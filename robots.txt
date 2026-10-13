@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://antonio-piloton.github.io/portfolio/sitemap.xml
+Sitemap: https://antonio-piloton.github.io/sitemap.xml
