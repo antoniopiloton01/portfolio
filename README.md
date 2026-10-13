@@ -89,36 +89,47 @@ portfolio/
 This website is pre-configured for free, permanent hosting on GitHub Pages with zero server fees.
 
 ### Step 1: Create a GitHub Repository
-1. Log in to your GitHub account at [github.com](https://github.com).
+1. Log in to your GitHub account at [github.com/antonio-piloton](https://github.com/antonio-piloton).
 2. Click the **+** (plus icon) in the top right and select **New repository**.
-3. Name your repository (e.g., `portfolio` or `<your-username>.github.io`).
-4. Set the repository visibility to **Public**.
-5. Do **not** initialize with a README (this project already includes one).
+3. Repository name choices:
+   - **Option A (Recommended - Direct URL):** Name it **`antonio-piloton.github.io`**
+     *(Your live website will be: **`https://antonio-piloton.github.io`**)*
+   - **Option B (Project Subfolder):** Name it **`portfolio`**
+     *(Your live website will be: **`https://antonio-piloton.github.io/portfolio`**)*
+4. Set repository visibility to **Public**.
+5. Leave "Add a README file" **unchecked** (we already have our README and all code files ready).
 6. Click **Create repository**.
 
-### Step 2: Upload Files to GitHub
-Open your terminal or command prompt inside this folder and run:
+### Step 2: Push Files to GitHub
+Open PowerShell inside `c:\Users\apilo\Downloads\portfolio` and run:
 
+**If you chose Option A (`antonio-piloton.github.io`):**
 ```bash
-git init
-git add .
-git commit -m "Deploy Antonio Jr. Piloton Canva Portfolio with Verified PDS"
+git remote add origin https://github.com/antonio-piloton/antonio-piloton.github.io.git
 git branch -M main
-git remote add origin https://github.com/<your-username>/<your-repo-name>.git
+git push -u origin main
+```
+
+**If you chose Option B (`portfolio`):**
+```bash
+git remote add origin https://github.com/antonio-piloton/portfolio.git
+git branch -M main
 git push -u origin main
 ```
 
 *(Alternatively, you can drag and drop all the project files directly through GitHub’s web interface by clicking **Add file** &rarr; **Upload files**).*
 
-### Step 3: Enable GitHub Pages
-1. On your GitHub repository page, click the **Settings** tab.
+### Step 3: Enable GitHub Pages (Instant Live Website)
+1. On your GitHub repository page, click the **Settings** tab (gear icon).
 2. In the left navigation menu under "Code and automation", click **Pages**.
 3. Under **Build and deployment**:
    - Source: **Deploy from a branch**.
    - Branch: Select **`main`** and folder **`/ (root)`**.
 4. Click **Save**.
-5. Wait 1 to 2 minutes. GitHub will display a notification:
-   > *"Your site is live at `https://<your-username>.github.io/<your-repo-name>/`"*
+5. Wait 1 to 2 minutes. GitHub will display a live notification:
+   > 🌐 *"Your site is live at `https://antonio-piloton.github.io`"* (or `/portfolio` if Option B)
+   
+*Click that link and your portfolio website is live for the world to see!*
 
 ---
 

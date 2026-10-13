@@ -54,7 +54,7 @@ const PORTFOLIO_DATA = {
     socialLinks: {
       github: {
         label: "GitHub",
-        url: "https://github.com/apiloton",
+        url: "https://github.com/antonio-piloton",
         icon: "fab fa-github",
         configured: true
       },
@@ -401,7 +401,7 @@ const PORTFOLIO_DATA = {
         "Resolving concurrent synchronization conflicts when multiple gate scanners sync simultaneously after network restoration.",
         "Optimizing camera viewfinder frame processing to conserve mobile device battery during prolonged scanning sessions."
       ],
-      githubUrl: "https://github.com/apiloton/scanalert-safetrack",
+      githubUrl: "https://github.com/antonio-piloton/scanalert-safetrack",
       demoUrl: "",
       demoAvailable: false
     },
@@ -430,7 +430,7 @@ const PORTFOLIO_DATA = {
         "Ensuring backward compatibility with legacy thermal receipt and barcode printers used in administrative offices.",
         "Preventing accidental out-of-order scans through strict state validation rules."
       ],
-      githubUrl: "https://github.com/apiloton/doctrack-system",
+      githubUrl: "https://github.com/antonio-piloton/doctrack-system",
       demoUrl: "",
       demoAvailable: false
     },
@@ -459,7 +459,7 @@ const PORTFOLIO_DATA = {
         "Guarding against race conditions during simultaneous checkout of limited inventory items via pessimistic database locks.",
         "Implementing clean multi-tenant schema isolation for independent retail clients."
       ],
-      githubUrl: "https://github.com/apiloton/saas-pos-inventory",
+      githubUrl: "https://github.com/antonio-piloton/saas-pos-inventory",
       demoUrl: "",
       demoAvailable: false
     },
@@ -488,7 +488,7 @@ const PORTFOLIO_DATA = {
         "Handling sudden traffic surges during end-of-semester evaluation deadlines without database connection pooling failures.",
         "Guaranteeing mathematical anonymity for students while strictly tracking completion flags."
       ],
-      githubUrl: "https://github.com/apiloton/edumetrics-evaluation",
+      githubUrl: "https://github.com/antonio-piloton/edumetrics-evaluation",
       demoUrl: "",
       demoAvailable: false
     },
@@ -517,7 +517,7 @@ const PORTFOLIO_DATA = {
         "Standardizing legacy bibliographic records with missing ISBN and call numbers.",
         "Creating a simple, resilient interface that library student assistants can operate with minimal technical training."
       ],
-      githubUrl: "https://github.com/apiloton/unilib-sis-manager",
+      githubUrl: "https://github.com/antonio-piloton/unilib-sis-manager",
       demoUrl: "",
       demoAvailable: false
     }
