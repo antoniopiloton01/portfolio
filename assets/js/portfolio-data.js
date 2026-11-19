@@ -1620,7 +1620,7 @@ const PORTFOLIO_DATA = {
     ],
     appointments: [
       {
-        role: "Assistant Professor III",
+        role: "Assistant Professor",
         type: "Current Academic Appointment",
         institution: "Agusan del Sur State University (ADSSU)",
         period: "Present Appointment",
