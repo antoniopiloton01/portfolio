@@ -49,11 +49,19 @@ const PORTFOLIO_DATA = {
       businessEmail: "antoniojrpiloton@gmail.com",
       officeLocation: "College of Computing and Information Sciences, ADSSU Main Campus, Bunawan, Agusan del Sur, Philippines",
       consultationHours: "Monday – Friday: Technical Inquiries & Consulting Appointments",
-      responseCommitment: "Guaranteed initial response within 24–48 business hours"
+      responseCommitment: "Guaranteed initial response within 24–48 business hours",
+      facebookPage: "https://www.facebook.com/JdigitalSolutions26",
+      facebookLabel: "J Digital Solutions"
     },
 
     // Verified Professional and Scholarly Links
     socialLinks: {
+      facebook: {
+        label: "Facebook (J Digital Solutions)",
+        url: "https://www.facebook.com/JdigitalSolutions26",
+        icon: "fab fa-facebook",
+        configured: true
+      },
       github: {
         label: "GitHub",
         url: "https://github.com/antonio-piloton",
