@@ -1109,7 +1109,7 @@ const PORTFOLIO_DATA = {
       categoryLabel: "Business Systems",
       badge: "Commercial Platform",
       status: "Production Ready / Operational",
-      image: "assets/images/projects/pos-system.svg",
+      image: "assets/images/projects/pos-system.jpg",
       summary: "An enterprise-grade point-of-sale and multi-branch inventory management platform developed for retail enterprises, cooperatives, and multi-branch merchants, featuring sub-second checkout, thermal receipt printing, and transactional inventory reconciliation.",
       problem: "Retailers and cooperatives regularly suffer stock leakage, inventory discrepancies across branches, slow checkout queues, and delayed end-of-day revenue reconciliation when relying on manual books or generic single-register applications.",
       intendedUsers: "Retail cashiers, branch inventory officers, accountants, and business owners.",

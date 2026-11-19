@@ -438,7 +438,7 @@ function hydrateFromPortfolioData() {
     featuredGrid.innerHTML = featuredProjects.map(proj => `
       <article class="project-item">
         <div class="project-item-preview">
-          <img src="${proj.image || 'assets/images/projects/pos-system.svg'}" alt="${proj.title}" />
+          <img src="${proj.image || 'assets/images/projects/pos-system.jpg'}" alt="${proj.title}" />
         </div>
         <div class="project-item-body">
           <span class="project-item-category">${proj.categoryLabel || 'Software System'}</span>
@@ -461,7 +461,7 @@ function hydrateFromPortfolioData() {
     allProjectsGrid.innerHTML = PORTFOLIO_DATA.projects.map(proj => `
       <article class="project-item" data-category="${proj.category || 'all'}">
         <div class="project-item-preview">
-          <img src="${proj.image || 'assets/images/projects/pos-system.svg'}" alt="${proj.title}" />
+          <img src="${proj.image || 'assets/images/projects/pos-system.jpg'}" alt="${proj.title}" />
         </div>
         <div class="project-item-body">
           <span class="project-item-category">${proj.categoryLabel || 'Software System'}</span>

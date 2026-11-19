@@ -1050,15 +1050,23 @@ select:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  padding: 0;
   border-bottom: 1px solid var(--border-light);
   overflow: hidden;
+  position: relative;
 }
 
 .project-item-preview img {
-  max-height: 100%;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
   transition: transform var(--transition-normal);
+}
+
+.project-item-preview img[src$=".svg"] {
+  object-fit: contain;
+  padding: 1.25rem;
 }
 
 .project-item:hover .project-item-preview img {
