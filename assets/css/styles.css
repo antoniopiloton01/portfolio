@@ -1546,6 +1546,31 @@ select:focus-visible {
   color: var(--color-champagne);
 }
 
+.calc-other-spec {
+  background: var(--grad-secondary);
+  border: 1.5px dashed rgba(36, 70, 106, 0.28);
+  border-radius: var(--radius-sm);
+  padding: 0.85rem 1rem;
+  transition: all var(--transition-fast);
+  animation: fadeInDown 0.25s ease-out;
+}
+
+[data-theme="dark"] .calc-other-spec {
+  background: var(--bg-surface);
+  border-color: rgba(216, 182, 138, 0.35);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Calculator Summary Box */
 .calc-summary-card {
   position: sticky;

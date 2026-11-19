@@ -146,17 +146,38 @@ function initQuotationCalculator() {
   const scaleInputs = calcContainer.querySelectorAll('input[name="calc_scale"]');
   const featureInputs = calcContainer.querySelectorAll('input[name="calc_feature"]');
   const applyBtn = document.getElementById("apply-quote-btn");
+  const otherSpecBox = document.getElementById("calc-other-spec-box");
+  const customNameInput = document.getElementById("calc-custom-system-name");
+
+  function toggleOtherSpec() {
+    const selectedType = calcContainer.querySelector('input[name="calc_type"]:checked');
+    const isOther = selectedType && (selectedType.value === "other" || (selectedType.getAttribute("data-name") || "").toLowerCase().includes("other"));
+    if (otherSpecBox) {
+      if (isOther) {
+        otherSpecBox.style.display = "block";
+      } else {
+        otherSpecBox.style.display = "none";
+      }
+    }
+  }
 
   function calculateQuote() {
     let basePrice = 35000;
-    let typeName = "Custom Business POS & Inventory";
+    let typeName = "POS & Multi-Branch Inventory System";
     let typeTimelineWeeks = 4;
 
     const selectedType = calcContainer.querySelector('input[name="calc_type"]:checked');
+    const isOther = selectedType && (selectedType.value === "other" || (selectedType.getAttribute("data-name") || "").toLowerCase().includes("other"));
+    const customTyped = (customNameInput && isOther) ? customNameInput.value.trim() : "";
+
     if (selectedType) {
       basePrice = parseInt(selectedType.getAttribute("data-price") || "35000", 10);
       typeName = selectedType.getAttribute("data-name") || "Custom System";
       typeTimelineWeeks = parseInt(selectedType.getAttribute("data-weeks") || "4", 10);
+
+      if (isOther && customTyped) {
+        typeName = `Other: ${customTyped}`;
+      }
     }
 
     let scalePrice = 0;
@@ -235,16 +256,25 @@ function initQuotationCalculator() {
       selectedFeatures: selectedFeatures.map(f => f.name),
       priceRange: `₱${subtotal.toLocaleString()} – ₱${highRange.toLocaleString()}`,
       timeline: `${totalWeeksMin} – ${totalWeeksMax} Weeks`,
-      estimatedBase: subtotal
+      estimatedBase: subtotal,
+      customTypedName: customTyped
     };
   }
 
   // Bind change events
-  typeInputs.forEach(i => i.addEventListener("change", calculateQuote));
+  typeInputs.forEach(i => i.addEventListener("change", () => {
+    toggleOtherSpec();
+    calculateQuote();
+  }));
   scaleInputs.forEach(i => i.addEventListener("change", calculateQuote));
   featureInputs.forEach(i => i.addEventListener("change", calculateQuote));
 
-  // Initial calculation
+  if (customNameInput) {
+    customNameInput.addEventListener("input", calculateQuote);
+  }
+
+  // Initial calculation & spec toggle check
+  toggleOtherSpec();
   calculateQuote();
 
   // Apply to inquiry button handler
@@ -275,12 +305,26 @@ function loadPendingQuoteToForm() {
     const messageTextarea = document.getElementById("contact-message");
 
     if (projectTypeSelect) {
-      // Find matching option or closest match
+      let matched = false;
+      const isOther = (quote.typeName || "").toLowerCase().includes("other");
       for (let opt of projectTypeSelect.options) {
-        if (opt.value.toLowerCase().includes(quote.typeName.toLowerCase()) ||
+        if (isOther && opt.value.toLowerCase().includes("other")) {
+          opt.selected = true;
+          matched = true;
+          break;
+        } else if (opt.value.toLowerCase().includes(quote.typeName.toLowerCase()) ||
           quote.typeName.toLowerCase().includes(opt.value.toLowerCase())) {
           opt.selected = true;
+          matched = true;
           break;
+        }
+      }
+      if (!matched && isOther) {
+        for (let opt of projectTypeSelect.options) {
+          if (opt.value.toLowerCase().includes("other")) {
+            opt.selected = true;
+            break;
+          }
         }
       }
     }
@@ -288,11 +332,15 @@ function loadPendingQuoteToForm() {
     if (messageTextarea) {
       const featuresList = quote.selectedFeatures && quote.selectedFeatures.length > 0
         ? quote.selectedFeatures.map(f => `  • ${f}`).join("\n")
-        : "  • Standard System Architecture";
+        : "  • Standard System Architecture & Modules";
+
+      const systemLabel = quote.customTypedName 
+        ? `Other Custom System: ${quote.customTypedName}`
+        : quote.typeName;
 
       messageTextarea.value =
         `[Calculated Quotation Estimate Basis]\n` +
-        `Selected System: ${quote.typeName}\n` +
+        `Selected System: ${systemLabel}\n` +
         `Operational Scale: ${quote.scaleName}\n` +
         `Estimated Price Range: ${quote.priceRange}\n` +
         `Estimated Timeline: ${quote.timeline}\n\n` +

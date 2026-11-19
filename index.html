@@ -503,99 +503,159 @@
             <!-- 1. System Category -->
             <div class="calc-section">
               <h3 class="calc-section-title">1. Select System Type</h3>
-              <p class="calc-section-desc">Choose the foundational platform architecture for your project.</p>
+              <p class="calc-section-desc">Choose from proven software systems engineered to solve real operational bottlenecks, or select "Others" for custom projects.</p>
               <div class="calc-tile-grid">
+                <!-- 1. POS & Inventory -->
                 <label class="calc-tile">
                   <input type="radio" name="calc_type" data-price="35000"
-                    data-name="Custom Business POS &amp; Inventory" data-weeks="4" checked />
+                    data-name="POS &amp; Multi-Branch Inventory System" data-weeks="4" checked />
                   <div class="calc-tile-content">
                     <div>
                       <div class="calc-tile-title">
-                        <span>POS &amp; Inventory</span>
+                        <span><i class="fas fa-cash-register" style="margin-right: 0.35rem; color: var(--color-champagne);"></i> POS &amp; Inventory</span>
                         <i class="fas fa-check" style="font-size: 0.75rem; color: var(--color-champagne);"></i>
                       </div>
-                      <p class="calc-tile-desc">Multi-branch stock ledger, cashier registers &amp; thermal printing.</p>
+                      <p class="calc-tile-desc">Multi-branch stock ledger, cashier registers, thermal printing &amp; Z-readings.</p>
                     </div>
                     <div class="calc-tile-price">Base: ₱35,000</div>
                   </div>
                 </label>
 
+                <!-- 2. Smart Gate & Attendance -->
                 <label class="calc-tile">
-                  <input type="radio" name="calc_type" data-price="45000" data-name="Full-Stack Web Application"
-                    data-weeks="5" />
+                  <input type="radio" name="calc_type" data-price="38000"
+                    data-name="Campus Smart Gate &amp; RFID Sentinel" data-weeks="4" />
                   <div class="calc-tile-content">
                     <div>
                       <div class="calc-tile-title">
-                        <span>Web Application</span>
+                        <span><i class="fas fa-id-card" style="margin-right: 0.35rem; color: var(--color-champagne);"></i> Smart Gate &amp; Attendance</span>
                         <i class="fas fa-check" style="font-size: 0.75rem; color: var(--color-champagne);"></i>
                       </div>
-                      <p class="calc-tile-desc">Custom Laravel portal, REST API, role permissions &amp; dashboards.</p>
+                      <p class="calc-tile-desc">DepEd-ready turnstiles, RFID/QR gate tap, live dashboard &amp; SMS guardian alerts.</p>
                     </div>
-                    <div class="calc-tile-price">Base: ₱45,000</div>
+                    <div class="calc-tile-price">Base: ₱38,000</div>
                   </div>
                 </label>
 
+                <!-- 3. Assessment & OMR Cloud -->
                 <label class="calc-tile">
-                  <input type="radio" name="calc_type" data-price="50000" data-name="Offline-First Mobile App"
-                    data-weeks="6" />
+                  <input type="radio" name="calc_type" data-price="40000"
+                    data-name="Assessment &amp; OMR Cloud Grading Engine" data-weeks="4" />
                   <div class="calc-tile-content">
                     <div>
                       <div class="calc-tile-title">
-                        <span>Offline Mobile App</span>
+                        <span><i class="fas fa-camera" style="margin-right: 0.35rem; color: var(--color-champagne);"></i> OMR Exam Cloud</span>
                         <i class="fas fa-check" style="font-size: 0.75rem; color: var(--color-champagne);"></i>
                       </div>
-                      <p class="calc-tile-desc">React Native + SQLite offline cache with auto cloud synchronization.</p>
+                      <p class="calc-tile-desc">0.28s camera bubble sheet grading, perspective warp &amp; automated item analysis.</p>
                     </div>
-                    <div class="calc-tile-price">Base: ₱50,000</div>
+                    <div class="calc-tile-price">Base: ₱40,000</div>
                   </div>
                 </label>
 
+                <!-- 4. Records & Document Tracking -->
+                <label class="calc-tile">
+                  <input type="radio" name="calc_type" data-price="32000"
+                    data-name="Records Tracking Management System" data-weeks="3" />
+                  <div class="calc-tile-content">
+                    <div>
+                      <div class="calc-tile-title">
+                        <span><i class="fas fa-qrcode" style="margin-right: 0.35rem; color: var(--color-champagne);"></i> Records Tracking</span>
+                        <i class="fas fa-check" style="font-size: 0.75rem; color: var(--color-champagne);"></i>
+                      </div>
+                      <p class="calc-tile-desc">QR-coded inter-office routing, transmittal custody trails &amp; ISO/IEC audit logs.</p>
+                    </div>
+                    <div class="calc-tile-price">Base: ₱32,000</div>
+                  </div>
+                </label>
+
+                <!-- 5. Barangay Information (BIMS) -->
                 <label class="calc-tile">
                   <input type="radio" name="calc_type" data-price="30000"
-                    data-name="Database &amp; Systems Architecture" data-weeks="3" />
+                    data-name="Barangay Information System (BIMS)" data-weeks="3" />
                   <div class="calc-tile-content">
                     <div>
                       <div class="calc-tile-title">
-                        <span>Database Architecture</span>
+                        <span><i class="fas fa-landmark" style="margin-right: 0.35rem; color: var(--color-champagne);"></i> Barangay (BIMS)</span>
                         <i class="fas fa-check" style="font-size: 0.75rem; color: var(--color-champagne);"></i>
                       </div>
-                      <p class="calc-tile-desc">RDBMS schema design, index tuning &amp; transactional modeling.</p>
+                      <p class="calc-tile-desc">Resident profiling, clearances/IDs, blotter incident tracking &amp; municipal records.</p>
                     </div>
                     <div class="calc-tile-price">Base: ₱30,000</div>
                   </div>
                 </label>
 
+                <!-- 6. Student Information (SIS / OPAC) -->
                 <label class="calc-tile">
                   <input type="radio" name="calc_type" data-price="35000"
-                    data-name="Graduate Research Technical Consultation" data-weeks="4" />
+                    data-name="Student Information &amp; Academic SIS" data-weeks="4" />
                   <div class="calc-tile-content">
                     <div>
                       <div class="calc-tile-title">
-                        <span>Research Consulting</span>
+                        <span><i class="fas fa-graduation-cap" style="margin-right: 0.35rem; color: var(--color-champagne);"></i> Academic SIS &amp; Library</span>
                         <i class="fas fa-check" style="font-size: 0.75rem; color: var(--color-champagne);"></i>
                       </div>
-                      <p class="calc-tile-desc">Legitimate technical architecture &amp; functional research prototyping.
-                      </p>
+                      <p class="calc-tile-desc">Student enrollment, semester clearances, OPAC library catalog &amp; overdue penalties.</p>
                     </div>
                     <div class="calc-tile-price">Base: ₱35,000</div>
                   </div>
                 </label>
 
+                <!-- 7. Clinic & Health Records -->
                 <label class="calc-tile">
-                  <input type="radio" name="calc_type" data-price="40000" data-name="Institutional Information System"
-                    data-weeks="5" />
+                  <input type="radio" name="calc_type" data-price="32000"
+                    data-name="Clinic &amp; Patient Health Records System" data-weeks="3" />
                   <div class="calc-tile-content">
                     <div>
                       <div class="calc-tile-title">
-                        <span>Government &amp; Institutional</span>
+                        <span><i class="fas fa-hospital-user" style="margin-right: 0.35rem; color: var(--color-champagne);"></i> Clinic &amp; Patient Records</span>
                         <i class="fas fa-check" style="font-size: 0.75rem; color: var(--color-champagne);"></i>
                       </div>
-                      <p class="calc-tile-desc">Barangay BIMS, document routing, resident profiling &amp; SIS platforms.
-                      </p>
+                      <p class="calc-tile-desc">Patient health charts, consultation logs, prescription printing &amp; pharmacy stock.</p>
                     </div>
-                    <div class="calc-tile-price">Base: ₱40,000</div>
+                    <div class="calc-tile-price">Base: ₱32,000</div>
                   </div>
                 </label>
+
+                <!-- 8. Payroll & Biometric DTR -->
+                <label class="calc-tile">
+                  <input type="radio" name="calc_type" data-price="35000"
+                    data-name="Employee Payroll &amp; Biometric DTR System" data-weeks="4" />
+                  <div class="calc-tile-content">
+                    <div>
+                      <div class="calc-tile-title">
+                        <span><i class="fas fa-fingerprint" style="margin-right: 0.35rem; color: var(--color-champagne);"></i> Payroll &amp; Biometric DTR</span>
+                        <i class="fas fa-check" style="font-size: 0.75rem; color: var(--color-champagne);"></i>
+                      </div>
+                      <p class="calc-tile-desc">Biometric timekeeping, automated tax/contribution deductions &amp; payslips.</p>
+                    </div>
+                    <div class="calc-tile-price">Base: ₱35,000</div>
+                  </div>
+                </label>
+
+                <!-- 9. Others (Custom System) -->
+                <label class="calc-tile">
+                  <input type="radio" name="calc_type" data-price="30000"
+                    data-name="Other Custom System / Bespoke Solution" data-weeks="3" value="other" />
+                  <div class="calc-tile-content">
+                    <div>
+                      <div class="calc-tile-title">
+                        <span><i class="fas fa-laptop-code" style="margin-right: 0.35rem; color: var(--color-champagne);"></i> Others (Custom System)</span>
+                        <i class="fas fa-check" style="font-size: 0.75rem; color: var(--color-champagne);"></i>
+                      </div>
+                      <p class="calc-tile-desc">Custom business platform, database portal, or workflow automation tailored to your specs.</p>
+                    </div>
+                    <div class="calc-tile-price">Base: ₱30,000</div>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Collapsible input if 'Others' is selected -->
+              <div class="calc-other-spec" id="calc-other-spec-box" style="margin-top: 0.85rem; display: none;">
+                <label for="calc-custom-system-name" style="font-size: 0.8125rem; font-weight: 600; color: var(--text-primary); display: block; margin-bottom: 0.35rem;">
+                  <i class="fas fa-pen" style="color: var(--color-champagne); margin-right: 0.3rem;"></i> Specify Your Custom System Concept (e.g. Cooperative Loan, Hotel Booking, Water Billing):
+                </label>
+                <input type="text" id="calc-custom-system-name" class="form-input" placeholder="Type your custom system name or requirements..." style="width: 100%; padding: 0.55rem 0.75rem; font-size: 0.875rem;" />
               </div>
             </div>
 
