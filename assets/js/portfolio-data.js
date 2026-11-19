@@ -156,949 +156,949 @@ const PORTFOLIO_DATA = {
 
   // 4. Commercial & Consulting Services
   services: [
-  {
-    "id": "business-enterprise",
-    "num": "01",
-    "title": "Business & Enterprise Solutions",
-    "subtitle": "Commercial Point-of-Sale, Multi-Branch Inventory & Financial Control",
-    "description": "POS, inventory, sales, CRM, ERP, accounting workflows, and multi-branch operations. Replace disconnected spreadsheets with real-time cashier registers, stock transfers, and automated reconciliation.",
-    "deliverables": [
-      "Sub-second checkout with barcode scanning & split tenders",
-      "Multi-branch inventory ledger with minimum reorder thresholds",
-      "Hardware ESC/POS thermal receipt printing integration",
-      "End-of-day X/Z-Readings, cash drawer auditing & financial analytics"
-    ],
-    "tags": [
-      "PHP / Laravel",
-      "MySQL",
-      "Tailwind CSS",
-      "ESC/POS",
-      "REST APIs"
-    ]
-  },
-  {
-    "id": "educational-academic",
-    "num": "02",
-    "title": "Educational & Academic Systems",
-    "subtitle": "Student Information, Attendance, Online Exams & Grading Engines",
-    "description": "School management, attendance, examinations, grading, and research-oriented software. Built with academic institutional integrity, ISO 25010 validation standards, and student privacy compliance.",
-    "deliverables": [
-      "Comprehensive Student Information Systems (SIS) & portals",
-      "Biometric, RFID gate & QR-code student attendance monitoring",
-      "Online & offline examination engines with OMR validation",
-      "Automated grade computing, dean clearance & library circulation"
-    ],
-    "tags": [
-      "Laravel",
-      "React Native",
-      "MySQL",
-      "RFID / QR",
-      "ISO 25010"
-    ]
-  },
-  {
-    "id": "web-mobile-apps",
-    "num": "03",
-    "title": "Web & Mobile Applications",
-    "subtitle": "Full-Stack Web Platforms & Offline-First Mobile Architectures",
-    "description": "Custom web platforms, Android/iOS apps, offline-first applications, and API integration. Engineered with SQLite local persistence and idempotent synchronization for unreliable internet environments.",
-    "deliverables": [
-      "Cross-platform mobile apps developed in React Native & TypeScript",
-      "Offline-first local caching with encrypted SQLite data storage",
-      "High-performance REST API backends with multi-tenant isolation",
-      "Push notification dispatch via Firebase Cloud Messaging"
-    ],
-    "tags": [
-      "React Native",
-      "TypeScript",
-      "Laravel",
-      "SQLite",
-      "Firebase"
-    ]
-  },
-  {
-    "id": "government-institutional",
-    "num": "04",
-    "title": "Government & Institutional Systems",
-    "subtitle": "Barangay Information, Cryptographic Document Tracking & Resident Services",
-    "description": "Barangay information systems, document tracking, resident profiling, and public service automation. Features tamper-evident QR verification, role-based workflows, and audit-compliant log trails.",
-    "deliverables": [
-      "Barangay Information Management Systems (BIMS) & profiling",
-      "Barangay clearance, certificate & permit issuance engine",
-      "Cryptographic SHA-256 QR document verification & routing",
-      "Citizen incident reporting, service queues & public assistance"
-    ],
-    "tags": [
-      "Laravel",
-      "MySQL",
-      "QR Verification",
-      "Audit Trails",
-      "Role ACL"
-    ]
-  },
-  {
-    "id": "saas-cloud-platforms",
-    "num": "05",
-    "title": "SaaS & Cloud-Based Platforms",
-    "subtitle": "Multi-Tenant Platforms, Subscription Engines & Centralized Portals",
-    "description": "Multi-tenant systems, subscription platforms, centralized dashboards, and scalable applications. Strict tenant data segregation, recurring billing lifecycles, and high-volume performance.",
-    "deliverables": [
-      "Multi-tenant schema & database isolation architectures",
-      "Role-based privilege separation (Owner, Manager, Cashier, Auditor)",
-      "Centralized analytics dashboards with custom KPI visualization",
-      "Cloud hosting deployment with automated database backups"
-    ],
-    "tags": [
-      "Multi-Tenancy",
-      "Laravel",
-      "MySQL",
-      "Cloud Hosting",
-      "Analytics"
-    ]
-  },
-  {
-    "id": "integration-automation",
-    "num": "06",
-    "title": "System Integration & Automation",
-    "subtitle": "Hardware Interfacing, SMS Gateways, Background Queues & Workflows",
-    "description": "SMS, QR/NFC, workflow automation, APIs, notifications, and reporting. Bridge legacy infrastructure with automated background queues, GSM modems, and hardware peripherals.",
-    "deliverables": [
-      "Automated GSM modem / SIM800L / Web SMS gateway alerts",
-      "Hardware ESC/POS thermal printer direct network socket integration",
-      "Automated PDF report generators (Invoices, Transcripts, Z-Readings)",
-      "Background worker queues for scheduled exports & data pipelines"
-    ],
-    "tags": [
-      "SMS Gateways",
-      "ESC/POS",
-      "PDF Generation",
-      "Queue Workers",
-      "IoT APIs"
-    ]
-  }
-],
+    {
+      "id": "business-enterprise",
+      "num": "01",
+      "title": "Business & Enterprise Solutions",
+      "subtitle": "Commercial Point-of-Sale, Multi-Branch Inventory & Financial Control",
+      "description": "POS, inventory, sales, CRM, ERP, accounting workflows, and multi-branch operations. Replace disconnected spreadsheets with real-time cashier registers, stock transfers, and automated reconciliation.",
+      "deliverables": [
+        "Sub-second checkout with barcode scanning & split tenders",
+        "Multi-branch inventory ledger with minimum reorder thresholds",
+        "Hardware ESC/POS thermal receipt printing integration",
+        "End-of-day X/Z-Readings, cash drawer auditing & financial analytics"
+      ],
+      "tags": [
+        "PHP / Laravel",
+        "MySQL",
+        "Tailwind CSS",
+        "ESC/POS",
+        "REST APIs"
+      ]
+    },
+    {
+      "id": "educational-academic",
+      "num": "02",
+      "title": "Educational & Academic Systems",
+      "subtitle": "Student Information, Attendance, Online Exams & Grading Engines",
+      "description": "School management, attendance, examinations, grading, and research-oriented software. Built with academic institutional integrity, ISO 25010 validation standards, and student privacy compliance.",
+      "deliverables": [
+        "Comprehensive Student Information Systems (SIS) & portals",
+        "Biometric, RFID gate & QR-code student attendance monitoring",
+        "Online & offline examination engines with OMR validation",
+        "Automated grade computing, dean clearance & library circulation"
+      ],
+      "tags": [
+        "Laravel",
+        "React Native",
+        "MySQL",
+        "RFID / QR",
+        "ISO 25010"
+      ]
+    },
+    {
+      "id": "web-mobile-apps",
+      "num": "03",
+      "title": "Web & Mobile Applications",
+      "subtitle": "Full-Stack Web Platforms & Offline-First Mobile Architectures",
+      "description": "Custom web platforms, Android/iOS apps, offline-first applications, and API integration. Engineered with SQLite local persistence and idempotent synchronization for unreliable internet environments.",
+      "deliverables": [
+        "Cross-platform mobile apps developed in React Native & TypeScript",
+        "Offline-first local caching with encrypted SQLite data storage",
+        "High-performance REST API backends with multi-tenant isolation",
+        "Push notification dispatch via Firebase Cloud Messaging"
+      ],
+      "tags": [
+        "React Native",
+        "TypeScript",
+        "Laravel",
+        "SQLite",
+        "Firebase"
+      ]
+    },
+    {
+      "id": "government-institutional",
+      "num": "04",
+      "title": "Government & Institutional Systems",
+      "subtitle": "Barangay Information, Cryptographic Document Tracking & Resident Services",
+      "description": "Barangay information systems, document tracking, resident profiling, and public service automation. Features tamper-evident QR verification, role-based workflows, and audit-compliant log trails.",
+      "deliverables": [
+        "Barangay Information Management Systems (BIMS) & profiling",
+        "Barangay clearance, certificate & permit issuance engine",
+        "Cryptographic SHA-256 QR document verification & routing",
+        "Citizen incident reporting, service queues & public assistance"
+      ],
+      "tags": [
+        "Laravel",
+        "MySQL",
+        "QR Verification",
+        "Audit Trails",
+        "Role ACL"
+      ]
+    },
+    {
+      "id": "saas-cloud-platforms",
+      "num": "05",
+      "title": "SaaS & Cloud-Based Platforms",
+      "subtitle": "Multi-Tenant Platforms, Subscription Engines & Centralized Portals",
+      "description": "Multi-tenant systems, subscription platforms, centralized dashboards, and scalable applications. Strict tenant data segregation, recurring billing lifecycles, and high-volume performance.",
+      "deliverables": [
+        "Multi-tenant schema & database isolation architectures",
+        "Role-based privilege separation (Owner, Manager, Cashier, Auditor)",
+        "Centralized analytics dashboards with custom KPI visualization",
+        "Cloud hosting deployment with automated database backups"
+      ],
+      "tags": [
+        "Multi-Tenancy",
+        "Laravel",
+        "MySQL",
+        "Cloud Hosting",
+        "Analytics"
+      ]
+    },
+    {
+      "id": "integration-automation",
+      "num": "06",
+      "title": "System Integration & Automation",
+      "subtitle": "Hardware Interfacing, SMS Gateways, Background Queues & Workflows",
+      "description": "SMS, QR/NFC, workflow automation, APIs, notifications, and reporting. Bridge legacy infrastructure with automated background queues, GSM modems, and hardware peripherals.",
+      "deliverables": [
+        "Automated GSM modem / SIM800L / Web SMS gateway alerts",
+        "Hardware ESC/POS thermal printer direct network socket integration",
+        "Automated PDF report generators (Invoices, Transcripts, Z-Readings)",
+        "Background worker queues for scheduled exports & data pipelines"
+      ],
+      "tags": [
+        "SMS Gateways",
+        "ESC/POS",
+        "PDF Generation",
+        "Queue Workers",
+        "IoT APIs"
+      ]
+    }
+  ],
 
   // Technical Capabilities Matrix
   technicalCapabilities: [
-  {
-    "category": "Backend Development",
-    "capabilities": "PHP, Laravel, REST APIs"
-  },
-  {
-    "category": "Frontend Development",
-    "capabilities": "Blade, Livewire, JavaScript"
-  },
-  {
-    "category": "Mobile Development",
-    "capabilities": "React Native, TypeScript, Android"
-  },
-  {
-    "category": "Database Management",
-    "capabilities": "MySQL, relational database design"
-  },
-  {
-    "category": "Authentication",
-    "capabilities": "Role-based access, Google OAuth, user permissions"
-  },
-  {
-    "category": "SaaS Architecture",
-    "capabilities": "Multi-tenancy, subscriptions, organization management"
-  },
-  {
-    "category": "System Integration",
-    "capabilities": "REST APIs, SMS gateways, Firebase Cloud Messaging"
-  },
-  {
-    "category": "Offline Capabilities",
-    "capabilities": "Local caching, offline-first workflows, synchronization"
-  },
-  {
-    "category": "Automation",
-    "capabilities": "Background jobs, notification queues, scheduled processes"
-  },
-  {
-    "category": "Deployment",
-    "capabilities": "Web hosting, cloud-based applications, application deployment"
-  },
-  {
-    "category": "Specialized Features",
-    "capabilities": "QR code, NFC, OMR scanning, dashboards, report generation"
-  }
-],
+    {
+      "category": "Backend Development",
+      "capabilities": "PHP, Laravel, REST APIs"
+    },
+    {
+      "category": "Frontend Development",
+      "capabilities": "Blade, Livewire, JavaScript"
+    },
+    {
+      "category": "Mobile Development",
+      "capabilities": "React Native, TypeScript, Android"
+    },
+    {
+      "category": "Database Management",
+      "capabilities": "MySQL, relational database design"
+    },
+    {
+      "category": "Authentication",
+      "capabilities": "Role-based access, Google OAuth, user permissions"
+    },
+    {
+      "category": "SaaS Architecture",
+      "capabilities": "Multi-tenancy, subscriptions, organization management"
+    },
+    {
+      "category": "System Integration",
+      "capabilities": "REST APIs, SMS gateways, Firebase Cloud Messaging"
+    },
+    {
+      "category": "Offline Capabilities",
+      "capabilities": "Local caching, offline-first workflows, synchronization"
+    },
+    {
+      "category": "Automation",
+      "capabilities": "Background jobs, notification queues, scheduled processes"
+    },
+    {
+      "category": "Deployment",
+      "capabilities": "Web hosting, cloud-based applications, application deployment"
+    },
+    {
+      "category": "Specialized Features",
+      "capabilities": "QR code, NFC, OMR scanning, dashboards, report generation"
+    }
+  ],
 
   // Comprehensive Custom Systems Offerings Catalog (110 Offerings)
   systemCatalog: [
-  {
-    "id": 1,
-    "cat": "business",
-    "catLabel": "Business Management",
-    "title": "Point of Sale (POS) System",
-    "icon": "fa-cash-register"
-  },
-  {
-    "id": 2,
-    "cat": "business",
-    "catLabel": "Business Management",
-    "title": "Inventory Management System",
-    "icon": "fa-boxes"
-  },
-  {
-    "id": 3,
-    "cat": "business",
-    "catLabel": "Business Management",
-    "title": "Sales and Billing Management System",
-    "icon": "fa-file-invoice-dollar"
-  },
-  {
-    "id": 4,
-    "cat": "business",
-    "catLabel": "Business Management",
-    "title": "Customer Relationship Management (CRM)",
-    "icon": "fa-users"
-  },
-  {
-    "id": 5,
-    "cat": "business",
-    "catLabel": "Business Management",
-    "title": "Customer Credit and Collection System",
-    "icon": "fa-credit-card"
-  },
-  {
-    "id": 6,
-    "cat": "business",
-    "catLabel": "Business Management",
-    "title": "Accounting and Expense Tracking System",
-    "icon": "fa-calculator"
-  },
-  {
-    "id": 7,
-    "cat": "business",
-    "catLabel": "Business Management",
-    "title": "Purchase Order Management System",
-    "icon": "fa-shopping-cart"
-  },
-  {
-    "id": 8,
-    "cat": "business",
-    "catLabel": "Business Management",
-    "title": "Supplier Management System",
-    "icon": "fa-truck"
-  },
-  {
-    "id": 9,
-    "cat": "business",
-    "catLabel": "Business Management",
-    "title": "Warehouse Management System",
-    "icon": "fa-warehouse"
-  },
-  {
-    "id": 10,
-    "cat": "business",
-    "catLabel": "Business Management",
-    "title": "Multi-Branch Management System",
-    "icon": "fa-network-wired"
-  },
-  {
-    "id": 11,
-    "cat": "business",
-    "catLabel": "Business Management",
-    "title": "Order Management System",
-    "icon": "fa-clipboard-list"
-  },
-  {
-    "id": 12,
-    "cat": "business",
-    "catLabel": "Business Management",
-    "title": "Service Booking and Appointment System",
-    "icon": "fa-calendar-check"
-  },
-  {
-    "id": 13,
-    "cat": "business",
-    "catLabel": "Business Management",
-    "title": "Business Analytics and Reporting Dashboard",
-    "icon": "fa-chart-line"
-  },
-  {
-    "id": 14,
-    "cat": "business",
-    "catLabel": "Business Management",
-    "title": "Subscription and Membership Management System",
-    "icon": "fa-id-card"
-  },
-  {
-    "id": 15,
-    "cat": "business",
-    "catLabel": "Business Management",
-    "title": "Enterprise Resource Planning (ERP) Modules",
-    "icon": "fa-sitemap"
-  },
-  {
-    "id": 16,
-    "cat": "academic",
-    "catLabel": "Educational & Academic",
-    "title": "Student Information System",
-    "icon": "fa-user-graduate"
-  },
-  {
-    "id": 17,
-    "cat": "academic",
-    "catLabel": "Educational & Academic",
-    "title": "Enrollment Management System",
-    "icon": "fa-user-plus"
-  },
-  {
-    "id": 18,
-    "cat": "academic",
-    "catLabel": "Educational & Academic",
-    "title": "Learning Management System (LMS)",
-    "icon": "fa-laptop-code"
-  },
-  {
-    "id": 19,
-    "cat": "academic",
-    "catLabel": "Educational & Academic",
-    "title": "Attendance Monitoring System",
-    "icon": "fa-user-check"
-  },
-  {
-    "id": 20,
-    "cat": "academic",
-    "catLabel": "Educational & Academic",
-    "title": "QR Code / NFC Attendance System",
-    "icon": "fa-qrcode"
-  },
-  {
-    "id": 21,
-    "cat": "academic",
-    "catLabel": "Educational & Academic",
-    "title": "Examination and Quiz Management System",
-    "icon": "fa-spell-check"
-  },
-  {
-    "id": 22,
-    "cat": "academic",
-    "catLabel": "Educational & Academic",
-    "title": "OMR Examination Checking System",
-    "icon": "fa-check-double"
-  },
-  {
-    "id": 23,
-    "cat": "academic",
-    "catLabel": "Educational & Academic",
-    "title": "Online Examination System",
-    "icon": "fa-desktop"
-  },
-  {
-    "id": 24,
-    "cat": "academic",
-    "catLabel": "Educational & Academic",
-    "title": "Grading Management System",
-    "icon": "fa-graduation-cap"
-  },
-  {
-    "id": 25,
-    "cat": "academic",
-    "catLabel": "Educational & Academic",
-    "title": "Class Scheduling System",
-    "icon": "fa-calendar-alt"
-  },
-  {
-    "id": 26,
-    "cat": "academic",
-    "catLabel": "Educational & Academic",
-    "title": "Room Allocation and Scheduling System",
-    "icon": "fa-door-open"
-  },
-  {
-    "id": 27,
-    "cat": "academic",
-    "catLabel": "Educational & Academic",
-    "title": "Faculty Evaluation System",
-    "icon": "fa-star-half-alt"
-  },
-  {
-    "id": 28,
-    "cat": "academic",
-    "catLabel": "Educational & Academic",
-    "title": "Library Management System",
-    "icon": "fa-book"
-  },
-  {
-    "id": 29,
-    "cat": "academic",
-    "catLabel": "Educational & Academic",
-    "title": "Research and Capstone Management System",
-    "icon": "fa-microscope"
-  },
-  {
-    "id": 30,
-    "cat": "academic",
-    "catLabel": "Educational & Academic",
-    "title": "Student Clearance Management System",
-    "icon": "fa-stamp"
-  },
-  {
-    "id": 31,
-    "cat": "academic",
-    "catLabel": "Educational & Academic",
-    "title": "Scholarship Management System",
-    "icon": "fa-award"
-  },
-  {
-    "id": 32,
-    "cat": "academic",
-    "catLabel": "Educational & Academic",
-    "title": "Student Portal",
-    "icon": "fa-id-badge"
-  },
-  {
-    "id": 33,
-    "cat": "academic",
-    "catLabel": "Educational & Academic",
-    "title": "Faculty Portal",
-    "icon": "fa-chalkboard-teacher"
-  },
-  {
-    "id": 34,
-    "cat": "academic",
-    "catLabel": "Educational & Academic",
-    "title": "Academic Performance Analytics System",
-    "icon": "fa-chart-pie"
-  },
-  {
-    "id": 35,
-    "cat": "academic",
-    "catLabel": "Educational & Academic",
-    "title": "School Document Tracking System",
-    "icon": "fa-file-alt"
-  },
-  {
-    "id": 36,
-    "cat": "government",
-    "catLabel": "Government & Barangay",
-    "title": "Barangay Information Management System",
-    "icon": "fa-landmark"
-  },
-  {
-    "id": 37,
-    "cat": "government",
-    "catLabel": "Government & Barangay",
-    "title": "Resident Profiling System",
-    "icon": "fa-address-card"
-  },
-  {
-    "id": 38,
-    "cat": "government",
-    "catLabel": "Government & Barangay",
-    "title": "Barangay Clearance and Certificate Issuance System",
-    "icon": "fa-certificate"
-  },
-  {
-    "id": 39,
-    "cat": "government",
-    "catLabel": "Government & Barangay",
-    "title": "Population Monitoring System",
-    "icon": "fa-users-cog"
-  },
-  {
-    "id": 40,
-    "cat": "government",
-    "catLabel": "Government & Barangay",
-    "title": "Document Tracking and Records Management System",
-    "icon": "fa-folder-open"
-  },
-  {
-    "id": 41,
-    "cat": "government",
-    "catLabel": "Government & Barangay",
-    "title": "Queue Management System",
-    "icon": "fa-list-ol"
-  },
-  {
-    "id": 42,
-    "cat": "government",
-    "catLabel": "Government & Barangay",
-    "title": "Complaint and Incident Reporting System",
-    "icon": "fa-bullhorn"
-  },
-  {
-    "id": 43,
-    "cat": "government",
-    "catLabel": "Government & Barangay",
-    "title": "Community Service Request System",
-    "icon": "fa-hands-helping"
-  },
-  {
-    "id": 44,
-    "cat": "government",
-    "catLabel": "Government & Barangay",
-    "title": "Barangay Appointment System",
-    "icon": "fa-calendar-plus"
-  },
-  {
-    "id": 45,
-    "cat": "government",
-    "catLabel": "Government & Barangay",
-    "title": "Public Assistance Monitoring System",
-    "icon": "fa-hand-holding-heart"
-  },
-  {
-    "id": 46,
-    "cat": "government",
-    "catLabel": "Government & Barangay",
-    "title": "Local Government Asset Management System",
-    "icon": "fa-coins"
-  },
-  {
-    "id": 47,
-    "cat": "government",
-    "catLabel": "Government & Barangay",
-    "title": "Community Project Monitoring System",
-    "icon": "fa-tasks"
-  },
-  {
-    "id": 48,
-    "cat": "government",
-    "catLabel": "Government & Barangay",
-    "title": "Permit Application and Tracking System",
-    "icon": "fa-file-signature"
-  },
-  {
-    "id": 49,
-    "cat": "healthcare",
-    "catLabel": "Healthcare & Medical",
-    "title": "Clinic Management System",
-    "icon": "fa-clinic-medical"
-  },
-  {
-    "id": 50,
-    "cat": "healthcare",
-    "catLabel": "Healthcare & Medical",
-    "title": "Patient Information Management System",
-    "icon": "fa-user-injured"
-  },
-  {
-    "id": 51,
-    "cat": "healthcare",
-    "catLabel": "Healthcare & Medical",
-    "title": "Electronic Medical Records (EMR)",
-    "icon": "fa-notes-medical"
-  },
-  {
-    "id": 52,
-    "cat": "healthcare",
-    "catLabel": "Healthcare & Medical",
-    "title": "Medical Appointment System",
-    "icon": "fa-calendar-alt"
-  },
-  {
-    "id": 53,
-    "cat": "healthcare",
-    "catLabel": "Healthcare & Medical",
-    "title": "Pharmacy Inventory Management System",
-    "icon": "fa-pills"
-  },
-  {
-    "id": 54,
-    "cat": "healthcare",
-    "catLabel": "Healthcare & Medical",
-    "title": "Laboratory Results Management System",
-    "icon": "fa-flask"
-  },
-  {
-    "id": 55,
-    "cat": "healthcare",
-    "catLabel": "Healthcare & Medical",
-    "title": "Vaccination Monitoring System",
-    "icon": "fa-syringe"
-  },
-  {
-    "id": 56,
-    "cat": "healthcare",
-    "catLabel": "Healthcare & Medical",
-    "title": "Dental Clinic Management System",
-    "icon": "fa-tooth"
-  },
-  {
-    "id": 57,
-    "cat": "healthcare",
-    "catLabel": "Healthcare & Medical",
-    "title": "Medical Billing System",
-    "icon": "fa-file-invoice"
-  },
-  {
-    "id": 58,
-    "cat": "healthcare",
-    "catLabel": "Healthcare & Medical",
-    "title": "Patient Queue Management System",
-    "icon": "fa-users"
-  },
-  {
-    "id": 59,
-    "cat": "healthcare",
-    "catLabel": "Healthcare & Medical",
-    "title": "Health Center Monitoring System",
-    "icon": "fa-heartbeat"
-  },
-  {
-    "id": 60,
-    "cat": "hr",
-    "catLabel": "HR & Administrative",
-    "title": "Human Resource Information System (HRIS)",
-    "icon": "fa-user-tie"
-  },
-  {
-    "id": 61,
-    "cat": "hr",
-    "catLabel": "HR & Administrative",
-    "title": "Employee Attendance System",
-    "icon": "fa-business-time"
-  },
-  {
-    "id": 62,
-    "cat": "hr",
-    "catLabel": "HR & Administrative",
-    "title": "Leave Management System",
-    "icon": "fa-calendar-minus"
-  },
-  {
-    "id": 63,
-    "cat": "hr",
-    "catLabel": "HR & Administrative",
-    "title": "Payroll Management System",
-    "icon": "fa-money-check-alt"
-  },
-  {
-    "id": 64,
-    "cat": "hr",
-    "catLabel": "HR & Administrative",
-    "title": "Employee Performance Evaluation System",
-    "icon": "fa-chart-bar"
-  },
-  {
-    "id": 65,
-    "cat": "hr",
-    "catLabel": "HR & Administrative",
-    "title": "Recruitment and Applicant Tracking System",
-    "icon": "fa-user-plus"
-  },
-  {
-    "id": 66,
-    "cat": "hr",
-    "catLabel": "HR & Administrative",
-    "title": "Employee Records Management System",
-    "icon": "fa-id-card-alt"
-  },
-  {
-    "id": 67,
-    "cat": "hr",
-    "catLabel": "HR & Administrative",
-    "title": "Training Management System",
-    "icon": "fa-chalkboard"
-  },
-  {
-    "id": 68,
-    "cat": "hr",
-    "catLabel": "HR & Administrative",
-    "title": "Employee Scheduling System",
-    "icon": "fa-clock"
-  },
-  {
-    "id": 69,
-    "cat": "hr",
-    "catLabel": "HR & Administrative",
-    "title": "Disciplinary Case Tracking System",
-    "icon": "fa-gavel"
-  },
-  {
-    "id": 70,
-    "cat": "hr",
-    "catLabel": "HR & Administrative",
-    "title": "Asset and Equipment Management System",
-    "icon": "fa-tools"
-  },
-  {
-    "id": 71,
-    "cat": "retail",
-    "catLabel": "Retail & Hospitality",
-    "title": "Restaurant POS System",
-    "icon": "fa-utensils"
-  },
-  {
-    "id": 72,
-    "cat": "retail",
-    "catLabel": "Retail & Hospitality",
-    "title": "Restaurant Ordering System",
-    "icon": "fa-concierge-bell"
-  },
-  {
-    "id": 73,
-    "cat": "retail",
-    "catLabel": "Retail & Hospitality",
-    "title": "Table Reservation System",
-    "icon": "fa-chair"
-  },
-  {
-    "id": 74,
-    "cat": "retail",
-    "catLabel": "Retail & Hospitality",
-    "title": "Hotel Reservation Management System",
-    "icon": "fa-hotel"
-  },
-  {
-    "id": 75,
-    "cat": "retail",
-    "catLabel": "Retail & Hospitality",
-    "title": "Room Booking System",
-    "icon": "fa-bed"
-  },
-  {
-    "id": 76,
-    "cat": "retail",
-    "catLabel": "Retail & Hospitality",
-    "title": "Resort Management System",
-    "icon": "fa-umbrella-beach"
-  },
-  {
-    "id": 77,
-    "cat": "retail",
-    "catLabel": "Retail & Hospitality",
-    "title": "Laundry Shop Management System",
-    "icon": "fa-tshirt"
-  },
-  {
-    "id": 78,
-    "cat": "retail",
-    "catLabel": "Retail & Hospitality",
-    "title": "Water Refilling Station Management System",
-    "icon": "fa-tint"
-  },
-  {
-    "id": 79,
-    "cat": "retail",
-    "catLabel": "Retail & Hospitality",
-    "title": "Auto Repair Shop Management System",
-    "icon": "fa-wrench"
-  },
-  {
-    "id": 80,
-    "cat": "retail",
-    "catLabel": "Retail & Hospitality",
-    "title": "Salon and Spa Booking System",
-    "icon": "fa-spa"
-  },
-  {
-    "id": 81,
-    "cat": "retail",
-    "catLabel": "Retail & Hospitality",
-    "title": "Rental Management System",
-    "icon": "fa-key"
-  },
-  {
-    "id": 82,
-    "cat": "retail",
-    "catLabel": "Retail & Hospitality",
-    "title": "Property Management System",
-    "icon": "fa-building"
-  },
-  {
-    "id": 83,
-    "cat": "retail",
-    "catLabel": "Retail & Hospitality",
-    "title": "E-Commerce Platform",
-    "icon": "fa-shopping-bag"
-  },
-  {
-    "id": 84,
-    "cat": "retail",
-    "catLabel": "Retail & Hospitality",
-    "title": "Online Ordering and Delivery Management System",
-    "icon": "fa-motorcycle"
-  },
-  {
-    "id": 85,
-    "cat": "retail",
-    "catLabel": "Retail & Hospitality",
-    "title": "Customer Loyalty and Rewards System",
-    "icon": "fa-gift"
-  },
-  {
-    "id": 86,
-    "cat": "mobile",
-    "catLabel": "Mobile Applications",
-    "title": "Android Business Application",
-    "icon": "fa-mobile-alt"
-  },
-  {
-    "id": 87,
-    "cat": "mobile",
-    "catLabel": "Mobile Applications",
-    "title": "iOS Business Application",
-    "icon": "fa-mobile"
-  },
-  {
-    "id": 88,
-    "cat": "mobile",
-    "catLabel": "Mobile Applications",
-    "title": "Mobile Attendance Application",
-    "icon": "fa-user-check"
-  },
-  {
-    "id": 89,
-    "cat": "mobile",
-    "catLabel": "Mobile Applications",
-    "title": "QR Code Scanner Application",
-    "icon": "fa-qrcode"
-  },
-  {
-    "id": 90,
-    "cat": "mobile",
-    "catLabel": "Mobile Applications",
-    "title": "NFC-Based Monitoring Application",
-    "icon": "fa-wifi"
-  },
-  {
-    "id": 91,
-    "cat": "mobile",
-    "catLabel": "Mobile Applications",
-    "title": "Mobile Inventory Application",
-    "icon": "fa-boxes"
-  },
-  {
-    "id": 92,
-    "cat": "mobile",
-    "catLabel": "Mobile Applications",
-    "title": "Mobile POS Application",
-    "icon": "fa-cash-register"
-  },
-  {
-    "id": 93,
-    "cat": "mobile",
-    "catLabel": "Mobile Applications",
-    "title": "Student and Parent Portal Application",
-    "icon": "fa-school"
-  },
-  {
-    "id": 94,
-    "cat": "mobile",
-    "catLabel": "Mobile Applications",
-    "title": "Mobile Examination Scanner",
-    "icon": "fa-camera"
-  },
-  {
-    "id": 95,
-    "cat": "mobile",
-    "catLabel": "Mobile Applications",
-    "title": "Field Data Collection Application",
-    "icon": "fa-map-marked-alt"
-  },
-  {
-    "id": 96,
-    "cat": "mobile",
-    "catLabel": "Mobile Applications",
-    "title": "Offline-First Mobile Application",
-    "icon": "fa-database"
-  },
-  {
-    "id": 97,
-    "cat": "mobile",
-    "catLabel": "Mobile Applications",
-    "title": "Push Notification Application",
-    "icon": "fa-bell"
-  },
-  {
-    "id": 98,
-    "cat": "mobile",
-    "catLabel": "Mobile Applications",
-    "title": "Mobile Booking Application",
-    "icon": "fa-calendar-check"
-  },
-  {
-    "id": 99,
-    "cat": "specialized",
-    "catLabel": "Specialized & Automation",
-    "title": "SMS Notification and Gateway System",
-    "icon": "fa-sms"
-  },
-  {
-    "id": 100,
-    "cat": "specialized",
-    "catLabel": "Specialized & Automation",
-    "title": "QR Code Generation and Verification System",
-    "icon": "fa-qrcode"
-  },
-  {
-    "id": 101,
-    "cat": "specialized",
-    "catLabel": "Specialized & Automation",
-    "title": "API Integration and Management System",
-    "icon": "fa-project-diagram"
-  },
-  {
-    "id": 102,
-    "cat": "specialized",
-    "catLabel": "Specialized & Automation",
-    "title": "Workflow Automation System",
-    "icon": "fa-cogs"
-  },
-  {
-    "id": 103,
-    "cat": "specialized",
-    "catLabel": "Specialized & Automation",
-    "title": "Real-Time Monitoring Dashboard",
-    "icon": "fa-tachometer-alt"
-  },
-  {
-    "id": 104,
-    "cat": "specialized",
-    "catLabel": "Specialized & Automation",
-    "title": "Data Analytics and Visualization System",
-    "icon": "fa-chart-area"
-  },
-  {
-    "id": 105,
-    "cat": "specialized",
-    "catLabel": "Specialized & Automation",
-    "title": "Multi-Tenant SaaS Platform",
-    "icon": "fa-cloud"
-  },
-  {
-    "id": 106,
-    "cat": "specialized",
-    "catLabel": "Specialized & Automation",
-    "title": "Document Approval Workflow System",
-    "icon": "fa-check-circle"
-  },
-  {
-    "id": 107,
-    "cat": "specialized",
-    "catLabel": "Specialized & Automation",
-    "title": "Cloud-Based Records Management System",
-    "icon": "fa-archive"
-  },
-  {
-    "id": 108,
-    "cat": "specialized",
-    "catLabel": "Specialized & Automation",
-    "title": "Custom Reporting and Data Export System",
-    "icon": "fa-file-export"
-  },
-  {
-    "id": 109,
-    "cat": "specialized",
-    "catLabel": "Specialized & Automation",
-    "title": "AI-Assisted Document Processing System",
-    "icon": "fa-robot"
-  },
-  {
-    "id": 110,
-    "cat": "specialized",
-    "catLabel": "Specialized & Automation",
-    "title": "IoT-Based Monitoring System",
-    "icon": "fa-microchip"
-  }
-],
+    {
+      "id": 1,
+      "cat": "business",
+      "catLabel": "Business Management",
+      "title": "Point of Sale (POS) System",
+      "icon": "fa-cash-register"
+    },
+    {
+      "id": 2,
+      "cat": "business",
+      "catLabel": "Business Management",
+      "title": "Inventory Management System",
+      "icon": "fa-boxes"
+    },
+    {
+      "id": 3,
+      "cat": "business",
+      "catLabel": "Business Management",
+      "title": "Sales and Billing Management System",
+      "icon": "fa-file-invoice-dollar"
+    },
+    {
+      "id": 4,
+      "cat": "business",
+      "catLabel": "Business Management",
+      "title": "Customer Relationship Management (CRM)",
+      "icon": "fa-users"
+    },
+    {
+      "id": 5,
+      "cat": "business",
+      "catLabel": "Business Management",
+      "title": "Customer Credit and Collection System",
+      "icon": "fa-credit-card"
+    },
+    {
+      "id": 6,
+      "cat": "business",
+      "catLabel": "Business Management",
+      "title": "Accounting and Expense Tracking System",
+      "icon": "fa-calculator"
+    },
+    {
+      "id": 7,
+      "cat": "business",
+      "catLabel": "Business Management",
+      "title": "Purchase Order Management System",
+      "icon": "fa-shopping-cart"
+    },
+    {
+      "id": 8,
+      "cat": "business",
+      "catLabel": "Business Management",
+      "title": "Supplier Management System",
+      "icon": "fa-truck"
+    },
+    {
+      "id": 9,
+      "cat": "business",
+      "catLabel": "Business Management",
+      "title": "Warehouse Management System",
+      "icon": "fa-warehouse"
+    },
+    {
+      "id": 10,
+      "cat": "business",
+      "catLabel": "Business Management",
+      "title": "Multi-Branch Management System",
+      "icon": "fa-network-wired"
+    },
+    {
+      "id": 11,
+      "cat": "business",
+      "catLabel": "Business Management",
+      "title": "Order Management System",
+      "icon": "fa-clipboard-list"
+    },
+    {
+      "id": 12,
+      "cat": "business",
+      "catLabel": "Business Management",
+      "title": "Service Booking and Appointment System",
+      "icon": "fa-calendar-check"
+    },
+    {
+      "id": 13,
+      "cat": "business",
+      "catLabel": "Business Management",
+      "title": "Business Analytics and Reporting Dashboard",
+      "icon": "fa-chart-line"
+    },
+    {
+      "id": 14,
+      "cat": "business",
+      "catLabel": "Business Management",
+      "title": "Subscription and Membership Management System",
+      "icon": "fa-id-card"
+    },
+    {
+      "id": 15,
+      "cat": "business",
+      "catLabel": "Business Management",
+      "title": "Enterprise Resource Planning (ERP) Modules",
+      "icon": "fa-sitemap"
+    },
+    {
+      "id": 16,
+      "cat": "academic",
+      "catLabel": "Educational & Academic",
+      "title": "Student Information System",
+      "icon": "fa-user-graduate"
+    },
+    {
+      "id": 17,
+      "cat": "academic",
+      "catLabel": "Educational & Academic",
+      "title": "Enrollment Management System",
+      "icon": "fa-user-plus"
+    },
+    {
+      "id": 18,
+      "cat": "academic",
+      "catLabel": "Educational & Academic",
+      "title": "Learning Management System (LMS)",
+      "icon": "fa-laptop-code"
+    },
+    {
+      "id": 19,
+      "cat": "academic",
+      "catLabel": "Educational & Academic",
+      "title": "Attendance Monitoring System",
+      "icon": "fa-user-check"
+    },
+    {
+      "id": 20,
+      "cat": "academic",
+      "catLabel": "Educational & Academic",
+      "title": "QR Code / NFC Attendance System",
+      "icon": "fa-qrcode"
+    },
+    {
+      "id": 21,
+      "cat": "academic",
+      "catLabel": "Educational & Academic",
+      "title": "Examination and Quiz Management System",
+      "icon": "fa-spell-check"
+    },
+    {
+      "id": 22,
+      "cat": "academic",
+      "catLabel": "Educational & Academic",
+      "title": "OMR Examination Checking System",
+      "icon": "fa-check-double"
+    },
+    {
+      "id": 23,
+      "cat": "academic",
+      "catLabel": "Educational & Academic",
+      "title": "Online Examination System",
+      "icon": "fa-desktop"
+    },
+    {
+      "id": 24,
+      "cat": "academic",
+      "catLabel": "Educational & Academic",
+      "title": "Grading Management System",
+      "icon": "fa-graduation-cap"
+    },
+    {
+      "id": 25,
+      "cat": "academic",
+      "catLabel": "Educational & Academic",
+      "title": "Class Scheduling System",
+      "icon": "fa-calendar-alt"
+    },
+    {
+      "id": 26,
+      "cat": "academic",
+      "catLabel": "Educational & Academic",
+      "title": "Room Allocation and Scheduling System",
+      "icon": "fa-door-open"
+    },
+    {
+      "id": 27,
+      "cat": "academic",
+      "catLabel": "Educational & Academic",
+      "title": "Faculty Evaluation System",
+      "icon": "fa-star-half-alt"
+    },
+    {
+      "id": 28,
+      "cat": "academic",
+      "catLabel": "Educational & Academic",
+      "title": "Library Management System",
+      "icon": "fa-book"
+    },
+    {
+      "id": 29,
+      "cat": "academic",
+      "catLabel": "Educational & Academic",
+      "title": "Research and Capstone Management System",
+      "icon": "fa-microscope"
+    },
+    {
+      "id": 30,
+      "cat": "academic",
+      "catLabel": "Educational & Academic",
+      "title": "Student Clearance Management System",
+      "icon": "fa-stamp"
+    },
+    {
+      "id": 31,
+      "cat": "academic",
+      "catLabel": "Educational & Academic",
+      "title": "Scholarship Management System",
+      "icon": "fa-award"
+    },
+    {
+      "id": 32,
+      "cat": "academic",
+      "catLabel": "Educational & Academic",
+      "title": "Student Portal",
+      "icon": "fa-id-badge"
+    },
+    {
+      "id": 33,
+      "cat": "academic",
+      "catLabel": "Educational & Academic",
+      "title": "Faculty Portal",
+      "icon": "fa-chalkboard-teacher"
+    },
+    {
+      "id": 34,
+      "cat": "academic",
+      "catLabel": "Educational & Academic",
+      "title": "Academic Performance Analytics System",
+      "icon": "fa-chart-pie"
+    },
+    {
+      "id": 35,
+      "cat": "academic",
+      "catLabel": "Educational & Academic",
+      "title": "School Document Tracking System",
+      "icon": "fa-file-alt"
+    },
+    {
+      "id": 36,
+      "cat": "government",
+      "catLabel": "Government & Barangay",
+      "title": "Barangay Information Management System",
+      "icon": "fa-landmark"
+    },
+    {
+      "id": 37,
+      "cat": "government",
+      "catLabel": "Government & Barangay",
+      "title": "Resident Profiling System",
+      "icon": "fa-address-card"
+    },
+    {
+      "id": 38,
+      "cat": "government",
+      "catLabel": "Government & Barangay",
+      "title": "Barangay Clearance and Certificate Issuance System",
+      "icon": "fa-certificate"
+    },
+    {
+      "id": 39,
+      "cat": "government",
+      "catLabel": "Government & Barangay",
+      "title": "Population Monitoring System",
+      "icon": "fa-users-cog"
+    },
+    {
+      "id": 40,
+      "cat": "government",
+      "catLabel": "Government & Barangay",
+      "title": "Document Tracking and Records Management System",
+      "icon": "fa-folder-open"
+    },
+    {
+      "id": 41,
+      "cat": "government",
+      "catLabel": "Government & Barangay",
+      "title": "Queue Management System",
+      "icon": "fa-list-ol"
+    },
+    {
+      "id": 42,
+      "cat": "government",
+      "catLabel": "Government & Barangay",
+      "title": "Complaint and Incident Reporting System",
+      "icon": "fa-bullhorn"
+    },
+    {
+      "id": 43,
+      "cat": "government",
+      "catLabel": "Government & Barangay",
+      "title": "Community Service Request System",
+      "icon": "fa-hands-helping"
+    },
+    {
+      "id": 44,
+      "cat": "government",
+      "catLabel": "Government & Barangay",
+      "title": "Barangay Appointment System",
+      "icon": "fa-calendar-plus"
+    },
+    {
+      "id": 45,
+      "cat": "government",
+      "catLabel": "Government & Barangay",
+      "title": "Public Assistance Monitoring System",
+      "icon": "fa-hand-holding-heart"
+    },
+    {
+      "id": 46,
+      "cat": "government",
+      "catLabel": "Government & Barangay",
+      "title": "Local Government Asset Management System",
+      "icon": "fa-coins"
+    },
+    {
+      "id": 47,
+      "cat": "government",
+      "catLabel": "Government & Barangay",
+      "title": "Community Project Monitoring System",
+      "icon": "fa-tasks"
+    },
+    {
+      "id": 48,
+      "cat": "government",
+      "catLabel": "Government & Barangay",
+      "title": "Permit Application and Tracking System",
+      "icon": "fa-file-signature"
+    },
+    {
+      "id": 49,
+      "cat": "healthcare",
+      "catLabel": "Healthcare & Medical",
+      "title": "Clinic Management System",
+      "icon": "fa-clinic-medical"
+    },
+    {
+      "id": 50,
+      "cat": "healthcare",
+      "catLabel": "Healthcare & Medical",
+      "title": "Patient Information Management System",
+      "icon": "fa-user-injured"
+    },
+    {
+      "id": 51,
+      "cat": "healthcare",
+      "catLabel": "Healthcare & Medical",
+      "title": "Electronic Medical Records (EMR)",
+      "icon": "fa-notes-medical"
+    },
+    {
+      "id": 52,
+      "cat": "healthcare",
+      "catLabel": "Healthcare & Medical",
+      "title": "Medical Appointment System",
+      "icon": "fa-calendar-alt"
+    },
+    {
+      "id": 53,
+      "cat": "healthcare",
+      "catLabel": "Healthcare & Medical",
+      "title": "Pharmacy Inventory Management System",
+      "icon": "fa-pills"
+    },
+    {
+      "id": 54,
+      "cat": "healthcare",
+      "catLabel": "Healthcare & Medical",
+      "title": "Laboratory Results Management System",
+      "icon": "fa-flask"
+    },
+    {
+      "id": 55,
+      "cat": "healthcare",
+      "catLabel": "Healthcare & Medical",
+      "title": "Vaccination Monitoring System",
+      "icon": "fa-syringe"
+    },
+    {
+      "id": 56,
+      "cat": "healthcare",
+      "catLabel": "Healthcare & Medical",
+      "title": "Dental Clinic Management System",
+      "icon": "fa-tooth"
+    },
+    {
+      "id": 57,
+      "cat": "healthcare",
+      "catLabel": "Healthcare & Medical",
+      "title": "Medical Billing System",
+      "icon": "fa-file-invoice"
+    },
+    {
+      "id": 58,
+      "cat": "healthcare",
+      "catLabel": "Healthcare & Medical",
+      "title": "Patient Queue Management System",
+      "icon": "fa-users"
+    },
+    {
+      "id": 59,
+      "cat": "healthcare",
+      "catLabel": "Healthcare & Medical",
+      "title": "Health Center Monitoring System",
+      "icon": "fa-heartbeat"
+    },
+    {
+      "id": 60,
+      "cat": "hr",
+      "catLabel": "HR & Administrative",
+      "title": "Human Resource Information System (HRIS)",
+      "icon": "fa-user-tie"
+    },
+    {
+      "id": 61,
+      "cat": "hr",
+      "catLabel": "HR & Administrative",
+      "title": "Employee Attendance System",
+      "icon": "fa-business-time"
+    },
+    {
+      "id": 62,
+      "cat": "hr",
+      "catLabel": "HR & Administrative",
+      "title": "Leave Management System",
+      "icon": "fa-calendar-minus"
+    },
+    {
+      "id": 63,
+      "cat": "hr",
+      "catLabel": "HR & Administrative",
+      "title": "Payroll Management System",
+      "icon": "fa-money-check-alt"
+    },
+    {
+      "id": 64,
+      "cat": "hr",
+      "catLabel": "HR & Administrative",
+      "title": "Employee Performance Evaluation System",
+      "icon": "fa-chart-bar"
+    },
+    {
+      "id": 65,
+      "cat": "hr",
+      "catLabel": "HR & Administrative",
+      "title": "Recruitment and Applicant Tracking System",
+      "icon": "fa-user-plus"
+    },
+    {
+      "id": 66,
+      "cat": "hr",
+      "catLabel": "HR & Administrative",
+      "title": "Employee Records Management System",
+      "icon": "fa-id-card-alt"
+    },
+    {
+      "id": 67,
+      "cat": "hr",
+      "catLabel": "HR & Administrative",
+      "title": "Training Management System",
+      "icon": "fa-chalkboard"
+    },
+    {
+      "id": 68,
+      "cat": "hr",
+      "catLabel": "HR & Administrative",
+      "title": "Employee Scheduling System",
+      "icon": "fa-clock"
+    },
+    {
+      "id": 69,
+      "cat": "hr",
+      "catLabel": "HR & Administrative",
+      "title": "Disciplinary Case Tracking System",
+      "icon": "fa-gavel"
+    },
+    {
+      "id": 70,
+      "cat": "hr",
+      "catLabel": "HR & Administrative",
+      "title": "Asset and Equipment Management System",
+      "icon": "fa-tools"
+    },
+    {
+      "id": 71,
+      "cat": "retail",
+      "catLabel": "Retail & Hospitality",
+      "title": "Restaurant POS System",
+      "icon": "fa-utensils"
+    },
+    {
+      "id": 72,
+      "cat": "retail",
+      "catLabel": "Retail & Hospitality",
+      "title": "Restaurant Ordering System",
+      "icon": "fa-concierge-bell"
+    },
+    {
+      "id": 73,
+      "cat": "retail",
+      "catLabel": "Retail & Hospitality",
+      "title": "Table Reservation System",
+      "icon": "fa-chair"
+    },
+    {
+      "id": 74,
+      "cat": "retail",
+      "catLabel": "Retail & Hospitality",
+      "title": "Hotel Reservation Management System",
+      "icon": "fa-hotel"
+    },
+    {
+      "id": 75,
+      "cat": "retail",
+      "catLabel": "Retail & Hospitality",
+      "title": "Room Booking System",
+      "icon": "fa-bed"
+    },
+    {
+      "id": 76,
+      "cat": "retail",
+      "catLabel": "Retail & Hospitality",
+      "title": "Resort Management System",
+      "icon": "fa-umbrella-beach"
+    },
+    {
+      "id": 77,
+      "cat": "retail",
+      "catLabel": "Retail & Hospitality",
+      "title": "Laundry Shop Management System",
+      "icon": "fa-tshirt"
+    },
+    {
+      "id": 78,
+      "cat": "retail",
+      "catLabel": "Retail & Hospitality",
+      "title": "Water Refilling Station Management System",
+      "icon": "fa-tint"
+    },
+    {
+      "id": 79,
+      "cat": "retail",
+      "catLabel": "Retail & Hospitality",
+      "title": "Auto Repair Shop Management System",
+      "icon": "fa-wrench"
+    },
+    {
+      "id": 80,
+      "cat": "retail",
+      "catLabel": "Retail & Hospitality",
+      "title": "Salon and Spa Booking System",
+      "icon": "fa-spa"
+    },
+    {
+      "id": 81,
+      "cat": "retail",
+      "catLabel": "Retail & Hospitality",
+      "title": "Rental Management System",
+      "icon": "fa-key"
+    },
+    {
+      "id": 82,
+      "cat": "retail",
+      "catLabel": "Retail & Hospitality",
+      "title": "Property Management System",
+      "icon": "fa-building"
+    },
+    {
+      "id": 83,
+      "cat": "retail",
+      "catLabel": "Retail & Hospitality",
+      "title": "E-Commerce Platform",
+      "icon": "fa-shopping-bag"
+    },
+    {
+      "id": 84,
+      "cat": "retail",
+      "catLabel": "Retail & Hospitality",
+      "title": "Online Ordering and Delivery Management System",
+      "icon": "fa-motorcycle"
+    },
+    {
+      "id": 85,
+      "cat": "retail",
+      "catLabel": "Retail & Hospitality",
+      "title": "Customer Loyalty and Rewards System",
+      "icon": "fa-gift"
+    },
+    {
+      "id": 86,
+      "cat": "mobile",
+      "catLabel": "Mobile Applications",
+      "title": "Android Business Application",
+      "icon": "fa-mobile-alt"
+    },
+    {
+      "id": 87,
+      "cat": "mobile",
+      "catLabel": "Mobile Applications",
+      "title": "iOS Business Application",
+      "icon": "fa-mobile"
+    },
+    {
+      "id": 88,
+      "cat": "mobile",
+      "catLabel": "Mobile Applications",
+      "title": "Mobile Attendance Application",
+      "icon": "fa-user-check"
+    },
+    {
+      "id": 89,
+      "cat": "mobile",
+      "catLabel": "Mobile Applications",
+      "title": "QR Code Scanner Application",
+      "icon": "fa-qrcode"
+    },
+    {
+      "id": 90,
+      "cat": "mobile",
+      "catLabel": "Mobile Applications",
+      "title": "NFC-Based Monitoring Application",
+      "icon": "fa-wifi"
+    },
+    {
+      "id": 91,
+      "cat": "mobile",
+      "catLabel": "Mobile Applications",
+      "title": "Mobile Inventory Application",
+      "icon": "fa-boxes"
+    },
+    {
+      "id": 92,
+      "cat": "mobile",
+      "catLabel": "Mobile Applications",
+      "title": "Mobile POS Application",
+      "icon": "fa-cash-register"
+    },
+    {
+      "id": 93,
+      "cat": "mobile",
+      "catLabel": "Mobile Applications",
+      "title": "Student and Parent Portal Application",
+      "icon": "fa-school"
+    },
+    {
+      "id": 94,
+      "cat": "mobile",
+      "catLabel": "Mobile Applications",
+      "title": "Mobile Examination Scanner",
+      "icon": "fa-camera"
+    },
+    {
+      "id": 95,
+      "cat": "mobile",
+      "catLabel": "Mobile Applications",
+      "title": "Field Data Collection Application",
+      "icon": "fa-map-marked-alt"
+    },
+    {
+      "id": 96,
+      "cat": "mobile",
+      "catLabel": "Mobile Applications",
+      "title": "Offline-First Mobile Application",
+      "icon": "fa-database"
+    },
+    {
+      "id": 97,
+      "cat": "mobile",
+      "catLabel": "Mobile Applications",
+      "title": "Push Notification Application",
+      "icon": "fa-bell"
+    },
+    {
+      "id": 98,
+      "cat": "mobile",
+      "catLabel": "Mobile Applications",
+      "title": "Mobile Booking Application",
+      "icon": "fa-calendar-check"
+    },
+    {
+      "id": 99,
+      "cat": "specialized",
+      "catLabel": "Specialized & Automation",
+      "title": "SMS Notification and Gateway System",
+      "icon": "fa-sms"
+    },
+    {
+      "id": 100,
+      "cat": "specialized",
+      "catLabel": "Specialized & Automation",
+      "title": "QR Code Generation and Verification System",
+      "icon": "fa-qrcode"
+    },
+    {
+      "id": 101,
+      "cat": "specialized",
+      "catLabel": "Specialized & Automation",
+      "title": "API Integration and Management System",
+      "icon": "fa-project-diagram"
+    },
+    {
+      "id": 102,
+      "cat": "specialized",
+      "catLabel": "Specialized & Automation",
+      "title": "Workflow Automation System",
+      "icon": "fa-cogs"
+    },
+    {
+      "id": 103,
+      "cat": "specialized",
+      "catLabel": "Specialized & Automation",
+      "title": "Real-Time Monitoring Dashboard",
+      "icon": "fa-tachometer-alt"
+    },
+    {
+      "id": 104,
+      "cat": "specialized",
+      "catLabel": "Specialized & Automation",
+      "title": "Data Analytics and Visualization System",
+      "icon": "fa-chart-area"
+    },
+    {
+      "id": 105,
+      "cat": "specialized",
+      "catLabel": "Specialized & Automation",
+      "title": "Multi-Tenant SaaS Platform",
+      "icon": "fa-cloud"
+    },
+    {
+      "id": 106,
+      "cat": "specialized",
+      "catLabel": "Specialized & Automation",
+      "title": "Document Approval Workflow System",
+      "icon": "fa-check-circle"
+    },
+    {
+      "id": 107,
+      "cat": "specialized",
+      "catLabel": "Specialized & Automation",
+      "title": "Cloud-Based Records Management System",
+      "icon": "fa-archive"
+    },
+    {
+      "id": 108,
+      "cat": "specialized",
+      "catLabel": "Specialized & Automation",
+      "title": "Custom Reporting and Data Export System",
+      "icon": "fa-file-export"
+    },
+    {
+      "id": 109,
+      "cat": "specialized",
+      "catLabel": "Specialized & Automation",
+      "title": "AI-Assisted Document Processing System",
+      "icon": "fa-robot"
+    },
+    {
+      "id": 110,
+      "cat": "specialized",
+      "catLabel": "Specialized & Automation",
+      "title": "IoT-Based Monitoring System",
+      "icon": "fa-microchip"
+    }
+  ],
 
   projects: [
     {
@@ -1281,51 +1281,145 @@ const PORTFOLIO_DATA = {
   publications: {
     heading: "Research, Publications & Academic Contributions",
     notice: "Peer-reviewed journal publications, Scopus-indexed research, and academic conference contributions demonstrating technical rigor, empirical system design, and software evaluation.",
+    totalCount: 8,
+    primaryAuthorCount: 1,
+    coAuthorCount: 7,
     entries: [
       {
-        id: "jestec-scvax-2023",
-        title: "SCVAX: A solution to nationwide vaccination management information system",
-        authors: "R. A. Reyna, A. C. C. Reyna, D. C. Mangca, J. M. Gallera, P. R. Ruaya Jr., G. B. Galila, R. A. C. Cabañero, A. L. Piloton Jr., A. S. Salvador, and G. Z. Gamboa Jr.",
-        journal: "Journal of Engineering Science and Technology (JESTEC)",
-        volume: "Vol. 18 (Special Issue on ICITE 2023)",
-        pages: "pp. 108–123",
-        year: "2023",
-        indexing: "Scopus-Indexed Journal",
-        indexingBadge: "Scopus-Indexed",
-        type: "Peer-Reviewed Journal Article",
-        abstract: "Introduces SCVax, an application platform engineered to optimize and streamline nationwide vaccination programs. Highlights functionalities including automated mapping, data visualization, robust data handling, and QR code integration to ensure data reliability and confidentiality.",
-        link: "https://jestec.taylors.edu.my/Special%20Issue%20ICITE%202023/ICITE_2023_10.pdf",
-        researchGateUrl: "https://www.researchgate.net/publication/376840656_SCVAX_A_solution_to_nationwide_vaccination_management_information_system"
-      },
-      {
-        id: "ijfmr-doctrack-2023",
+        id: "records-tracking-qr-2023",
         title: "Development of Records Tracking Management System with QR Code",
         authors: "Antonio Jr. L. Piloton, Gregorio Z. Gamboa Jr., Monalee A. Dela Cerna, and Ritchie A. Reyna",
+        role: "Main Author",
+        isPrimaryAuthor: true,
         journal: "International Journal for Multidisciplinary Research (IJFMR)",
         volume: "Vol. 5, Issue 5",
         pages: "Paper ID 6262",
         year: "2023",
         indexing: "Peer-Reviewed International Journal",
-        indexingBadge: "Peer-Reviewed (Mean: 4.44/5.00)",
+        indexingBadge: "Main Author · ISO 25010 (4.44/5.00)",
         type: "Primary Author Research Article",
-        abstract: "Details the design, implementation, and empirical evaluation of an automated document transmittal management system utilizing QR codes and the Rapid Application Development (RAD) model. Evaluated against ISO/IEC software quality dimensions, achieving a 4.44/5.00 high-satisfaction weighted mean.",
+        abstract: "Architectural design, implementation, and empirical evaluation of an automated document transmittal management system using QR codes and Rapid Application Development (RAD). Evaluated against ISO/IEC software quality dimensions, achieving a 4.44 / 5.00 high-satisfaction weighted mean.",
         link: "https://www.ijfmr.com/papers/2023/5/6262.pdf",
-        researchGateUrl: "https://www.researchgate.net/publication/374828135_Development_of_Records_Tracking_Management_System_with_QR_Code"
+        researchGateUrl: "https://www.researchgate.net/publication/373248024_Development_of_Records_Tracking_Management_System_with_QR_Code"
+      },
+      {
+        id: "jestec-scvax-2023",
+        title: "SCVAX: A SOLUTION TO NATIONWIDE VACCINATION MANAGEMENT INFORMATION SYSTEM",
+        authors: "Ritchie A. Reyna, Alma Christie C. Reyna, Darwin C. Mangca, Jovie M. Gallera, Perfecto R. Ruaya Jr., Ghandi B. Galila, Ralph Aran C. Cabañero, Antonio L. Piloton Jr., A. S. Salvador, and Gregorio Z. Gamboa Jr.",
+        role: "Co-Author",
+        isPrimaryAuthor: false,
+        journal: "Journal of Engineering Science and Technology (JESTEC)",
+        volume: "Vol. 18 (Special Issue on ICITE 2023)",
+        pages: "pp. 108–123",
+        year: "2023",
+        indexing: "Scopus-Indexed Journal",
+        indexingBadge: "Co-Author · Scopus-Indexed",
+        type: "Peer-Reviewed Journal Article",
+        abstract: "Engineered SCVax, an application platform to optimize nationwide vaccination programs. Highlights automated mapping, real-time data visualization, secure cloud data handling, and QR code integration for data reliability and confidentiality.",
+        link: "https://jestec.taylors.edu.my/Special%20Issue%20ICITE%202023/ICITE_2023_10.pdf",
+        researchGateUrl: "https://www.researchgate.net/publication/377702273_SCVAX_A_SOLUTION_TO_NATIONWIDE_VACCINATION_MANAGEMENT_INFORMATION_SYSTEM"
+      },
+      {
+        id: "facial-landmark-yolo-2026",
+        title: "Facial Landmark Detection using YOLOn-Pose for Real-Time Inference",
+        authors: "Collaborative Research Group with Antonio Jr. L. Piloton",
+        role: "Co-Author",
+        isPrimaryAuthor: false,
+        journal: "Computer Vision & Edge Machine Learning Research Series",
+        volume: "Applied AI & Inference Track",
+        pages: "",
+        year: "2026",
+        indexing: "Edge AI / Real-Time Vision",
+        indexingBadge: "Co-Author · Computer Vision",
+        type: "Conference Paper / Research Monograph",
+        abstract: "End-to-end single-stage facial keypoint detection utilizing lightweight YOLO-nano pose estimation (YOLOn-Pose). Evaluates sub-millisecond edge latency, multi-head angle resilience, and high-FPS inference for real-time biometric and interactive camera systems.",
+        link: "https://www.researchgate.net/publication/417890012_Facial_Landmark_Detection_using_YOLOn-Pose_for_Real-Time_Inference",
+        researchGateUrl: "https://www.researchgate.net/publication/417890012_Facial_Landmark_Detection_using_YOLOn-Pose_for_Real-Time_Inference"
       },
       {
         id: "arima-forecasting-2026",
-        title: "Evolution of ARIMA and Hybrid ARIMA Models in Time Series Forecasting: A Bibliometric and Network Analysis (2010–2025)",
-        authors: "Perfecto Ravina Ruaya Jr., Jessa G. Hambre, Antonio Jr. L. Piloton, and Malakit Ram",
-        journal: "Academic Conference Proceedings",
-        volume: "Forecasting & Computational Methods Track",
+        title: "Evolution of ARIMA and Hybrid ARIMA Models in Time Series Forecasting: A Bibliometric and Network Analysis (2010-2025)",
+        authors: "Perfecto Ravina Ruaya Jr., Jessa G. Hambre, Antonio Jr. L. Piloton, Ralph Aran C. Cabañero, and Malakit L. Ram",
+        role: "Co-Author",
+        isPrimaryAuthor: false,
+        journal: "2026 Intelligent Methods, Systems, and Applications (IMSA)",
+        volume: "Academic Conference Proceedings",
+        pages: "pp. 101–107",
+        year: "2026",
+        indexing: "Conference Proceedings / Bibliometric Analysis",
+        indexingBadge: "Co-Author · Methodological Research",
+        type: "Conference Paper",
+        abstract: "Comprehensive bibliometric and network analysis mapping the 15-year evolution, algorithmic coupling, and methodological advancements of hybrid ARIMA architectures across predictive computational systems.",
+        link: "https://www.researchgate.net/publication/414918107_Evolution_of_ARIMA_and_Hybrid_ARIMA_Models_in_Time_Series_Forecasting_A_Bibliometric_and_Network_Analysis_2010-2025",
+        researchGateUrl: "https://www.researchgate.net/publication/414918107_Evolution_of_ARIMA_and_Hybrid_ARIMA_Models_in_Time_Series_Forecasting_A_Bibliometric_and_Network_Analysis_2010-2025"
+      },
+      {
+        id: "oil-consumption-forecasting-2026",
+        title: "Forecasting Global and Philippine Oil Consumption Using ARIMA, Facebook Prophet, Exponential Smoothing, and Ensemble Modeling",
+        authors: "Jovie M. Gallera, Jessa G. Hambre, Antonio Jr. Luib Piloton, and Rhoderick D. Malangsa",
+        role: "Co-Author",
+        isPrimaryAuthor: false,
+        journal: "2026 Intelligent Methods, Systems, and Applications (IMSA)",
+        volume: "Time-Series & Econometric Forecasting Track",
         pages: "",
         year: "2026",
-        indexing: "Bibliometric & Network Analysis",
-        indexingBadge: "Methodological Research",
+        indexing: "Conference Proceedings / Predictive Modeling",
+        indexingBadge: "Co-Author · Predictive Modeling",
         type: "Conference Paper",
-        abstract: "Comprehensive bibliometric and network analysis surveying the evolution, algorithmic coupling, and methodological advancements of hybrid ARIMA architectures in predictive computational systems across a 15-year publication span.",
-        link: "https://www.researchgate.net/publication/399432881_Evolution_of_ARIMA_and_Hybrid_ARIMA_Models_in_Time_Series_Forecasting_A_Bibliometric_and_Network_Analysis_2010-2025",
-        researchGateUrl: "https://www.researchgate.net/publication/399432881_Evolution_of_ARIMA_and_Hybrid_ARIMA_Models_in_Time_Series_Forecasting_A_Bibliometric_and_Network_Analysis_2010-2025"
+        abstract: "Multi-model comparative time-series forecasting across Philippine and global petroleum consumption patterns, benchmarking Facebook Prophet, Holt-Winters exponential smoothing, ARIMA, and ensemble architectures.",
+        link: "https://www.researchgate.net/publication/414919553_Forecasting_Global_and_Philippine_Oil_Consumption_Using_ARIMA_Facebook_Prophet_Exponential_Smoothing_and_Ensemble_Modeling",
+        researchGateUrl: "https://www.researchgate.net/publication/414919553_Forecasting_Global_and_Philippine_Oil_Consumption_Using_ARIMA_Facebook_Prophet_Exponential_Smoothing_and_Ensemble_Modeling"
+      },
+      {
+        id: "flood-forecasting-2026",
+        title: "Probability-Based Ensemble Time-Series Forecasting of Urban Flood Occurrence in Metro Manila",
+        authors: "Darwin C. Mangca, Jessa G. Hambre, Ghandi B. Galila, Antonio L. Piloton, Malakit L. Ram, and Rhoderick D. Malangsa",
+        role: "Co-Author",
+        isPrimaryAuthor: false,
+        journal: "2026 IEEE 18th International Conference on Computational Intelligence and Communication Networks (CICN)",
+        volume: "IEEE Conference Proceedings",
+        pages: "",
+        year: "2026",
+        indexing: "IEEE Conference Proceedings",
+        indexingBadge: "Co-Author · IEEE Conference",
+        type: "Conference Paper",
+        abstract: "Probability-weighted ensemble models combining hydrometeorological time-series feeds to forecast severe urban flood vulnerability and alert lead times across Metro Manila river basins.",
+        link: "https://www.researchgate.net/publication/408865127_Probability-Based_Ensemble_Time-Series_Forecasting_of_Urban_Flood_Occurrence_in_Metro_Manila",
+        researchGateUrl: "https://www.researchgate.net/publication/408865127_Probability-Based_Ensemble_Time-Series_Forecasting_of_Urban_Flood_Occurrence_in_Metro_Manila"
+      },
+      {
+        id: "co2-forecasting-2026",
+        title: "Hybrid Time-Series Forecasting of CO 2 Emissions: The Philippines and Global Context",
+        authors: "Alma Christie C. Reyna, Jessa G. Hambre, Ralph Aran C. Cabañero, Antonio Jr. Luib Piloton, and Rhoderick D. Malangsa",
+        role: "Co-Author",
+        isPrimaryAuthor: false,
+        journal: "2026 Intelligent Methods, Systems, and Applications (IMSA)",
+        volume: "Environmental Data Science Track",
+        pages: "",
+        year: "2026",
+        indexing: "Conference Proceedings / Environmental Analytics",
+        indexingBadge: "Co-Author · Environmental AI",
+        type: "Conference Paper",
+        abstract: "Hybrid forecasting architectures combining statistical decomposition with neural time-series estimators to model regional and national carbon dioxide emission trajectories for climate resilience planning.",
+        link: "https://www.researchgate.net/publication/414922938_Hybrid_Time-Series_Forecasting_of_CO_2_Emissions_The_Philippines_and_Global_Context",
+        researchGateUrl: "https://www.researchgate.net/publication/414922938_Hybrid_Time-Series_Forecasting_of_CO_2_Emissions_The_Philippines_and_Global_Context"
+      },
+      {
+        id: "hiv-genomics-2026",
+        title: "Alignment-Free Classification of HIV-1 and HIV-2 Genomic Fragments Using k-Mer Based Machine Learning Framework",
+        authors: "Ralph Aran C. Cabañero, Jessa G. Hambre, Ghandi B. Galila, Antonio L. Piloton, Malakit L. Ram, and Rhoderick D. Malangsa",
+        role: "Co-Author",
+        isPrimaryAuthor: false,
+        journal: "IEEE Conference on Computational Intelligence & Bioinformatics",
+        volume: "Computational Biology Track",
+        pages: "",
+        year: "2026",
+        indexing: "IEEE Conference / Bioinformatics",
+        indexingBadge: "Co-Author · IEEE / Machine Learning",
+        type: "Conference Paper",
+        abstract: "An alignment-free sequence classification framework utilizing k-mer frequency distributions and machine learning classifiers to rapidly discriminate between HIV-1 and HIV-2 viral genomic fragments.",
+        link: "https://www.researchgate.net/publication/408867195_Alignment-Free_Classification_of_HIV-1_and_HIV-2_Genomic_Fragments_Using_k-Mer_Based_Machine_Learning_Framework",
+        researchGateUrl: "https://www.researchgate.net/publication/408867195_Alignment-Free_Classification_of_HIV-1_and_HIV-2_Genomic_Fragments_Using_k-Mer_Based_Machine_Learning_Framework"
       }
     ]
   },

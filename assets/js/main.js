@@ -512,34 +512,73 @@ function hydrateFromPortfolioData() {
     `).join('');
   }
 
-  // 4. Hydrate Publications (research.html)
+  // 4. Publication Filter & Hydration (research.html)
   const pubContainer = document.getElementById("publications-container");
-  if (pubContainer && PORTFOLIO_DATA.publications && Array.isArray(PORTFOLIO_DATA.publications.entries)) {
-    pubContainer.innerHTML = PORTFOLIO_DATA.publications.entries.map(pub => `
-      <article class="publication-card">
-        <div class="pub-indexing-pill">
-          <i class="fas fa-award"></i> ${pub.indexingBadge || pub.indexing || 'Peer-Reviewed'}
-        </div>
-        <h2 class="pub-title">${pub.title}</h2>
-        <div class="pub-venue">${pub.journal} • ${pub.volume || ''} (${pub.year})</div>
-        <p class="pub-meta">
-          <strong>Authors:</strong> ${pub.authors}<br />
-          <strong>Abstract Summary:</strong> ${pub.abstract}
-        </p>
-        <div class="pub-actions">
-          ${pub.link ? `
-            <a href="${pub.link}" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
-              <i class="fas fa-file-pdf"></i> Direct PDF
-            </a>
-          ` : ''}
-          ${pub.researchGateUrl ? `
-            <a href="${pub.researchGateUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm">
-              <i class="fab fa-researchgate"></i> ResearchGate
-            </a>
-          ` : ''}
-        </div>
-      </article>
-    `).join('');
+  const pubFilterBtns = document.querySelectorAll(".pub-filter-btn");
+
+  // If container is empty or needs dynamic hydration from PORTFOLIO_DATA
+  if (pubContainer && pubContainer.children.length === 0 && PORTFOLIO_DATA.publications && Array.isArray(PORTFOLIO_DATA.publications.entries)) {
+    pubContainer.innerHTML = PORTFOLIO_DATA.publications.entries.map(pub => {
+      const isMain = !!pub.isPrimaryAuthor;
+      const formattedAuthors = pub.authors.replace(
+        /(Antonio Jr\. L\. Piloton|Antonio Jr\. Luib Piloton|Antonio L\. Piloton Jr\.|Antonio L\. Piloton)/g,
+        '<strong>$1</strong>'
+      );
+      return `
+        <article class="pub-card ${isMain ? 'pub-card--main-author' : ''}" data-author="${isMain ? 'main' : 'coauthor'}">
+          <div class="pub-card-header">
+            <div class="pub-badges">
+              ${isMain 
+                ? '<span class="pub-badge pub-badge--main"><i class="fas fa-crown"></i> Main Author</span>' 
+                : '<span class="pub-badge pub-badge--co"><i class="fas fa-users"></i> Co-Author</span>'}
+              <span class="pub-badge pub-badge--indexing">${pub.indexingBadge || pub.indexing || 'Peer-Reviewed'}</span>
+            </div>
+            <span class="pub-year">${pub.year || ''}</span>
+          </div>
+          <h2 class="pub-title">${pub.title}</h2>
+          <p class="pub-authors">${formattedAuthors}</p>
+          <div class="pub-meta">
+            <em>${pub.journal}</em>${pub.volume ? `, ${pub.volume}` : ''}${pub.pages ? `, ${pub.pages}` : ''}
+          </div>
+          <div class="pub-abstract">
+            <strong>Abstract:</strong> ${pub.abstract}
+          </div>
+          <div class="pub-actions">
+            ${pub.link && pub.link.endsWith('.pdf') ? `
+              <a href="${pub.link}" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--xs">
+                <i class="fas fa-file-pdf"></i> View PDF
+              </a>
+            ` : ''}
+            ${pub.researchGateUrl ? `
+              <a href="${pub.researchGateUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--xs">
+                <i class="fab fa-researchgate"></i> ResearchGate Entry
+              </a>
+            ` : ''}
+          </div>
+        </article>
+      `;
+    }).join('');
+  }
+
+  // Interactive Filter Tabs
+  if (pubFilterBtns.length > 0 && pubContainer) {
+    const cards = pubContainer.querySelectorAll(".pub-card");
+    pubFilterBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        pubFilterBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        const filter = btn.getAttribute("data-filter");
+
+        cards.forEach(card => {
+          const authorType = card.getAttribute("data-author");
+          if (filter === "all" || authorType === filter) {
+            card.style.display = "";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      });
+    });
   }
 
   // 5. Hydrate Academic Timeline (about.html)
