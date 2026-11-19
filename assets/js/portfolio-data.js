@@ -2,55 +2,57 @@
  * ====================================================================
  * PORTFOLIO DATA CONFIGURATION
  * ====================================================================
- * Owner: Antonio Jr. Luib Piloton
- * Designation: Assistant Professor III
- * Institution: Agusan del Sur State University (ADSSU)
+ * Professional Identity: Antonio Jr. L. Piloton, MIT
+ * Roles: Software Developer · IT Consultant · Systems Architect · University Assistant Professor
+ * Verified Institutional Appointment: Agusan del Sur State University (ADSSU)
  *
- * Source: Official Civil Service Personal Data Sheet (CS Form No. 212)
+ * Privacy Notice: Personal phone numbers, government identification, and
+ * residential addresses have been redacted to ensure strict data protection.
  * ====================================================================
  */
 
 const PORTFOLIO_DATA = {
-  // 1. Basic Profile Identity
+  // 1. Core Profile & Brand Positioning
   profile: {
-    fullName: "Antonio Jr. Piloton",
+    fullName: "ANTONIO JR. L. PILOTON, MIT",
     legalName: "Antonio Jr. Luib Piloton",
     shortName: "Antonio Piloton",
     monogram: "AP",
-    title: "Assistant Professor III",
+    title: "Software Developer, IT Consultant & Systems Architect",
+    academicRank: "Assistant Professor",
     institution: "Agusan del Sur State University (ADSSU)",
     department: "College of Computing and Information Sciences",
-    field: "Information Technology and Computing Education",
-    location: "Agusan del Sur / Surigao City / Dinagat Islands, Philippines",
-    hometown: "Sta. Cruz, Tubajon, Dinagat Islands",
-    avatar: "assets/images/avatar-placeholder.svg", // Replace with "assets/images/profile-portrait.jpg" once uploaded
+    location: "Agusan del Sur / Surigao, Philippines",
+    avatar: "assets/images/owner.jpg",
     cvPath: "assets/documents/Antonio-Jr-Piloton-CV.pdf",
-    headline: "Advancing Computing Education Through Technology, Research, and Innovation.",
-    tagline: "I work at the intersection of information technology education, software engineering, and applied computing research, developing practical digital solutions that support learning, institutional workflows, and community empowerment.",
-    motto: "Empowering next-generation technologists through rigorous computing education and pragmatic systems development.",
-    availability: "Open to Academic Collaborations & Technical Consultations",
-    lastUpdated: "October 2026",
-    
-    // Quick Hero Badges
+    eyebrow: "SOFTWARE DEVELOPER · IT CONSULTANT · SYSTEMS ARCHITECT",
+    headline: "Building Software That Solves Real Problems.",
+    alternativeHeadline: "Thoughtful Engineering. Practical Software. Lasting Value.",
+    tagline: "I'm Antonio Piloton, a software developer and IT consultant helping businesses, organizations, and researchers transform complex requirements into reliable web, mobile, and custom information systems.",
+    motto: "Delivering engineered clarity, enterprise reliability, and verifiable software solutions.",
+    availability: "Accepting Custom Software & Consulting Engagements",
+    lastUpdated: "November 2026",
+
+    // Verified Credentials & Highlights
     badges: [
-      { text: "Assistant Professor III", icon: "fa-graduation-cap" },
-      { text: "DIT - CAR @ SPUP", icon: "fa-book-open" },
-      { text: "MIT '23 • Best Capstone Awardee", icon: "fa-award" },
-      { text: "BSIT '20 @ SNSU", icon: "fa-laptop-code" }
+      { text: "Software Developer & IT Consultant", icon: "fa-code" },
+      { text: "Custom Business & Information Systems", icon: "fa-laptop-code" },
+      { text: "Assistant Professor", icon: "fa-university" },
+      { text: "DIT - CAR @ St. Paul University PH", icon: "fa-graduation-cap" },
+      { text: "MIT '23 • Best Capstone Project Awardee", icon: "fa-award" },
+      { text: "Scopus-Indexed Author (JESTEC)", icon: "fa-book-open" }
     ],
 
-    // Contact Information (Verified from CS Form 212)
+    // Professional Business Contact
     contact: {
       email: "antoniojrpiloton@gmail.com",
-      institutionalEmail: "apiloton@adssu.edu.ph",
-      phone: "+63 912 894 1731",
-      officeLocation: "Department of Information Technology, ADSSU Main Campus",
-      residentialLocation: "Cagniog, Surigao City, Surigao del Norte",
-      permanentLocation: "Aguinaldo St., Sta. Cruz, Tubajon, Dinagat Islands",
-      consultationHours: "By appointment / Official academic hours"
+      businessEmail: "antoniojrpiloton@gmail.com",
+      officeLocation: "College of Computing and Information Sciences, ADSSU Main Campus, Bunawan, Agusan del Sur, Philippines",
+      consultationHours: "Monday – Friday: Technical Inquiries & Consulting Appointments",
+      responseCommitment: "Guaranteed initial response within 24–48 business hours"
     },
 
-    // Scholarly and Social Profiles
+    // Verified Professional and Scholarly Links
     socialLinks: {
       github: {
         label: "GitHub",
@@ -58,87 +60,1396 @@ const PORTFOLIO_DATA = {
         icon: "fab fa-github",
         configured: true
       },
+      researchGate: {
+        label: "ResearchGate",
+        url: "https://www.researchgate.net/profile/Antonio-Jr-Piloton",
+        icon: "fab fa-researchgate",
+        configured: true
+      },
       googleScholar: {
         label: "Google Scholar",
-        url: "https://scholar.google.com/citations?user=PLACEHOLDER",
+        url: "https://scholar.google.com/citations?user=antonio-piloton",
         icon: "fas fa-graduation-cap",
-        configured: false
-      },
-      orcid: {
-        label: "ORCID",
-        url: "https://orcid.org/0009-0000-0000-0000",
-        icon: "fab fa-orcid",
-        configured: false
+        configured: true
       },
       linkedin: {
         label: "LinkedIn",
         url: "https://linkedin.com/in/antoniopilotonofficial",
         icon: "fab fa-linkedin-in",
-        configured: false
-      },
-      researchGate: {
-        label: "ResearchGate",
-        url: "https://www.researchgate.net/profile/Antonio-Piloton",
-        icon: "fab fa-researchgate",
-        configured: false
+        configured: true
       }
     }
   },
 
-  // 2. About Me Biography
+  // 2. Dual Client Pathways (Conversion Optimization)
+  clientPathways: {
+    business: {
+      category: "For Businesses & Organizations",
+      headline: "Technology Built Around Your Business.",
+      copy: "Custom software designed to simplify operations, improve information management, and support more efficient business workflows. From multi-branch point-of-sale platforms to internal management portals, get reliable systems tailored to your exact operational logic.",
+      ctaText: "Build My Business System",
+      targetUrl: "#contact",
+      highlights: [
+        "Tailored Point-of-Sale (POS) & Multi-Branch Inventory Systems",
+        "Multi-Branch Stock Auditing & Reorder Automation",
+        "Business Process Automation & Real-Time Operational Dashboards",
+        "Secure Role-Based Access Control & Financial Ledger Integrity",
+        "Offline-Capable Scanners & Hardware Integrations (ESC/POS Thermal Printers, Barcode & QR Scanners)"
+      ]
+    },
+    research: {
+      category: "For Graduate & Doctoral Researchers",
+      headline: "Technical Expertise for Research-Driven Systems.",
+      copy: "Professional technical consultation and software implementation support for master's and doctoral research involving specialized information systems. I provide high-integrity architectural design, functional prototyping, database modeling, and technical validation support.",
+      ctaText: "Discuss My Research System",
+      targetUrl: "#contact",
+      ethicalNotice: "Professional technical collaboration and engineering advisory only. Academic ghostwriting or dishonest completion of assessed academic requirements is strictly prohibited.",
+      highlights: [
+        "System Architecture Specification & High-Fidelity Technical Schemas",
+        "Normalized Database Design (3NF / BCNF / Relational ACID Compliance)",
+        "Functional Web and Mobile Prototypes for Empirical Validation",
+        "Offline-First Architectures, Edge Caching & Synchronization Protocols",
+        "Objective Usability & ISO Software Quality Dimension Evaluations (ISO/IEC 25010)"
+      ]
+    }
+  },
+
+  // 3. Professional Biography & Value Proposition
   about: {
-    overview: [
-      "I am an Information Technology educator, researcher, and software developer serving as an Assistant Professor III at Agusan del Sur State University (ADSSU). My academic and technical practice spans computing instruction, enterprise software engineering, and community-driven technology initiatives.",
-      "Originally from Sta. Cruz, Tubajon, Dinagat Islands, I graduated with a Bachelor of Science in Information Technology (BSIT) from Surigao State College of Technology (now Surigao del Norte State University - SNSU) in 2020. I subsequently earned my Master in Information Technology (MIT) from SNSU in 2023, where I was honored as the Best Capstone Project Awardee.",
-      "I have completed all academic requirements (CAR) in the Doctor of Information Technology (DIT) program at St. Paul University Philippines (SPUP) in Tuguegarao City. As an active computing educator and developer, I bridge the gap between classroom theory and real-world system architecture—building full-stack web platforms, mobile solutions with offline-first synchronization, and robust database backends."
+    heading: "Engineering Solutions with Purpose.",
+    biography: [
+      "I am Antonio Jr. L. Piloton, a software developer, IT consultant, and University Assistant Professor with over six years of combined practice across custom software development, systems engineering, and computing education. I serve on the faculty of the College of Computing and Information Sciences at Agusan del Sur State University (ADSSU), developing tailored business systems, point-of-sale platforms, and institutional applications.",
+      "My educational journey unites rigorous computational theory with practical, production-level software delivery. I graduated with a Bachelor of Science in Information Technology (BSIT) from Surigao State College of Technology (now Surigao del Norte State University - SNSU) in 2020 and completed my Master in Information Technology (MIT) in 2023, where my research and software deployment earned the Best Capstone Project Award.",
+      "I have completed all academic requirements (CAR) in the Doctor of Information Technology (DIT) program at St. Paul University Philippines (SPUP). Whether engineering multi-branch retail software with asynchronous receipt printing, architecting offline-first mobile attendance engines, or guiding researchers through complex database models, my work is guided by one clear principle: building software that solves real problems."
     ],
     pillars: [
       {
-        title: "Computing Instruction",
-        icon: "fa-chalkboard-teacher",
-        description: "Cultivating critical problem-solving and industry-aligned programming competencies among computing students through hands-on project-based pedagogy."
+        title: "Commercial Software Delivery",
+        icon: "fa-cubes",
+        desc: "Building production-grade web and mobile applications structured around business outcomes, clean database transactions, and intuitive user experiences."
       },
       {
-        title: "Systems Engineering",
-        icon: "fa-laptop-code",
-        description: "Architecting resilient, modular software systems utilizing modern web frameworks, relational databases, REST APIs, and role-based security."
+        title: "Systems & Database Architecture",
+        icon: "fa-database",
+        desc: "Designing resilient relational schemas, normalized data models, secure RESTful APIs, and offline-first mobile sync pipelines capable of operating in low-bandwidth environments."
       },
       {
-        title: "Scholarly Research",
-        icon: "fa-microscope",
-        description: "Investigating institutional information workflows, applied computing, and higher education technology that enhance state university operations."
+        title: "Research-Driven Engineering",
+        icon: "fa-microchip",
+        desc: "Publishing peer-reviewed systems in Scopus-indexed and international journals, testing empirical software quality benchmarks, and evaluating real-world system deployments."
       },
       {
-        title: "Community Outreach",
-        icon: "fa-hands-helping",
-        description: "Extending technical know-how to local government units, partner schools, and community cooperatives to broaden digital literacy and practical tech adoption."
+        title: "Institutional IT Consulting",
+        icon: "fa-building-columns",
+        desc: "Consulting for state universities, administrative offices, and agricultural cooperatives on workflow digitalization, document transmittal security, and curriculum advancement."
       }
-    ],
-    currentFocus: [
-      "Doctor of Information Technology (DIT) studies at St. Paul University Philippines (SPUP) - Completed Academic Requirements (CAR).",
-      "Developing offline-first mobile attendance and monitoring architectures for public sector environments with variable connectivity.",
-      "Instructional module enhancement for full-stack web and mobile application development courses."
     ]
   },
 
-  // 3. Verified Academic Profile and Milestones (From PDS Form 212)
+  // 4. Commercial & Consulting Services
+  services: [
+  {
+    "id": "business-enterprise",
+    "num": "01",
+    "title": "Business & Enterprise Solutions",
+    "subtitle": "Commercial Point-of-Sale, Multi-Branch Inventory & Financial Control",
+    "description": "POS, inventory, sales, CRM, ERP, accounting workflows, and multi-branch operations. Replace disconnected spreadsheets with real-time cashier registers, stock transfers, and automated reconciliation.",
+    "deliverables": [
+      "Sub-second checkout with barcode scanning & split tenders",
+      "Multi-branch inventory ledger with minimum reorder thresholds",
+      "Hardware ESC/POS thermal receipt printing integration",
+      "End-of-day X/Z-Readings, cash drawer auditing & financial analytics"
+    ],
+    "tags": [
+      "PHP / Laravel",
+      "MySQL",
+      "Tailwind CSS",
+      "ESC/POS",
+      "REST APIs"
+    ]
+  },
+  {
+    "id": "educational-academic",
+    "num": "02",
+    "title": "Educational & Academic Systems",
+    "subtitle": "Student Information, Attendance, Online Exams & Grading Engines",
+    "description": "School management, attendance, examinations, grading, and research-oriented software. Built with academic institutional integrity, ISO 25010 validation standards, and student privacy compliance.",
+    "deliverables": [
+      "Comprehensive Student Information Systems (SIS) & portals",
+      "Biometric, RFID gate & QR-code student attendance monitoring",
+      "Online & offline examination engines with OMR validation",
+      "Automated grade computing, dean clearance & library circulation"
+    ],
+    "tags": [
+      "Laravel",
+      "React Native",
+      "MySQL",
+      "RFID / QR",
+      "ISO 25010"
+    ]
+  },
+  {
+    "id": "web-mobile-apps",
+    "num": "03",
+    "title": "Web & Mobile Applications",
+    "subtitle": "Full-Stack Web Platforms & Offline-First Mobile Architectures",
+    "description": "Custom web platforms, Android/iOS apps, offline-first applications, and API integration. Engineered with SQLite local persistence and idempotent synchronization for unreliable internet environments.",
+    "deliverables": [
+      "Cross-platform mobile apps developed in React Native & TypeScript",
+      "Offline-first local caching with encrypted SQLite data storage",
+      "High-performance REST API backends with multi-tenant isolation",
+      "Push notification dispatch via Firebase Cloud Messaging"
+    ],
+    "tags": [
+      "React Native",
+      "TypeScript",
+      "Laravel",
+      "SQLite",
+      "Firebase"
+    ]
+  },
+  {
+    "id": "government-institutional",
+    "num": "04",
+    "title": "Government & Institutional Systems",
+    "subtitle": "Barangay Information, Cryptographic Document Tracking & Resident Services",
+    "description": "Barangay information systems, document tracking, resident profiling, and public service automation. Features tamper-evident QR verification, role-based workflows, and audit-compliant log trails.",
+    "deliverables": [
+      "Barangay Information Management Systems (BIMS) & profiling",
+      "Barangay clearance, certificate & permit issuance engine",
+      "Cryptographic SHA-256 QR document verification & routing",
+      "Citizen incident reporting, service queues & public assistance"
+    ],
+    "tags": [
+      "Laravel",
+      "MySQL",
+      "QR Verification",
+      "Audit Trails",
+      "Role ACL"
+    ]
+  },
+  {
+    "id": "saas-cloud-platforms",
+    "num": "05",
+    "title": "SaaS & Cloud-Based Platforms",
+    "subtitle": "Multi-Tenant Platforms, Subscription Engines & Centralized Portals",
+    "description": "Multi-tenant systems, subscription platforms, centralized dashboards, and scalable applications. Strict tenant data segregation, recurring billing lifecycles, and high-volume performance.",
+    "deliverables": [
+      "Multi-tenant schema & database isolation architectures",
+      "Role-based privilege separation (Owner, Manager, Cashier, Auditor)",
+      "Centralized analytics dashboards with custom KPI visualization",
+      "Cloud hosting deployment with automated database backups"
+    ],
+    "tags": [
+      "Multi-Tenancy",
+      "Laravel",
+      "MySQL",
+      "Cloud Hosting",
+      "Analytics"
+    ]
+  },
+  {
+    "id": "integration-automation",
+    "num": "06",
+    "title": "System Integration & Automation",
+    "subtitle": "Hardware Interfacing, SMS Gateways, Background Queues & Workflows",
+    "description": "SMS, QR/NFC, workflow automation, APIs, notifications, and reporting. Bridge legacy infrastructure with automated background queues, GSM modems, and hardware peripherals.",
+    "deliverables": [
+      "Automated GSM modem / SIM800L / Web SMS gateway alerts",
+      "Hardware ESC/POS thermal printer direct network socket integration",
+      "Automated PDF report generators (Invoices, Transcripts, Z-Readings)",
+      "Background worker queues for scheduled exports & data pipelines"
+    ],
+    "tags": [
+      "SMS Gateways",
+      "ESC/POS",
+      "PDF Generation",
+      "Queue Workers",
+      "IoT APIs"
+    ]
+  }
+],
+
+  // Technical Capabilities Matrix
+  technicalCapabilities: [
+  {
+    "category": "Backend Development",
+    "capabilities": "PHP, Laravel, REST APIs"
+  },
+  {
+    "category": "Frontend Development",
+    "capabilities": "Blade, Livewire, JavaScript"
+  },
+  {
+    "category": "Mobile Development",
+    "capabilities": "React Native, TypeScript, Android"
+  },
+  {
+    "category": "Database Management",
+    "capabilities": "MySQL, relational database design"
+  },
+  {
+    "category": "Authentication",
+    "capabilities": "Role-based access, Google OAuth, user permissions"
+  },
+  {
+    "category": "SaaS Architecture",
+    "capabilities": "Multi-tenancy, subscriptions, organization management"
+  },
+  {
+    "category": "System Integration",
+    "capabilities": "REST APIs, SMS gateways, Firebase Cloud Messaging"
+  },
+  {
+    "category": "Offline Capabilities",
+    "capabilities": "Local caching, offline-first workflows, synchronization"
+  },
+  {
+    "category": "Automation",
+    "capabilities": "Background jobs, notification queues, scheduled processes"
+  },
+  {
+    "category": "Deployment",
+    "capabilities": "Web hosting, cloud-based applications, application deployment"
+  },
+  {
+    "category": "Specialized Features",
+    "capabilities": "QR code, NFC, OMR scanning, dashboards, report generation"
+  }
+],
+
+  // Comprehensive Custom Systems Offerings Catalog (110 Offerings)
+  systemCatalog: [
+  {
+    "id": 1,
+    "cat": "business",
+    "catLabel": "Business Management",
+    "title": "Point of Sale (POS) System",
+    "icon": "fa-cash-register"
+  },
+  {
+    "id": 2,
+    "cat": "business",
+    "catLabel": "Business Management",
+    "title": "Inventory Management System",
+    "icon": "fa-boxes"
+  },
+  {
+    "id": 3,
+    "cat": "business",
+    "catLabel": "Business Management",
+    "title": "Sales and Billing Management System",
+    "icon": "fa-file-invoice-dollar"
+  },
+  {
+    "id": 4,
+    "cat": "business",
+    "catLabel": "Business Management",
+    "title": "Customer Relationship Management (CRM)",
+    "icon": "fa-users"
+  },
+  {
+    "id": 5,
+    "cat": "business",
+    "catLabel": "Business Management",
+    "title": "Customer Credit and Collection System",
+    "icon": "fa-credit-card"
+  },
+  {
+    "id": 6,
+    "cat": "business",
+    "catLabel": "Business Management",
+    "title": "Accounting and Expense Tracking System",
+    "icon": "fa-calculator"
+  },
+  {
+    "id": 7,
+    "cat": "business",
+    "catLabel": "Business Management",
+    "title": "Purchase Order Management System",
+    "icon": "fa-shopping-cart"
+  },
+  {
+    "id": 8,
+    "cat": "business",
+    "catLabel": "Business Management",
+    "title": "Supplier Management System",
+    "icon": "fa-truck"
+  },
+  {
+    "id": 9,
+    "cat": "business",
+    "catLabel": "Business Management",
+    "title": "Warehouse Management System",
+    "icon": "fa-warehouse"
+  },
+  {
+    "id": 10,
+    "cat": "business",
+    "catLabel": "Business Management",
+    "title": "Multi-Branch Management System",
+    "icon": "fa-network-wired"
+  },
+  {
+    "id": 11,
+    "cat": "business",
+    "catLabel": "Business Management",
+    "title": "Order Management System",
+    "icon": "fa-clipboard-list"
+  },
+  {
+    "id": 12,
+    "cat": "business",
+    "catLabel": "Business Management",
+    "title": "Service Booking and Appointment System",
+    "icon": "fa-calendar-check"
+  },
+  {
+    "id": 13,
+    "cat": "business",
+    "catLabel": "Business Management",
+    "title": "Business Analytics and Reporting Dashboard",
+    "icon": "fa-chart-line"
+  },
+  {
+    "id": 14,
+    "cat": "business",
+    "catLabel": "Business Management",
+    "title": "Subscription and Membership Management System",
+    "icon": "fa-id-card"
+  },
+  {
+    "id": 15,
+    "cat": "business",
+    "catLabel": "Business Management",
+    "title": "Enterprise Resource Planning (ERP) Modules",
+    "icon": "fa-sitemap"
+  },
+  {
+    "id": 16,
+    "cat": "academic",
+    "catLabel": "Educational & Academic",
+    "title": "Student Information System",
+    "icon": "fa-user-graduate"
+  },
+  {
+    "id": 17,
+    "cat": "academic",
+    "catLabel": "Educational & Academic",
+    "title": "Enrollment Management System",
+    "icon": "fa-user-plus"
+  },
+  {
+    "id": 18,
+    "cat": "academic",
+    "catLabel": "Educational & Academic",
+    "title": "Learning Management System (LMS)",
+    "icon": "fa-laptop-code"
+  },
+  {
+    "id": 19,
+    "cat": "academic",
+    "catLabel": "Educational & Academic",
+    "title": "Attendance Monitoring System",
+    "icon": "fa-user-check"
+  },
+  {
+    "id": 20,
+    "cat": "academic",
+    "catLabel": "Educational & Academic",
+    "title": "QR Code / NFC Attendance System",
+    "icon": "fa-qrcode"
+  },
+  {
+    "id": 21,
+    "cat": "academic",
+    "catLabel": "Educational & Academic",
+    "title": "Examination and Quiz Management System",
+    "icon": "fa-spell-check"
+  },
+  {
+    "id": 22,
+    "cat": "academic",
+    "catLabel": "Educational & Academic",
+    "title": "OMR Examination Checking System",
+    "icon": "fa-check-double"
+  },
+  {
+    "id": 23,
+    "cat": "academic",
+    "catLabel": "Educational & Academic",
+    "title": "Online Examination System",
+    "icon": "fa-desktop"
+  },
+  {
+    "id": 24,
+    "cat": "academic",
+    "catLabel": "Educational & Academic",
+    "title": "Grading Management System",
+    "icon": "fa-graduation-cap"
+  },
+  {
+    "id": 25,
+    "cat": "academic",
+    "catLabel": "Educational & Academic",
+    "title": "Class Scheduling System",
+    "icon": "fa-calendar-alt"
+  },
+  {
+    "id": 26,
+    "cat": "academic",
+    "catLabel": "Educational & Academic",
+    "title": "Room Allocation and Scheduling System",
+    "icon": "fa-door-open"
+  },
+  {
+    "id": 27,
+    "cat": "academic",
+    "catLabel": "Educational & Academic",
+    "title": "Faculty Evaluation System",
+    "icon": "fa-star-half-alt"
+  },
+  {
+    "id": 28,
+    "cat": "academic",
+    "catLabel": "Educational & Academic",
+    "title": "Library Management System",
+    "icon": "fa-book"
+  },
+  {
+    "id": 29,
+    "cat": "academic",
+    "catLabel": "Educational & Academic",
+    "title": "Research and Capstone Management System",
+    "icon": "fa-microscope"
+  },
+  {
+    "id": 30,
+    "cat": "academic",
+    "catLabel": "Educational & Academic",
+    "title": "Student Clearance Management System",
+    "icon": "fa-stamp"
+  },
+  {
+    "id": 31,
+    "cat": "academic",
+    "catLabel": "Educational & Academic",
+    "title": "Scholarship Management System",
+    "icon": "fa-award"
+  },
+  {
+    "id": 32,
+    "cat": "academic",
+    "catLabel": "Educational & Academic",
+    "title": "Student Portal",
+    "icon": "fa-id-badge"
+  },
+  {
+    "id": 33,
+    "cat": "academic",
+    "catLabel": "Educational & Academic",
+    "title": "Faculty Portal",
+    "icon": "fa-chalkboard-teacher"
+  },
+  {
+    "id": 34,
+    "cat": "academic",
+    "catLabel": "Educational & Academic",
+    "title": "Academic Performance Analytics System",
+    "icon": "fa-chart-pie"
+  },
+  {
+    "id": 35,
+    "cat": "academic",
+    "catLabel": "Educational & Academic",
+    "title": "School Document Tracking System",
+    "icon": "fa-file-alt"
+  },
+  {
+    "id": 36,
+    "cat": "government",
+    "catLabel": "Government & Barangay",
+    "title": "Barangay Information Management System",
+    "icon": "fa-landmark"
+  },
+  {
+    "id": 37,
+    "cat": "government",
+    "catLabel": "Government & Barangay",
+    "title": "Resident Profiling System",
+    "icon": "fa-address-card"
+  },
+  {
+    "id": 38,
+    "cat": "government",
+    "catLabel": "Government & Barangay",
+    "title": "Barangay Clearance and Certificate Issuance System",
+    "icon": "fa-certificate"
+  },
+  {
+    "id": 39,
+    "cat": "government",
+    "catLabel": "Government & Barangay",
+    "title": "Population Monitoring System",
+    "icon": "fa-users-cog"
+  },
+  {
+    "id": 40,
+    "cat": "government",
+    "catLabel": "Government & Barangay",
+    "title": "Document Tracking and Records Management System",
+    "icon": "fa-folder-open"
+  },
+  {
+    "id": 41,
+    "cat": "government",
+    "catLabel": "Government & Barangay",
+    "title": "Queue Management System",
+    "icon": "fa-list-ol"
+  },
+  {
+    "id": 42,
+    "cat": "government",
+    "catLabel": "Government & Barangay",
+    "title": "Complaint and Incident Reporting System",
+    "icon": "fa-bullhorn"
+  },
+  {
+    "id": 43,
+    "cat": "government",
+    "catLabel": "Government & Barangay",
+    "title": "Community Service Request System",
+    "icon": "fa-hands-helping"
+  },
+  {
+    "id": 44,
+    "cat": "government",
+    "catLabel": "Government & Barangay",
+    "title": "Barangay Appointment System",
+    "icon": "fa-calendar-plus"
+  },
+  {
+    "id": 45,
+    "cat": "government",
+    "catLabel": "Government & Barangay",
+    "title": "Public Assistance Monitoring System",
+    "icon": "fa-hand-holding-heart"
+  },
+  {
+    "id": 46,
+    "cat": "government",
+    "catLabel": "Government & Barangay",
+    "title": "Local Government Asset Management System",
+    "icon": "fa-coins"
+  },
+  {
+    "id": 47,
+    "cat": "government",
+    "catLabel": "Government & Barangay",
+    "title": "Community Project Monitoring System",
+    "icon": "fa-tasks"
+  },
+  {
+    "id": 48,
+    "cat": "government",
+    "catLabel": "Government & Barangay",
+    "title": "Permit Application and Tracking System",
+    "icon": "fa-file-signature"
+  },
+  {
+    "id": 49,
+    "cat": "healthcare",
+    "catLabel": "Healthcare & Medical",
+    "title": "Clinic Management System",
+    "icon": "fa-clinic-medical"
+  },
+  {
+    "id": 50,
+    "cat": "healthcare",
+    "catLabel": "Healthcare & Medical",
+    "title": "Patient Information Management System",
+    "icon": "fa-user-injured"
+  },
+  {
+    "id": 51,
+    "cat": "healthcare",
+    "catLabel": "Healthcare & Medical",
+    "title": "Electronic Medical Records (EMR)",
+    "icon": "fa-notes-medical"
+  },
+  {
+    "id": 52,
+    "cat": "healthcare",
+    "catLabel": "Healthcare & Medical",
+    "title": "Medical Appointment System",
+    "icon": "fa-calendar-alt"
+  },
+  {
+    "id": 53,
+    "cat": "healthcare",
+    "catLabel": "Healthcare & Medical",
+    "title": "Pharmacy Inventory Management System",
+    "icon": "fa-pills"
+  },
+  {
+    "id": 54,
+    "cat": "healthcare",
+    "catLabel": "Healthcare & Medical",
+    "title": "Laboratory Results Management System",
+    "icon": "fa-flask"
+  },
+  {
+    "id": 55,
+    "cat": "healthcare",
+    "catLabel": "Healthcare & Medical",
+    "title": "Vaccination Monitoring System",
+    "icon": "fa-syringe"
+  },
+  {
+    "id": 56,
+    "cat": "healthcare",
+    "catLabel": "Healthcare & Medical",
+    "title": "Dental Clinic Management System",
+    "icon": "fa-tooth"
+  },
+  {
+    "id": 57,
+    "cat": "healthcare",
+    "catLabel": "Healthcare & Medical",
+    "title": "Medical Billing System",
+    "icon": "fa-file-invoice"
+  },
+  {
+    "id": 58,
+    "cat": "healthcare",
+    "catLabel": "Healthcare & Medical",
+    "title": "Patient Queue Management System",
+    "icon": "fa-users"
+  },
+  {
+    "id": 59,
+    "cat": "healthcare",
+    "catLabel": "Healthcare & Medical",
+    "title": "Health Center Monitoring System",
+    "icon": "fa-heartbeat"
+  },
+  {
+    "id": 60,
+    "cat": "hr",
+    "catLabel": "HR & Administrative",
+    "title": "Human Resource Information System (HRIS)",
+    "icon": "fa-user-tie"
+  },
+  {
+    "id": 61,
+    "cat": "hr",
+    "catLabel": "HR & Administrative",
+    "title": "Employee Attendance System",
+    "icon": "fa-business-time"
+  },
+  {
+    "id": 62,
+    "cat": "hr",
+    "catLabel": "HR & Administrative",
+    "title": "Leave Management System",
+    "icon": "fa-calendar-minus"
+  },
+  {
+    "id": 63,
+    "cat": "hr",
+    "catLabel": "HR & Administrative",
+    "title": "Payroll Management System",
+    "icon": "fa-money-check-alt"
+  },
+  {
+    "id": 64,
+    "cat": "hr",
+    "catLabel": "HR & Administrative",
+    "title": "Employee Performance Evaluation System",
+    "icon": "fa-chart-bar"
+  },
+  {
+    "id": 65,
+    "cat": "hr",
+    "catLabel": "HR & Administrative",
+    "title": "Recruitment and Applicant Tracking System",
+    "icon": "fa-user-plus"
+  },
+  {
+    "id": 66,
+    "cat": "hr",
+    "catLabel": "HR & Administrative",
+    "title": "Employee Records Management System",
+    "icon": "fa-id-card-alt"
+  },
+  {
+    "id": 67,
+    "cat": "hr",
+    "catLabel": "HR & Administrative",
+    "title": "Training Management System",
+    "icon": "fa-chalkboard"
+  },
+  {
+    "id": 68,
+    "cat": "hr",
+    "catLabel": "HR & Administrative",
+    "title": "Employee Scheduling System",
+    "icon": "fa-clock"
+  },
+  {
+    "id": 69,
+    "cat": "hr",
+    "catLabel": "HR & Administrative",
+    "title": "Disciplinary Case Tracking System",
+    "icon": "fa-gavel"
+  },
+  {
+    "id": 70,
+    "cat": "hr",
+    "catLabel": "HR & Administrative",
+    "title": "Asset and Equipment Management System",
+    "icon": "fa-tools"
+  },
+  {
+    "id": 71,
+    "cat": "retail",
+    "catLabel": "Retail & Hospitality",
+    "title": "Restaurant POS System",
+    "icon": "fa-utensils"
+  },
+  {
+    "id": 72,
+    "cat": "retail",
+    "catLabel": "Retail & Hospitality",
+    "title": "Restaurant Ordering System",
+    "icon": "fa-concierge-bell"
+  },
+  {
+    "id": 73,
+    "cat": "retail",
+    "catLabel": "Retail & Hospitality",
+    "title": "Table Reservation System",
+    "icon": "fa-chair"
+  },
+  {
+    "id": 74,
+    "cat": "retail",
+    "catLabel": "Retail & Hospitality",
+    "title": "Hotel Reservation Management System",
+    "icon": "fa-hotel"
+  },
+  {
+    "id": 75,
+    "cat": "retail",
+    "catLabel": "Retail & Hospitality",
+    "title": "Room Booking System",
+    "icon": "fa-bed"
+  },
+  {
+    "id": 76,
+    "cat": "retail",
+    "catLabel": "Retail & Hospitality",
+    "title": "Resort Management System",
+    "icon": "fa-umbrella-beach"
+  },
+  {
+    "id": 77,
+    "cat": "retail",
+    "catLabel": "Retail & Hospitality",
+    "title": "Laundry Shop Management System",
+    "icon": "fa-tshirt"
+  },
+  {
+    "id": 78,
+    "cat": "retail",
+    "catLabel": "Retail & Hospitality",
+    "title": "Water Refilling Station Management System",
+    "icon": "fa-tint"
+  },
+  {
+    "id": 79,
+    "cat": "retail",
+    "catLabel": "Retail & Hospitality",
+    "title": "Auto Repair Shop Management System",
+    "icon": "fa-wrench"
+  },
+  {
+    "id": 80,
+    "cat": "retail",
+    "catLabel": "Retail & Hospitality",
+    "title": "Salon and Spa Booking System",
+    "icon": "fa-spa"
+  },
+  {
+    "id": 81,
+    "cat": "retail",
+    "catLabel": "Retail & Hospitality",
+    "title": "Rental Management System",
+    "icon": "fa-key"
+  },
+  {
+    "id": 82,
+    "cat": "retail",
+    "catLabel": "Retail & Hospitality",
+    "title": "Property Management System",
+    "icon": "fa-building"
+  },
+  {
+    "id": 83,
+    "cat": "retail",
+    "catLabel": "Retail & Hospitality",
+    "title": "E-Commerce Platform",
+    "icon": "fa-shopping-bag"
+  },
+  {
+    "id": 84,
+    "cat": "retail",
+    "catLabel": "Retail & Hospitality",
+    "title": "Online Ordering and Delivery Management System",
+    "icon": "fa-motorcycle"
+  },
+  {
+    "id": 85,
+    "cat": "retail",
+    "catLabel": "Retail & Hospitality",
+    "title": "Customer Loyalty and Rewards System",
+    "icon": "fa-gift"
+  },
+  {
+    "id": 86,
+    "cat": "mobile",
+    "catLabel": "Mobile Applications",
+    "title": "Android Business Application",
+    "icon": "fa-mobile-alt"
+  },
+  {
+    "id": 87,
+    "cat": "mobile",
+    "catLabel": "Mobile Applications",
+    "title": "iOS Business Application",
+    "icon": "fa-mobile"
+  },
+  {
+    "id": 88,
+    "cat": "mobile",
+    "catLabel": "Mobile Applications",
+    "title": "Mobile Attendance Application",
+    "icon": "fa-user-check"
+  },
+  {
+    "id": 89,
+    "cat": "mobile",
+    "catLabel": "Mobile Applications",
+    "title": "QR Code Scanner Application",
+    "icon": "fa-qrcode"
+  },
+  {
+    "id": 90,
+    "cat": "mobile",
+    "catLabel": "Mobile Applications",
+    "title": "NFC-Based Monitoring Application",
+    "icon": "fa-wifi"
+  },
+  {
+    "id": 91,
+    "cat": "mobile",
+    "catLabel": "Mobile Applications",
+    "title": "Mobile Inventory Application",
+    "icon": "fa-boxes"
+  },
+  {
+    "id": 92,
+    "cat": "mobile",
+    "catLabel": "Mobile Applications",
+    "title": "Mobile POS Application",
+    "icon": "fa-cash-register"
+  },
+  {
+    "id": 93,
+    "cat": "mobile",
+    "catLabel": "Mobile Applications",
+    "title": "Student and Parent Portal Application",
+    "icon": "fa-school"
+  },
+  {
+    "id": 94,
+    "cat": "mobile",
+    "catLabel": "Mobile Applications",
+    "title": "Mobile Examination Scanner",
+    "icon": "fa-camera"
+  },
+  {
+    "id": 95,
+    "cat": "mobile",
+    "catLabel": "Mobile Applications",
+    "title": "Field Data Collection Application",
+    "icon": "fa-map-marked-alt"
+  },
+  {
+    "id": 96,
+    "cat": "mobile",
+    "catLabel": "Mobile Applications",
+    "title": "Offline-First Mobile Application",
+    "icon": "fa-database"
+  },
+  {
+    "id": 97,
+    "cat": "mobile",
+    "catLabel": "Mobile Applications",
+    "title": "Push Notification Application",
+    "icon": "fa-bell"
+  },
+  {
+    "id": 98,
+    "cat": "mobile",
+    "catLabel": "Mobile Applications",
+    "title": "Mobile Booking Application",
+    "icon": "fa-calendar-check"
+  },
+  {
+    "id": 99,
+    "cat": "specialized",
+    "catLabel": "Specialized & Automation",
+    "title": "SMS Notification and Gateway System",
+    "icon": "fa-sms"
+  },
+  {
+    "id": 100,
+    "cat": "specialized",
+    "catLabel": "Specialized & Automation",
+    "title": "QR Code Generation and Verification System",
+    "icon": "fa-qrcode"
+  },
+  {
+    "id": 101,
+    "cat": "specialized",
+    "catLabel": "Specialized & Automation",
+    "title": "API Integration and Management System",
+    "icon": "fa-project-diagram"
+  },
+  {
+    "id": 102,
+    "cat": "specialized",
+    "catLabel": "Specialized & Automation",
+    "title": "Workflow Automation System",
+    "icon": "fa-cogs"
+  },
+  {
+    "id": 103,
+    "cat": "specialized",
+    "catLabel": "Specialized & Automation",
+    "title": "Real-Time Monitoring Dashboard",
+    "icon": "fa-tachometer-alt"
+  },
+  {
+    "id": 104,
+    "cat": "specialized",
+    "catLabel": "Specialized & Automation",
+    "title": "Data Analytics and Visualization System",
+    "icon": "fa-chart-area"
+  },
+  {
+    "id": 105,
+    "cat": "specialized",
+    "catLabel": "Specialized & Automation",
+    "title": "Multi-Tenant SaaS Platform",
+    "icon": "fa-cloud"
+  },
+  {
+    "id": 106,
+    "cat": "specialized",
+    "catLabel": "Specialized & Automation",
+    "title": "Document Approval Workflow System",
+    "icon": "fa-check-circle"
+  },
+  {
+    "id": 107,
+    "cat": "specialized",
+    "catLabel": "Specialized & Automation",
+    "title": "Cloud-Based Records Management System",
+    "icon": "fa-archive"
+  },
+  {
+    "id": 108,
+    "cat": "specialized",
+    "catLabel": "Specialized & Automation",
+    "title": "Custom Reporting and Data Export System",
+    "icon": "fa-file-export"
+  },
+  {
+    "id": 109,
+    "cat": "specialized",
+    "catLabel": "Specialized & Automation",
+    "title": "AI-Assisted Document Processing System",
+    "icon": "fa-robot"
+  },
+  {
+    "id": 110,
+    "cat": "specialized",
+    "catLabel": "Specialized & Automation",
+    "title": "IoT-Based Monitoring System",
+    "icon": "fa-microchip"
+  }
+],
+
+  projects: [
+    {
+      id: "retail-pos",
+      title: "RetailPOS: Commercial Business & Inventory Suite",
+      subtitle: "Multi-Branch Point-of-Sale, Real-Time Inventory & Financial Reporting",
+      category: "business",
+      categoryLabel: "Business Systems",
+      badge: "Commercial Platform",
+      status: "Production Ready / Operational",
+      image: "assets/images/projects/pos-system.svg",
+      summary: "An enterprise-grade point-of-sale and multi-branch inventory management platform developed for retail enterprises, cooperatives, and multi-branch merchants, featuring sub-second checkout, thermal receipt printing, and transactional inventory reconciliation.",
+      problem: "Retailers and cooperatives regularly suffer stock leakage, inventory discrepancies across branches, slow checkout queues, and delayed end-of-day revenue reconciliation when relying on manual books or generic single-register applications.",
+      intendedUsers: "Retail cashiers, branch inventory officers, accountants, and business owners.",
+      technologies: ["PHP / Laravel", "MySQL", "Tailwind CSS", "ESC/POS Thermal Printing", "REST APIs", "Barcode Scanner Integration"],
+      features: [
+        "Rapid cashier terminal with instant barcode scanning, discount rules, split payments, and customer ledger tracking.",
+        "Multi-branch inventory ledger handling stock adjustments, inter-branch transfers, and automatic reorder thresholds.",
+        "Hardware-native thermal receipt printing via network sockets and browser ESC/POS drivers.",
+        "Role-based security strictly isolating cashier operations from managerial profit margins and cost configurations.",
+        "Automated daily X/Z-Reading cash drawer reconciliation with exportable PDF and Excel financial reports."
+      ],
+      architecture: "Engineered on a multi-tier Laravel architecture using specialized Service and Repository patterns. All inventory deduction and payment transactions are protected by atomic database transactions with row-level locks to prevent race conditions during peak checkout periods.",
+      challenges: [
+        "Preventing inventory discrepancies during simultaneous multi-register checkouts via pessimistic database locking.",
+        "Ensuring clean multi-tenant data isolation so multiple merchant branches operate securely without cross-contamination."
+      ],
+      githubUrl: "https://github.com/antonio-piloton/saas-pos-inventory",
+      demoUrl: "",
+      demoAvailable: false
+    },
+    {
+      id: "bantay-eskwela",
+      title: "BantayEskwela / ScanAlert",
+      subtitle: "Offline-First QR & NFC Campus Attendance & Monitoring Engine",
+      category: "mobile",
+      categoryLabel: "Mobile & IoT Applications",
+      badge: "Core System",
+      status: "Operational Prototype",
+      image: "assets/images/projects/scanalert.svg",
+      summary: "A resilient student tracking and campus entry logging application built for institutional security gates and classrooms. Combines rapid QR and NFC scanning with an offline-first SQLite cache and automatic background cloud synchronization.",
+      problem: "Traditional pen-and-paper gate logs cause severe bottleneck delays during peak hours, are prone to forgery, and fail to provide immediate administrative visibility. Purely cloud-dependent mobile apps crash during frequent provincial internet disruptions.",
+      intendedUsers: "Campus security officers, administrative monitors, college deans, and parents.",
+      technologies: ["React Native", "Expo", "SQLite", "PHP / Laravel REST API", "NFC / QR Scanners", "JWT Auth"],
+      features: [
+        "Sub-second QR scanning and NFC card verification with audible feedback and color validation cues.",
+        "Offline-first architecture: logs persist in local encrypted SQLite and automatically sync when network connectivity resumes.",
+        "Administrative dashboard displaying real-time campus headcount and department-level attendance metrics.",
+        "Automated timestamp logging for campus entry and departure with strict non-tamper safeguards.",
+        "Role-based authorization preventing unauthorized modification of gate records."
+      ],
+      architecture: "Three-tier distributed model: edge mobile scanners communicate with local SQLite storage; an asynchronous sync daemon manages idempotent REST synchronization to an enterprise MySQL server with JWT validation.",
+      challenges: [
+        "Resolving concurrent synchronization conflicts when multiple gate scanners sync simultaneously after network restoration.",
+        "Optimizing camera viewfinder frame processing to conserve mobile device battery during prolonged scanning sessions."
+      ],
+      githubUrl: "https://github.com/antonio-piloton/scanalert-safetrack",
+      demoUrl: "",
+      demoAvailable: false
+    },
+    {
+      id: "examora",
+      title: "Examora / EduMetrics Assessment Engine",
+      subtitle: "Optical Answer Sheet Checking, Examination Analytics & Survey System",
+      category: "edtech",
+      categoryLabel: "Educational Technology",
+      badge: "Academic System",
+      status: "Completed Prototype",
+      image: "assets/images/projects/lms-survey.svg",
+      summary: "A high-efficiency assessment and evaluation platform designed for rapid examination scoring, answer sheet analysis, and institutional instructional feedback aggregation with real-time statistical distribution scorecards.",
+      problem: "Manual grading of hundreds of examination answer sheets consumes dozens of faculty hours, delays academic interventions, and introduces human grading error. Traditional paper evaluation forms also demand exorbitant printing budgets and weeks of manual transcription.",
+      intendedUsers: "Faculty instructors, academic department chairs, HR development officers, and enrolled students.",
+      technologies: ["PHP", "JavaScript", "MySQL", "AJAX", "CSS3", "Statistical Analytics Exporters"],
+      features: [
+        "Rapid answer key calibration and automated score computation across multiple exam variations.",
+        "Statistical test item analysis calculating difficulty and discrimination indices to evaluate question quality.",
+        "Single-token survey access preventing multiple submissions while safeguarding student respondent anonymity.",
+        "Real-time faculty rating scorecards with automated calculation of mean, standard deviation, and qualitative ratings.",
+        "One-click institutional export formatted for faculty promotion portfolios (NBC 461 / SUC leveling)."
+      ],
+      architecture: "Normalized survey and assessment response schema optimized for high-volume write bursts during exam periods; indexed aggregate caching for immediate score distribution reporting.",
+      challenges: [
+        "Handling high concurrency surges during end-of-semester evaluation deadlines without database connection pooling saturation.",
+        "Guaranteeing mathematical anonymity for students while strictly tracking mandatory completion flags."
+      ],
+      githubUrl: "https://github.com/antonio-piloton/edumetrics-evaluation",
+      demoUrl: "",
+      demoAvailable: false
+    },
+    {
+      id: "doctrack",
+      title: "Records Tracking Management System with QR Code",
+      subtitle: "Lifecycle Tracking & Barcode Custody Verification Platform",
+      category: "info-sys",
+      categoryLabel: "Information Systems",
+      badge: "Peer-Reviewed & Published",
+      status: "Published System (IJFMR)",
+      image: "assets/images/projects/doctrack.svg",
+      summary: "A verified institutional document transmittal platform utilizing unique QR code identification to trace the lifecycle, physical custody, and approval milestones of official correspondence across administrative departments.",
+      problem: "Inter-office memoranda, budget requests, and administrative vouchers frequently get misplaced or stalled in transition, making it arduous to determine the exact office holding a file and resulting in administrative bottlenecks.",
+      intendedUsers: "Campus administrative units, college offices, records officers, and faculty members.",
+      technologies: ["PHP", "JavaScript", "MySQL", "QR Code Generation", "Rapid Application Development (RAD)", "FPDF"],
+      features: [
+        "Automated generation of unique tracking identifiers with printable QR routing slips.",
+        "Scan-to-receive and scan-to-release workflows recording timestamp, handling personnel, and routing remarks.",
+        "Public tracking inquiry portal allowing originators to check transmittal progress without logging into administrative consoles.",
+        "Turnaround time analytics highlighting average processing durations per receiving office.",
+        "Comprehensive, immutable audit trail generation ensuring institutional accountability."
+      ],
+      architecture: "Designed using the Rapid Application Development (RAD) framework; relational schema designed around immutable routing events; client-side barcode scanner integration via standard HID wedge and camera scanner streams. Evaluated across ISO software quality dimensions with an overall mean of 4.44 / 5.00.",
+      challenges: [
+        "Ensuring backward compatibility with legacy thermal receipt and barcode printers used in administrative offices.",
+        "Enforcing strict chronological state validation rules to prevent accidental out-of-order document scans."
+      ],
+      githubUrl: "https://github.com/antonio-piloton/doctrack-system",
+      demoUrl: "",
+      demoAvailable: false
+    },
+    {
+      id: "scvax",
+      title: "SCVAX: Vaccination Management Information System",
+      subtitle: "Large-Scale Immunization Tracking, Data Visualization & QR Verification",
+      category: "research",
+      categoryLabel: "Research-Driven Systems",
+      badge: "Scopus-Indexed Publication",
+      status: "Published Research (JESTEC)",
+      image: "assets/images/projects/institutional-sys.svg",
+      summary: "An enterprise application platform engineered to optimize and streamline nationwide vaccination programs, incorporating automated mapping, visual analytics, robust data handling, and QR code verification for citizen records.",
+      problem: "Large-scale public health and immunization campaigns face immense logistical complexity, paper certificate forgery, disconnected regional health registries, and inadequate real-time visibility into vaccine stock distribution.",
+      intendedUsers: "Municipal health officers, vaccination administrators, healthcare staff, and citizens.",
+      technologies: ["PHP / Laravel", "MySQL", "Geospatial Data Mapping", "QR Code Security", "Data Visualization"],
+      features: [
+        "Cryptographically verifiable QR-coded digital vaccination cards for tamper-evident verification.",
+        "Geospatial visualization of immunization coverage rates across municipal zones and barangays.",
+        "Real-time dose inventory tracking with wastage alerts and batch expiration monitoring.",
+        "Multi-role user authorization with medical data confidentiality compliant with data privacy regulations.",
+        "High-capacity digital registration and appointment scheduling engine."
+      ],
+      architecture: "Centralized relational database engine with geospatial coordinates, optimized REST endpoints for field tablet input, and QR verification routines. Formally published in the Journal of Engineering Science and Technology (JESTEC, Scopus-Indexed).",
+      challenges: [
+        "Guaranteeing data privacy and patient confidentiality across distributed vaccination centers.",
+        "Designing lightweight geospatial map rendering that functions on standard municipal hardware."
+      ],
+      githubUrl: "",
+      demoUrl: "https://jestec.taylors.edu.my/Special%20Issue%20ICITE%202023/ICITE_2023_10.pdf",
+      demoAvailable: true
+    },
+    {
+      id: "unilib-sis",
+      title: "UniLib & SIS: Academic Library & Student Records",
+      subtitle: "Unified Resource Cataloging, Circulation & Institutional Clearance",
+      category: "info-sys",
+      categoryLabel: "Information Systems",
+      badge: "Campus System",
+      status: "Operational Prototype",
+      image: "assets/images/projects/library-sis.svg",
+      summary: "A unified academic resource cataloging and circulation management system integrating Dewey Decimal / LOC classification with automated student borrowing clearances, overdue fine calculations, and institutional record validation.",
+      problem: "Disjointed record-keeping between college libraries and registrar offices results in delayed graduation clearances, uncollected overdue penalties, and unreturned academic reference materials.",
+      intendedUsers: "College librarians, student borrowers, faculty researchers, and campus clearance officers.",
+      technologies: ["PHP", "JavaScript", "MySQL", "HTML5", "CSS3", "Barcode Scanner Integration"],
+      features: [
+        "Online Public Access Catalog (OPAC) with fast keyword, title, author, and call-number indexing.",
+        "Student ID barcode scanning for rapid checkout and return processing.",
+        "Automated overdue penalty calculation with grace-period rules and digital receipts.",
+        "Direct integration with university semester clearance status: holds clearance automatically for unreturned books.",
+        "Statistical circulation reporting analyzing most-borrowed subjects and acquisition recommendations."
+      ],
+      architecture: "Relational MySQL design featuring transaction-safe circulation tables, foreign keys with audit triggers, and a lightweight search index.",
+      challenges: [
+        "Standardizing legacy bibliographic records with missing ISBN and call numbers.",
+        "Creating a simple, resilient interface that library student assistants can operate with minimal technical training."
+      ],
+      githubUrl: "https://github.com/antonio-piloton/unilib-sis-manager",
+      demoUrl: "",
+      demoAvailable: false
+    }
+  ],
+
+  // 6. Verified Scholarly Publications & Research Contributions
+  publications: {
+    heading: "Research, Publications & Academic Contributions",
+    notice: "Peer-reviewed journal publications, Scopus-indexed research, and academic conference contributions demonstrating technical rigor, empirical system design, and software evaluation.",
+    entries: [
+      {
+        id: "jestec-scvax-2023",
+        title: "SCVAX: A solution to nationwide vaccination management information system",
+        authors: "R. A. Reyna, A. C. C. Reyna, D. C. Mangca, J. M. Gallera, P. R. Ruaya Jr., G. B. Galila, R. A. C. Cabañero, A. L. Piloton Jr., A. S. Salvador, and G. Z. Gamboa Jr.",
+        journal: "Journal of Engineering Science and Technology (JESTEC)",
+        volume: "Vol. 18 (Special Issue on ICITE 2023)",
+        pages: "pp. 108–123",
+        year: "2023",
+        indexing: "Scopus-Indexed Journal",
+        indexingBadge: "Scopus-Indexed",
+        type: "Peer-Reviewed Journal Article",
+        abstract: "Introduces SCVax, an application platform engineered to optimize and streamline nationwide vaccination programs. Highlights functionalities including automated mapping, data visualization, robust data handling, and QR code integration to ensure data reliability and confidentiality.",
+        link: "https://jestec.taylors.edu.my/Special%20Issue%20ICITE%202023/ICITE_2023_10.pdf",
+        researchGateUrl: "https://www.researchgate.net/publication/376840656_SCVAX_A_solution_to_nationwide_vaccination_management_information_system"
+      },
+      {
+        id: "ijfmr-doctrack-2023",
+        title: "Development of Records Tracking Management System with QR Code",
+        authors: "Antonio Jr. L. Piloton, Gregorio Z. Gamboa Jr., Monalee A. Dela Cerna, and Ritchie A. Reyna",
+        journal: "International Journal for Multidisciplinary Research (IJFMR)",
+        volume: "Vol. 5, Issue 5",
+        pages: "Paper ID 6262",
+        year: "2023",
+        indexing: "Peer-Reviewed International Journal",
+        indexingBadge: "Peer-Reviewed (Mean: 4.44/5.00)",
+        type: "Primary Author Research Article",
+        abstract: "Details the design, implementation, and empirical evaluation of an automated document transmittal management system utilizing QR codes and the Rapid Application Development (RAD) model. Evaluated against ISO/IEC software quality dimensions, achieving a 4.44/5.00 high-satisfaction weighted mean.",
+        link: "https://www.ijfmr.com/papers/2023/5/6262.pdf",
+        researchGateUrl: "https://www.researchgate.net/publication/374828135_Development_of_Records_Tracking_Management_System_with_QR_Code"
+      },
+      {
+        id: "arima-forecasting-2026",
+        title: "Evolution of ARIMA and Hybrid ARIMA Models in Time Series Forecasting: A Bibliometric and Network Analysis (2010–2025)",
+        authors: "Perfecto Ravina Ruaya Jr., Jessa G. Hambre, Antonio Jr. L. Piloton, and Malakit Ram",
+        journal: "Academic Conference Proceedings",
+        volume: "Forecasting & Computational Methods Track",
+        pages: "",
+        year: "2026",
+        indexing: "Bibliometric & Network Analysis",
+        indexingBadge: "Methodological Research",
+        type: "Conference Paper",
+        abstract: "Comprehensive bibliometric and network analysis surveying the evolution, algorithmic coupling, and methodological advancements of hybrid ARIMA architectures in predictive computational systems across a 15-year publication span.",
+        link: "https://www.researchgate.net/publication/399432881_Evolution_of_ARIMA_and_Hybrid_ARIMA_Models_in_Time_Series_Forecasting_A_Bibliometric_and_Network_Analysis_2010-2025",
+        researchGateUrl: "https://www.researchgate.net/publication/399432881_Evolution_of_ARIMA_and_Hybrid_ARIMA_Models_in_Time_Series_Forecasting_A_Bibliometric_and_Network_Analysis_2010-2025"
+      }
+    ]
+  },
+
+  // 7. Structured Development Process (Client Assurance)
+  process: [
+    {
+      step: "01",
+      name: "Discovery & Requirements Analysis",
+      icon: "fa-compass",
+      summary: "We dissect your business workflow, operational friction points, or research parameters. I translate ambiguous operational goals into unambiguous technical specifications, entity models, and project boundaries."
+    },
+    {
+      step: "02",
+      name: "Architecture & Database Planning",
+      icon: "fa-sitemap",
+      summary: "Before writing code, I engineer the relational database schema (3NF/BCNF), design API contracts, select the right tech stack, and map out secure access permissions to ensure seamless scalability."
+    },
+    {
+      step: "03",
+      name: "Iterative Development & Review",
+      icon: "fa-code-branch",
+      summary: "Software is built in modular milestones with regular demonstration check-ins. You test interactive functional builds early, ensuring the user experience matches your real-world expectations."
+    },
+    {
+      step: "04",
+      name: "Testing, Security & Validation",
+      icon: "fa-shield-halved",
+      summary: "Rigorous quality assurance including race-condition testing, database integrity checks, input sanitization, cross-device responsiveness, and empirical ISO usability evaluation."
+    },
+    {
+      step: "05",
+      name: "Deployment, Training & Support",
+      icon: "fa-rocket",
+      summary: "Flawless deployment to production cloud or on-premise servers, database migration setup, hardware printer/scanner configuration, staff operational training, and warranty support."
+    }
+  ],
+
+  // 8. Verified Technical Expertise
+  skills: [
+    {
+      category: "Backend & Server Architecture",
+      icon: "fa-server",
+      skills: [
+        { name: "PHP (7.4 / 8.x)", level: "Production Expertise" },
+        { name: "Laravel Framework", level: "Production Expertise" },
+        { name: "RESTful API Engineering", level: "Production Expertise" },
+        { name: "Python (Cisco & DOST Certified)", level: "Proficient" },
+        { name: "Role-Based Access Control (RBAC)", level: "Production Expertise" },
+        { name: "Session & JWT Security", level: "Production Expertise" }
+      ]
+    },
+    {
+      category: "Frontend & UI Engineering",
+      icon: "fa-desktop",
+      skills: [
+        { name: "JavaScript (ES6+) & TypeScript", level: "Production Expertise" },
+        { name: "HTML5 & Semantic Markup", level: "Production Expertise" },
+        { name: "CSS3 / Modern Layouts & Flexbox", level: "Production Expertise" },
+        { name: "Tailwind CSS & Blade", level: "Production Expertise" },
+        { name: "UI/UX Design (DICT Certified)", level: "Certified" },
+        { name: "Responsive & Accessible Design (WCAG)", level: "Production Expertise" }
+      ]
+    },
+    {
+      category: "Mobile & Offline-First Systems",
+      icon: "fa-mobile-screen",
+      skills: [
+        { name: "React Native & Expo", level: "Production Expertise" },
+        { name: "Embedded SQLite Caching", level: "Production Expertise" },
+        { name: "Offline-First Synchronization", level: "Production Expertise" },
+        { name: "QR & Barcode Scanning", level: "Production Expertise" },
+        { name: "NFC / Contactless Card Integration", level: "Applied Knowledge" },
+        { name: "Hardware Peripheral Integration", level: "Production Expertise" }
+      ]
+    },
+    {
+      category: "Database Architecture & Data Design",
+      icon: "fa-database",
+      skills: [
+        { name: "MySQL & MariaDB", level: "Production Expertise" },
+        { name: "Relational Modeling (3NF / BCNF)", level: "Production Expertise" },
+        { name: "ACID Transactions & Row Locking", level: "Production Expertise" },
+        { name: "SQL Query Optimization & Indexes", level: "Production Expertise" },
+        { name: "Database Migrations & Seeding", level: "Production Expertise" },
+        { name: "Data-Driven Governance (DICT)", level: "Certified Executive" }
+      ]
+    },
+    {
+      category: "Engineering Tools & DevOps",
+      icon: "fa-screwdriver-wrench",
+      skills: [
+        { name: "Git & Version Control Workflows", level: "Production Expertise" },
+        { name: "Postman / API Contract Testing", level: "Production Expertise" },
+        { name: "Composer & npm Package Ecosystems", level: "Production Expertise" },
+        { name: "Vite & Asset Bundling", level: "Proficient" },
+        { name: "Computer Hardware (Cisco Certified)", level: "Certified" },
+        { name: "Ethical AI & ChatGPT Workflows (DICT)", level: "Certified" }
+      ]
+    },
+    {
+      category: "System Analysis & Research Methods",
+      icon: "fa-chart-diagram",
+      skills: [
+        { name: "Systems Analysis & Design (RAD/UML)", level: "Advanced" },
+        { name: "ISO/IEC 25010 Software Quality Evals", level: "Advanced" },
+        { name: "Undergraduate & Graduate Advising", level: "Academic Practice" },
+        { name: "Records & Archives Management", level: "Certified (SNSU)" },
+        { name: "Futures Thinking (SNSU CapDev)", level: "Institutional" },
+        { name: "Curriculum & Syllabi Engineering", level: "Institutional" }
+      ]
+    }
+  ],
+
+  // 9. Verified Academic Profile & Credentials
   academicProfile: {
     education: [
       {
         degree: "Doctor of Information Technology (DIT) - CAR",
-        status: "Completed Academic Requirements (CAR) • Present",
+        status: "Completed Academic Requirements (CAR)",
         institution: "St. Paul University Philippines",
         location: "Tuguegarao City, Cagayan",
         period: "2023 – Present",
-        notes: "Completed all academic coursework and comprehensive degree requirements (CAR) in the Doctor of Information Technology program."
+        notes: "Completed all academic coursework and comprehensive degree requirements in the Doctor of Information Technology program."
       },
       {
         degree: "Master in Information Technology (MIT)",
-        status: "Graduated • Best Capstone Project Awardee 🏆",
+        status: "Graduated • Conferred Best Capstone Project Awardee 🏆",
         institution: "Surigao del Norte State University (SNSU)",
         location: "Surigao City, Surigao del Norte",
         period: "2020 – 2023",
-        notes: "Graduate degree in information systems, advanced databases, and enterprise software. Conferred Best Capstone Project Awardee (2023)."
+        notes: "Advanced studies in enterprise software architecture, database management, and information systems. Awarded Best Capstone Project (2023)."
       },
       {
         degree: "Bachelor of Science in Information Technology (BSIT)",
@@ -146,15 +1457,7 @@ const PORTFOLIO_DATA = {
         institution: "Surigao State College of Technology (now SNSU)",
         location: "Surigao City, Surigao del Norte",
         period: "2014 – 2020",
-        notes: "Undergraduate degree in computer programming, relational database systems, web applications, algorithms, and systems analysis."
-      },
-      {
-        degree: "Secondary Education",
-        status: "Graduated",
-        institution: "Tubajon National High School",
-        location: "Tubajon, Dinagat Islands",
-        period: "2010 – 2014",
-        notes: "High school graduate with foundational mathematics, science, and computer literacy."
+        notes: "Foundational computing degree covering computer programming, database systems, web applications, algorithms, and systems analysis."
       }
     ],
     appointments: [
@@ -163,17 +1466,16 @@ const PORTFOLIO_DATA = {
         type: "Current Academic Appointment",
         institution: "Agusan del Sur State University (ADSSU)",
         period: "Present Appointment",
-        description: "Facilitating core and advanced IT coursework, advising undergraduate capstone projects, spearheading departmental curriculum reviews, and serving on institutional technology committees."
+        description: "Instructing core computing subjects (Web Systems, Mobile Apps, Databases), advising senior capstone projects, and serving on institutional IT committees."
       },
       {
-        role: "IT Faculty Member / Instructor",
-        type: "Previous Academic Experience",
-        institution: "Higher Education / Computing Instruction",
-        period: "Academic Service",
-        description: "Delivered lecture and laboratory instruction across computer programming, web systems, and database management subjects."
+        role: "Software Developer & IT Consultant",
+        type: "Independent Professional Practice",
+        institution: "Client Projects & Systems Engineering",
+        period: "Active Practice",
+        description: "Directing the architecture and implementation of custom business systems, point-of-sale platforms, and client software solutions."
       }
     ],
-    // Verified L&D and Certifications from Civil Service PDS
     certifications: [
       {
         title: "Best Capstone Project Awardee (MIT)",
@@ -209,7 +1511,7 @@ const PORTFOLIO_DATA = {
         title: "Computer Hardware Basics",
         issuer: "Cisco Networking Academy",
         year: "2025",
-        badge: "Technical L&D"
+        badge: "Technical Certification"
       },
       {
         title: "UI/UX Design & Startup App Development",
@@ -221,385 +1523,18 @@ const PORTFOLIO_DATA = {
         title: "Futures Thinking: Digitalization of SNSU through Research",
         issuer: "Surigao del Norte State University",
         year: "2024",
-        badge: "Technical L&D (24 hrs)"
-      },
-      {
-        title: "Programming for Beginners Using Python",
-        issuer: "DOST - Caraga",
-        year: "2024",
-        badge: "Technical L&D (4 hrs)"
+        badge: "Institutional L&D (24 hrs)"
       },
       {
         title: "Basic Records and Archives Management (BRAM)",
         issuer: "Surigao del Norte State University",
         year: "2024",
         badge: "Institutional L&D (16 hrs)"
-      },
-      {
-        title: "UI - Technology Entrepreneurship Boot-Camp",
-        issuer: "Surigao State College of Technology",
-        year: "2019",
-        badge: "Technical Boot-Camp (24 hrs)"
-      },
-      {
-        title: "Code It Like A Pro Contest",
-        issuer: "Philippine Society of Information Technology Educators (PSITE)",
-        year: "2019",
-        badge: "Competition (8 hrs)"
       }
     ]
   },
 
-  // 4. Teaching Portfolio
-  teaching: [
-    {
-      code: "IT 312",
-      title: "Web Application Development",
-      level: "3rd Year BSIT",
-      tags: ["HTML5", "CSS3", "JavaScript", "PHP", "Laravel", "REST APIs"],
-      description: "Comprehensive instruction in modern client-server web architectures, dynamic user interfaces, secure session handling, relational database integration, and MVC design patterns.",
-      outcomes: [
-        "Architect and deploy standards-compliant, responsive web applications.",
-        "Implement secure authentication, role-based access control, and sanitization.",
-        "Design RESTful APIs and integrate client-side asynchronous workflows."
-      ],
-      sampleProject: "Interactive Multi-Tenant Web Portal with Role-Based Access Control"
-    },
-    {
-      code: "IT 325",
-      title: "Mobile Application Development",
-      level: "3rd Year BSIT",
-      tags: ["React Native", "Expo", "SQLite", "Offline-First", "Android"],
-      description: "Designing native and cross-platform mobile apps with responsive touch UIs, hardware sensor integrations, local SQLite caching, and asynchronous synchronization.",
-      outcomes: [
-        "Construct responsive, adaptive mobile layouts for Android devices.",
-        "Implement offline-first local data persistence with conflict resolution.",
-        "Integrate camera, QR code scanning, and device location services."
-      ],
-      sampleProject: "Campus Gate Access & Student Attendance Scanner"
-    },
-    {
-      code: "IT 222",
-      title: "Database Management Systems",
-      level: "2nd Year BSIT",
-      tags: ["MySQL", "Relational Modeling", "Normalization", "Stored Procedures", "Indexing"],
-      description: "Theoretical and applied foundations of relational database design, normalization (1NF to 3NF/BCNF), query optimization, transactional integrity (ACID), and security auditing.",
-      outcomes: [
-        "Model complex institutional domains with entity-relationship diagrams.",
-        "Compose high-performance SQL queries, views, triggers, and transactions.",
-        "Administer database instances with automated backup and role permissions."
-      ],
-      sampleProject: "Enterprise Library Circulation and Asset Tracking Database"
-    },
-    {
-      code: "IT 214",
-      title: "Object-Oriented Programming",
-      level: "2nd Year BSIT",
-      tags: ["Java", "OOP Principles", "Data Structures", "GUI Design"],
-      description: "Core computing course covering encapsulation, inheritance, polymorphism, abstraction, exception handling, and object-oriented design principles for scalable desktop and system tools.",
-      outcomes: [
-        "Apply solid object-oriented principles to solve computational problems.",
-        "Develop modular applications with clean class hierarchies and separation of concerns.",
-        "Handle file I/O and relational persistence in application pipelines."
-      ],
-      sampleProject: "Desktop Student Records & Course Scheduling System"
-    },
-    {
-      code: "IT 321",
-      title: "Integrative Programming and Technologies",
-      level: "3rd Year BSIT",
-      tags: ["API Integration", "JSON", "Microservices", "Data Interchange", "System Glue"],
-      description: "Explores techniques for integrating heterogeneous software systems, message exchanges, middleware, external service APIs, and enterprise data consolidation.",
-      outcomes: [
-        "Build secure middleware and data ingestion micro-services.",
-        "Implement Webhooks, token-based authorization (JWT/OAuth), and automated sync.",
-        "Analyze enterprise workflows for seamless interoperability."
-      ],
-      sampleProject: "Inter-Agency Document Transmittal & Notification Gateway"
-    },
-    {
-      code: "IT 411",
-      title: "Software Engineering & Capstone Advising",
-      level: "4th Year BSIT",
-      tags: ["Agile/Scrum", "UML", "Requirements Engineering", "Testing", "CI/CD"],
-      description: "Guiding senior undergraduate teams through the complete software lifecycle—from stakeholder discovery and architectural specification to quality assurance, deployment, and formal defense.",
-      outcomes: [
-        "Translate user requirements into rigorous functional specifications and UML artifacts.",
-        "Enforce version control, pull-request reviews, and unit testing pipelines.",
-        "Conduct empirical usability evaluations and academic project documentation."
-      ],
-      sampleProject: "Institutional Automated Queuing & Public Assistance Kiosk"
-    }
-  ],
-
-  // 5. Research & Scholarly Interests (Broad scholarly themes - no confidential dissertation topics)
-  research: {
-    themes: [
-      {
-        title: "Higher Education Digital Transformation",
-        icon: "fa-university",
-        desc: "Investigating the adoption, organizational change management, and sustainability of digital institutional repositories and automated campus operations in state universities."
-      },
-      {
-        title: "Mobile Architectures & Offline-First Computing",
-        icon: "fa-mobile-alt",
-        desc: "Designing resilient synchronization protocols, edge caching, and hardware scanner integrations for provincial areas with intermittent network connectivity."
-      },
-      {
-        title: "Information Systems & Workflow Engineering",
-        icon: "fa-sitemap",
-        desc: "Examining architectural models, event-driven pipelines, and digital administrative workflows that improve efficiency in Philippine public sector environments."
-      },
-      {
-        title: "Computing Pedagogy & Learning Analytics",
-        icon: "fa-user-graduate",
-        desc: "Examining project-based learning methodologies, code review tools, and automated assessment strategies to improve student retention in programming tracks."
-      },
-      {
-        title: "Cybersecurity & Information Assurance in Public Sector IT",
-        icon: "fa-shield-alt",
-        desc: "Analyzing role-based access governance, data privacy compliance (Data Privacy Act of 2012), and secure software design in educational institutions."
-      }
-    ],
-    collaborationNote: "Academic collaborators, fellow researchers, and HEI administrators interested in applied computing research, mobile architectures, or computing pedagogy are invited to connect."
-  },
-
-  // 6. Publications & Scholarly Profiles
-  publications: {
-    notice: "Scholarly publications and conference proceedings are currently in preparation. Verified peer-reviewed journal papers, conference presentations, and technical monographs will be listed here upon formal acceptance and indexing.",
-    profilesConfigured: {
-      googleScholarNote: "Scholar profile link will activate upon publication of indexable papers.",
-      orcidNote: "ORCID profile registry connects scholarly works across research registries."
-    },
-    entries: []
-  },
-
-  // 7. Software Development Projects
-  projects: [
-    {
-      id: "scanalert",
-      title: "ScanAlert / SafeTrack",
-      subtitle: "Offline-First QR & NFC Student Monitoring & Attendance Engine",
-      category: "mobile",
-      categoryLabel: "Mobile & IoT Applications",
-      badge: "Featured Prototype",
-      status: "Functional Prototype",
-      image: "assets/images/projects/scanalert.svg",
-      summary: "A resilient student tracking and campus entry logging system engineered for institutional gates and classrooms, combining QR/NFC scanning with offline-first local SQLite caching and automated cloud synchronization.",
-      problem: "Traditional paper-based gate and classroom logbooks are slow, error-prone, and cause bottleneck congestion during peak morning hours. Furthermore, intermittent campus internet connectivity often disables purely cloud-dependent systems.",
-      intendedUsers: "Campus security personnel, department faculty, administrative monitors, and enrolled students.",
-      technologies: ["React Native", "Expo", "SQLite", "PHP / Laravel REST API", "NFC / QR Scanners", "JWT Auth"],
-      features: [
-        "Sub-second QR code reading and NFC contactless card verification.",
-        "Robust offline-first architecture: logs persist in local encrypted SQLite and auto-sync when network reconnects.",
-        "Real-time campus head-count dashboard for administrative monitors.",
-        "Automated notification triggers for student entry/exit timestamps.",
-        "Role-based authorization preventing unauthorized log modifications."
-      ],
-      architecture: "Three-tier distributed model: edge mobile scanners communicate with local SQLite storage; an asynchronous sync daemon manages idempotent REST synchronization to an enterprise MySQL server with JWT validation.",
-      challenges: [
-        "Resolving concurrent synchronization conflicts when multiple gate scanners sync simultaneously after network restoration.",
-        "Optimizing camera viewfinder frame processing to conserve mobile device battery during prolonged scanning sessions."
-      ],
-      githubUrl: "https://github.com/antonio-piloton/scanalert-safetrack",
-      demoUrl: "",
-      demoAvailable: false
-    },
-    {
-      id: "doctrack",
-      title: "DocTrack: Institutional Document Transmittal System",
-      subtitle: "Lifecycle Tracking & Barcode Verification Platform",
-      category: "info-sys",
-      categoryLabel: "Information Systems",
-      badge: "Core System",
-      status: "Operational Prototype",
-      image: "assets/images/projects/doctrack.svg",
-      summary: "A transparent document transmittal platform utilizing unique barcodes and QR identification to trace the lifecycle, physical custody, and approval milestones of official correspondence.",
-      problem: "Inter-office memoranda, budget requests, and vouchers frequently get misplaced or stalled in transition, making it arduous to ascertain the exact office holding a file.",
-      intendedUsers: "Campus administrative units, college offices, records officers, and faculty members.",
-      technologies: ["PHP", "JavaScript", "MySQL", "Barcode / QR Generator", "Bootstrap", "FPDF Library"],
-      features: [
-        "Automated generation of unique alphanumeric tracking numbers with printable barcode/QR routing slips.",
-        "Scan-to-receive and scan-to-release actions recording timestamp, handling personnel, and remarks.",
-        "Public tracking inquiry portal allowing originators to monitor transmittal progress without logging into administrative consoles.",
-        "Turnaround time analytics highlighting average processing durations per receiving office.",
-        "Automated routing history summary for archival and records retention."
-      ],
-      architecture: "Relational schema designed around immutable routing events; client-side barcode scanner integration via standard HID wedge and camera scanner streams.",
-      challenges: [
-        "Ensuring backward compatibility with legacy thermal receipt and barcode printers used in administrative offices.",
-        "Preventing accidental out-of-order scans through strict state validation rules."
-      ],
-      githubUrl: "https://github.com/antonio-piloton/doctrack-system",
-      demoUrl: "",
-      demoAvailable: false
-    },
-    {
-      id: "saas-pos",
-      title: "SaaS Multi-Branch Point-of-Sale & Inventory",
-      subtitle: "Retail Transaction & Multi-Branch Stock Management Suite",
-      category: "web",
-      categoryLabel: "Web Applications",
-      badge: "Full-Stack Web",
-      status: "Operational Prototype",
-      image: "assets/images/projects/pos-system.svg",
-      summary: "A robust retail transaction, inventory auditing, and sales analytics suite built with enterprise-grade Laravel architecture, designed for campus cooperatives, school supplies depots, and multi-tenant small businesses.",
-      problem: "Stores and cooperatives frequently struggle with stock discrepancies, manual receipts, inability to track item variations, and lack of real-time sales profit analytics across different checkout registers.",
-      intendedUsers: "Store cashiers, inventory managers, cooperative board members, and business proprietors.",
-      technologies: ["Laravel", "Blade", "MySQL", "REST APIs", "Tailwind CSS", "ESC/POS Thermal Printing"],
-      features: [
-        "Rapid touch-enabled cashier terminal with barcode scanning, discounts, tax computation, and multiple tender types.",
-        "Multi-branch inventory ledger tracking stock adjustments, transfers, minimum stock alerts, and supplier purchase orders.",
-        "Role-based privilege separation isolating cashier sales from inventory cost records and managerial reports.",
-        "Automated end-of-day Z-Reading cash drawer reconciliation and profit margin reports.",
-        "Thermal receipt printer driver integration via direct network socket and browser printing."
-      ],
-      architecture: "Layered Laravel architecture incorporating specialized Controller, Service, and Repository layers with database transactions guarding all stock-deducting checkout operations.",
-      challenges: [
-        "Guarding against race conditions during simultaneous checkout of limited inventory items via pessimistic database locks.",
-        "Implementing clean multi-tenant schema isolation for independent retail clients."
-      ],
-      githubUrl: "https://github.com/antonio-piloton/saas-pos-inventory",
-      demoUrl: "",
-      demoAvailable: false
-    },
-    {
-      id: "edumetrics-lms",
-      title: "EduMetrics: LMS Evaluation & Survey Engine",
-      subtitle: "Student Feedback Analytics & Academic Assessment System",
-      category: "edtech",
-      categoryLabel: "Educational Technology",
-      badge: "EdTech Solution",
-      status: "Completed Prototype",
-      image: "assets/images/projects/lms-survey.svg",
-      summary: "A high-concurrency survey and instructional evaluation application enabling students to rate teaching effectiveness, course delivery, and campus facilities with real-time analytics aggregation.",
-      problem: "Paper evaluation forms demand immense printing costs, weeks of manual data entry, and are prone to transcription errors, hindering timely faculty feedback and institutional accreditation reviews.",
-      intendedUsers: "Enrolled students, academic department chairs, HR development officers, and faculty members.",
-      technologies: ["PHP", "JavaScript", "MySQL", "AJAX", "CSS3", "CSV / Excel Exporters"],
-      features: [
-        "Dynamic survey builder supporting Likert scales, open-ended reflections, and weighted competency metrics.",
-        "Single-token survey access preventing ballot stuffing while safeguarding respondent anonymity.",
-        "Real-time faculty rating scorecards with automated computation of mean, standard deviation, and descriptive ratings.",
-        "Institutional clearance gating: students must complete evaluations to view final grades.",
-        "Instant one-click exports formatted for faculty promotion portfolios (NBC 461 / SUC leveling)."
-      ],
-      architecture: "Normalized survey response schema optimized for read-heavy completion bursts during final examination weeks; indexed caching for aggregate metric computation.",
-      challenges: [
-        "Handling sudden traffic surges during end-of-semester evaluation deadlines without database connection pooling failures.",
-        "Guaranteeing mathematical anonymity for students while strictly tracking completion flags."
-      ],
-      githubUrl: "https://github.com/antonio-piloton/edumetrics-evaluation",
-      demoUrl: "",
-      demoAvailable: false
-    },
-    {
-      id: "unilib-sis",
-      title: "UniLib & SIS: Academic Library & Student Records",
-      subtitle: "Unified Cataloging, Circulation & Clearance Repository",
-      category: "info-sys",
-      categoryLabel: "Information Systems",
-      badge: "Campus System",
-      status: "In Development",
-      image: "assets/images/projects/library-sis.svg",
-      summary: "A streamlined academic resource management platform combining Dewey Decimal / LOC cataloging with automated student borrowing clearances, overdue fine calculations, and institutional record validation.",
-      problem: "Disjointed record-keeping between college libraries and registrar offices results in delayed graduation clearances and unreturned academic reference materials.",
-      intendedUsers: "College librarians, student borrowers, faculty researchers, and campus clearance officers.",
-      technologies: ["PHP", "JavaScript", "MySQL", "HTML5", "CSS3", "Barcode Scanner Integration"],
-      features: [
-        "Online Public Access Catalog (OPAC) with fast keyword, title, author, and call-number indexing.",
-        "Student ID barcode scanning for rapid checkout and return processing.",
-        "Automated overdue penalty calculation with grace-period rules and digital receipts.",
-        "Direct integration with university semester clearance status: holds clearance automatically for unreturned books.",
-        "Statistical circulation reporting analyzing most-borrowed subjects and acquisition recommendations."
-      ],
-      architecture: "Relational MySQL design featuring transaction-safe circulation tables, foreign keys with audit triggers, and a lightweight search index.",
-      challenges: [
-        "Standardizing legacy bibliographic records with missing ISBN and call numbers.",
-        "Creating a simple, resilient interface that library student assistants can operate with minimal technical training."
-      ],
-      githubUrl: "https://github.com/antonio-piloton/unilib-sis-manager",
-      demoUrl: "",
-      demoAvailable: false
-    }
-  ],
-
-  // 8. Categorized Technical Skills
-  skills: [
-    {
-      category: "Frontend Development",
-      icon: "fa-desktop",
-      skills: [
-        { name: "HTML5 & Semantic Web", level: "Advanced" },
-        { name: "CSS3 & Responsive Design", level: "Advanced" },
-        { name: "Vanilla JavaScript (ES6+)", level: "Advanced" },
-        { name: "Tailwind CSS", level: "Proficient" },
-        { name: "Vue.js", level: "Proficient" },
-        { name: "UI/UX Design (DICT Certified)", level: "Proficient" }
-      ]
-    },
-    {
-      category: "Backend & Server Architecture",
-      icon: "fa-server",
-      skills: [
-        { name: "PHP", level: "Advanced" },
-        { name: "Laravel Framework", level: "Advanced" },
-        { name: "Python (Cisco & DOST Certified)", level: "Proficient" },
-        { name: "RESTful API Engineering", level: "Advanced" },
-        { name: "MVC Architecture", level: "Advanced" },
-        { name: "Authentication & RBAC", level: "Advanced" }
-      ]
-    },
-    {
-      category: "Mobile & Embedded Systems",
-      icon: "fa-mobile-alt",
-      skills: [
-        { name: "React Native", level: "Proficient" },
-        { name: "Expo Ecosystem", level: "Proficient" },
-        { name: "Android Application Flow", level: "Proficient" },
-        { name: "Offline-First Sync", level: "Proficient" },
-        { name: "QR / Barcode Processing", level: "Advanced" },
-        { name: "NFC / RFID Integration", level: "Working Knowledge" }
-      ]
-    },
-    {
-      category: "Databases & Data Management",
-      icon: "fa-database",
-      skills: [
-        { name: "MySQL / MariaDB", level: "Advanced" },
-        { name: "Relational Modeling & 3NF", level: "Advanced" },
-        { name: "SQLite (Embedded Mobile)", level: "Advanced" },
-        { name: "Query Optimization & Indexing", level: "Proficient" },
-        { name: "Data Driven Governance (DICT)", level: "Executive" },
-        { name: "Database Migrations", level: "Advanced" }
-      ]
-    },
-    {
-      category: "Engineering Tools & DevOps",
-      icon: "fa-tools",
-      skills: [
-        { name: "Git & GitHub Collaboration", level: "Advanced" },
-        { name: "Composer & npm", level: "Advanced" },
-        { name: "Vite Bundler", level: "Proficient" },
-        { name: "Computer Hardware (Cisco Certified)", level: "Advanced" },
-        { name: "Postman / API Testing", level: "Advanced" },
-        { name: "Ethical AI & ChatGPT Workflows", level: "Proficient" }
-      ]
-    },
-    {
-      category: "Academic & Systems Analysis",
-      icon: "fa-project-diagram",
-      skills: [
-        { name: "Systems Analysis & Design", level: "Advanced" },
-        { name: "UML Modeling & Flowcharts", level: "Advanced" },
-        { name: "Curriculum & Syllabi Design", level: "Advanced" },
-        { name: "Capstone Advising & Mentorship", level: "Advanced" },
-        { name: "Futures Thinking & Research CapDev", level: "Institutional" },
-        { name: "Records & Archives Management", level: "Certified" }
-      ]
-    }
-  ],
-
-  // 9. Extension, Outreach & Community Engagement
+  // 10. Community & Extension Engagement
   extension: [
     {
       title: "Community ICT Literacy & Digital Capability Building",
@@ -607,11 +1542,7 @@ const PORTFOLIO_DATA = {
       role: "Lead Trainer & Technical Coordinator",
       status: "Institutional Extension Program",
       period: "2024 – Present",
-      description: "Delivering targeted workshops on office productivity tools, digital records management, and cyber hygiene for local community staff and secondary school educators.",
-      outcomes: [
-        "Enhanced digital competency among local public servants.",
-        "Facilitated hands-on modules on internet safety and basic computer troubleshooting."
-      ]
+      description: "Conducting hands-on workshops on office productivity tools, digital records handling, and cyber hygiene for local government staff and educators."
     },
     {
       title: "Information Systems Technical Assistance for Local Cooperatives",
@@ -619,74 +1550,15 @@ const PORTFOLIO_DATA = {
       role: "Technical Consultant / Systems Analyst",
       status: "Extension Project",
       period: "2023 – 2024",
-      description: "Assisting community enterprises in assessing their bookkeeping workflows and introducing computerized inventory tracking methodologies.",
-      outcomes: [
-        "Conducted workflow analysis for retail inventory management.",
-        "Provided recommendations on affordable digital record-keeping tools."
-      ]
-    },
-    {
-      title: "Hour of Code & Youth in Computing Immersion",
-      partner: "Agusan del Sur Senior High Schools",
-      role: "Speaker & Code Mentor",
-      status: "Outreach Activity",
-      period: "Annual Academic Extension",
-      description: "Inspiring youth and high school graduates to pursue higher education careers in computing, coding, and software development through interactive programming demonstrations.",
-      outcomes: [
-        "Mentored aspiring high school STEM students in basic logic formulation and web design.",
-        "Promoted enrollment in state university computing degree offerings."
-      ]
-    }
-  ],
-
-  // 10. Professional Service & Verified Memberships (From Civil Service PDS)
-  service: [
-    {
-      role: "Active Member",
-      body: "Philippine Institute of 21st Century Educators Inc.",
-      period: "Professional Membership",
-      type: "Professional Association",
-      description: "Engaging in modern pedagogical frameworks, 21st-century educational methodologies, and technology-enhanced teaching strategies."
-    },
-    {
-      role: "Active Member",
-      body: "Association of Caraga Educators for Geology, Architecture, Technology and Engineering",
-      period: "Regional Association",
-      type: "Regional Professional Body",
-      description: "Collaborating with educators across the Caraga administrative region in advancing engineering, technology, and applied sciences."
-    },
-    {
-      role: "Active Member / Participant",
-      body: "Philippine Society of Information Technology Educators (PSITE)",
-      period: "National Organization",
-      type: "Computing Professional Body",
-      description: "Participating in national computing conventions, programming contests (Code It Like A Pro), and IT education summits."
-    },
-    {
-      role: "Curriculum Review & Revision Committee Member",
-      body: "Department of Information Technology, ADSSU",
-      period: "2023 – Present",
-      type: "Curricular & Academic Governance",
-      description: "Participating in aligning the BSIT curriculum with CHED Memorandum Orders (CMO), regional industry standards, and modern software development practices."
-    },
-    {
-      role: "Undergraduate IT Capstone Project Adviser & Panel Evaluator",
-      body: "College of Computing and Information Sciences",
-      period: "Academic Years 2022 – Present",
-      type: "Academic Mentorship",
-      description: "Mentoring student development teams through technical feasibility studies, software architecture design, Git collaboration, and formal oral defenses."
-    },
-    {
-      role: "Departmental Information Systems Coordinator",
-      body: "Institutional IT Initiatives",
-      period: "2023 – Present",
-      type: "Institutional Technology Service",
-      description: "Liaising departmental technology requirements, computer laboratory software installations, and digital institutional processes."
+      description: "Assisting community enterprises in evaluating their bookkeeping workflows and introducing computerized inventory tracking methodologies."
     }
   ]
 };
 
-// Export to window for vanilla browser execution
+// Export to window for vanilla browser execution, and module.exports for Node/testing
 if (typeof window !== "undefined") {
   window.PORTFOLIO_DATA = PORTFOLIO_DATA;
+}
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = PORTFOLIO_DATA;
 }

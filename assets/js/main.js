@@ -1,20 +1,46 @@
+
+// Helper to render official tech stack logo badges
+function renderTechBadge(tech) {
+  const t = tech.toLowerCase();
+  let icon = '<i class="fas fa-code" style="color: var(--color-brand-blue);"></i>';
+  
+  if (t.includes('laravel')) icon = '<i class="fab fa-laravel" style="color: #FF2D20;"></i>';
+  else if (t.includes('php')) icon = '<i class="fab fa-php" style="color: #777BB4; font-size: 0.95rem;"></i>';
+  else if (t.includes('react')) icon = '<i class="fab fa-react" style="color: #61DAFB;"></i>';
+  else if (t.includes('typescript')) icon = '<svg class="tech-icon-svg" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#3178C6"/><path fill="#FFF" d="M14.7 18.2c.5.3 1.1.5 1.8.5 1.1 0 1.7-.5 1.7-1.3 0-.8-.5-1.1-1.5-1.5-1.5-.5-2.5-1.3-2.5-2.6 0-1.5 1.2-2.6 3.1-2.6.9 0 1.5.2 2 .5l-.5 1.3c-.4-.3-1-.4-1.6-.4-1 0-1.5.5-1.5 1.2 0 .7.5 1.1 1.6 1.5 1.5.6 2.4 1.3 2.4 2.7 0 1.6-1.3 2.7-3.3 2.7-1 0-1.8-.2-2.3-.6l.6-1.4zM6 12.3h3.2v7.1H11v-7.1h3.2V11H6v1.3z"/></svg>';
+  else if (t.includes('javascript') || t === 'js') icon = '<i class="fab fa-js" style="color: #F7DF1E; background: #000; border-radius: 2px;"></i>';
+  else if (t.includes('tailwind')) icon = '<svg class="tech-icon-svg" viewBox="0 0 24 24"><path fill="#06B6D4" d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z"/></svg>';
+  else if (t.includes('mysql')) icon = '<svg class="tech-icon-svg" viewBox="0 0 24 24"><path fill="#00758F" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 16.5c-3 0-5.5-2-5.5-4.5s2.5-4.5 5.5-4.5 5.5 2 5.5 4.5-2.5 4.5-5.5 4.5z"/><circle cx="13" cy="14" r="1.5" fill="#F29111"/></svg>';
+  else if (t.includes('sqlite')) icon = '<svg class="tech-icon-svg" viewBox="0 0 24 24"><rect width="24" height="24" rx="4" fill="#003B57"/><path fill="#FFF" d="M7 6h10v3H7zm0 5h10v3H7zm0 5h10v3H7z"/></svg>';
+  else if (t.includes('python')) icon = '<i class="fab fa-python" style="color: #3776AB;"></i>';
+  else if (t.includes('android')) icon = '<i class="fab fa-android" style="color: #3DDC84;"></i>';
+  else if (t.includes('ios') || t.includes('apple')) icon = '<i class="fab fa-apple"></i>';
+  else if (t.includes('firebase')) icon = '<i class="fas fa-fire" style="color: #FFA611;"></i>';
+  else if (t.includes('git')) icon = '<i class="fab fa-git-alt" style="color: #F05032;"></i>';
+  else if (t.includes('rest') || t.includes('api')) icon = '<i class="fas fa-network-wired" style="color: var(--color-champagne);"></i>';
+  else if (t.includes('qr') || t.includes('nfc') || t.includes('rfid')) icon = '<i class="fas fa-qrcode" style="color: var(--color-champagne);"></i>';
+  else if (t.includes('esc/pos') || t.includes('thermal') || t.includes('hardware')) icon = '<i class="fas fa-print" style="color: var(--color-champagne);"></i>';
+
+  return `<span class="tag-pill">${icon}<span>${tech}</span></span>`;
+}
+
 /**
  * ====================================================================
  * PORTFOLIO APPLICATION CORE LOGIC
  * ====================================================================
- * Handles responsive mobile navigation, theme switcher, dynamic projects
- * rendering, filtering, interactive modals, mailto composer, and toast alerts.
+ * Owner: Antonio Jr. L. Piloton, MIT
+ * Multi-page architecture logic: theme toggle, mobile navigation drawer,
+ * quotation calculator, contact form composer, and toast alerts.
  * ====================================================================
  */
 
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
   initNavigation();
-  initScrollEffects();
-  initProjects();
+  hydrateFromPortfolioData();
   initContactForm();
-  initCvDownload();
-  renderDynamicData();
+  initQuotationCalculator();
+  loadPendingQuoteToForm();
 });
 
 /* --------------------------------------------------------------------------
@@ -24,7 +50,7 @@ function initTheme() {
   const themeToggleBtns = document.querySelectorAll(".theme-toggle-btn");
   const savedTheme = localStorage.getItem("antonio_portfolio_theme");
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  
+
   const initialTheme = savedTheme ? savedTheme : (prefersDark ? "dark" : "light");
   applyTheme(initialTheme);
 
@@ -42,7 +68,7 @@ function initTheme() {
 function applyTheme(theme) {
   document.documentElement.setAttribute("data-theme", theme);
   const themeToggleBtns = document.querySelectorAll(".theme-toggle-btn");
-  
+
   themeToggleBtns.forEach(btn => {
     const icon = btn.querySelector("i");
     if (icon) {
@@ -58,25 +84,25 @@ function applyTheme(theme) {
 }
 
 /* --------------------------------------------------------------------------
-   2. RESPONSIVE MOBILE NAVIGATION & DRAWER
+   2. MOBILE NAVIGATION DRAWER
    -------------------------------------------------------------------------- */
 function initNavigation() {
   const mobileToggle = document.querySelector(".mobile-nav-toggle");
   const mobileDrawer = document.querySelector(".mobile-drawer");
   const navBackdrop = document.querySelector(".nav-backdrop");
-  const navLinks = document.querySelectorAll(".nav-link, .mobile-nav-item a");
+  const navLinks = document.querySelectorAll(".mobile-nav-item a");
 
   function openMenu() {
-    mobileToggle.setAttribute("aria-expanded", "true");
-    mobileDrawer.classList.add("open");
-    navBackdrop.classList.add("active");
+    if (mobileToggle) mobileToggle.setAttribute("aria-expanded", "true");
+    if (mobileDrawer) mobileDrawer.classList.add("open");
+    if (navBackdrop) navBackdrop.classList.add("active");
     document.body.classList.add("no-scroll");
   }
 
   function closeMenu() {
-    mobileToggle.setAttribute("aria-expanded", "false");
-    mobileDrawer.classList.remove("open");
-    navBackdrop.classList.remove("active");
+    if (mobileToggle) mobileToggle.setAttribute("aria-expanded", "false");
+    if (mobileDrawer) mobileDrawer.classList.remove("open");
+    if (navBackdrop) navBackdrop.classList.remove("active");
     document.body.classList.remove("no-scroll");
   }
 
@@ -95,263 +121,202 @@ function initNavigation() {
     navBackdrop.addEventListener("click", closeMenu);
   }
 
-  // Close when clicking any link inside drawer
   navLinks.forEach(link => {
     link.addEventListener("click", () => {
       closeMenu();
     });
   });
 
-  // Close on Escape key press
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       closeMenu();
-      closeModal();
-      closeCvModal();
     }
   });
 }
 
 /* --------------------------------------------------------------------------
-   3. SCROLL EFFECTS & SCROLLSPY
+   3. QUOTATION CALCULATOR / COST ESTIMATOR LOGIC
    -------------------------------------------------------------------------- */
-function initScrollEffects() {
-  const navbar = document.querySelector(".navbar");
-  const backToTopBtn = document.querySelector(".back-to-top");
-  const sections = document.querySelectorAll("section[id]");
-  const desktopLinks = document.querySelectorAll(".nav-menu .nav-link");
+function initQuotationCalculator() {
+  const calcContainer = document.getElementById("quotation-calculator");
+  if (!calcContainer) return;
 
-  function onScroll() {
-    const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+  const typeInputs = calcContainer.querySelectorAll('input[name="calc_type"]');
+  const scaleInputs = calcContainer.querySelectorAll('input[name="calc_scale"]');
+  const featureInputs = calcContainer.querySelectorAll('input[name="calc_feature"]');
+  const applyBtn = document.getElementById("apply-quote-btn");
 
-    // Sticky navbar shadow
-    if (navbar) {
-      if (scrollY > 40) {
-        navbar.classList.add("scrolled");
-      } else {
-        navbar.classList.remove("scrolled");
-      }
+  function calculateQuote() {
+    let basePrice = 35000;
+    let typeName = "Custom Business POS & Inventory";
+    let typeTimelineWeeks = 4;
+
+    const selectedType = calcContainer.querySelector('input[name="calc_type"]:checked');
+    if (selectedType) {
+      basePrice = parseInt(selectedType.getAttribute("data-price") || "35000", 10);
+      typeName = selectedType.getAttribute("data-name") || "Custom System";
+      typeTimelineWeeks = parseInt(selectedType.getAttribute("data-weeks") || "4", 10);
     }
 
-    // Back to top visibility
-    if (backToTopBtn) {
-      if (scrollY > 450) {
-        backToTopBtn.classList.add("show");
-      } else {
-        backToTopBtn.classList.remove("show");
-      }
+    let scalePrice = 0;
+    let scaleName = "Single Branch / Core Scope";
+    let scaleWeeks = 0;
+    const selectedScale = calcContainer.querySelector('input[name="calc_scale"]:checked');
+    if (selectedScale) {
+      scalePrice = parseInt(selectedScale.getAttribute("data-price") || "0", 10);
+      scaleName = selectedScale.getAttribute("data-name") || "Core Scope";
+      scaleWeeks = parseInt(selectedScale.getAttribute("data-weeks") || "0", 10);
     }
 
-    // ScrollSpy active link detection
-    let currentSectionId = "";
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 120;
-      const sectionHeight = section.offsetHeight;
-      if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
-        currentSectionId = section.getAttribute("id");
-      }
+    let featuresTotal = 0;
+    let featureWeeks = 0;
+    const selectedFeatures = [];
+    calcContainer.querySelectorAll('input[name="calc_feature"]:checked').forEach(feat => {
+      const price = parseInt(feat.getAttribute("data-price") || "0", 10);
+      const name = feat.getAttribute("data-name") || "Feature";
+      const weeks = parseFloat(feat.getAttribute("data-weeks") || "0.5");
+      featuresTotal += price;
+      featureWeeks += weeks;
+      selectedFeatures.push({ name, price });
     });
 
-    if (currentSectionId) {
-      desktopLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === `#${currentSectionId}`) {
-          link.classList.add("active");
+    const subtotal = basePrice + scalePrice + featuresTotal;
+    const highRange = Math.round(subtotal * 1.25);
+    const totalWeeksMin = Math.max(2, Math.round(typeTimelineWeeks + scaleWeeks + featureWeeks));
+    const totalWeeksMax = Math.round(totalWeeksMin * 1.35);
+
+    // Update UI elements
+    const priceDisplay = document.getElementById("calc-price-display");
+    const timelineDisplay = document.getElementById("calc-timeline-display");
+    const breakdownContainer = document.getElementById("calc-breakdown-items");
+
+    if (priceDisplay) {
+      priceDisplay.textContent = `₱${subtotal.toLocaleString()} – ₱${highRange.toLocaleString()}`;
+    }
+
+    if (timelineDisplay) {
+      timelineDisplay.innerHTML = `<i class="fas fa-calendar-alt"></i> Est. Timeline: ${totalWeeksMin} – ${totalWeeksMax} Weeks`;
+    }
+
+    if (breakdownContainer) {
+      let breakdownHtml = `
+        <li class="calc-breakdown-item">
+          <span>${escapeHTML(typeName)}</span>
+          <strong>₱${basePrice.toLocaleString()}</strong>
+        </li>
+      `;
+
+      if (scalePrice > 0) {
+        breakdownHtml += `
+          <li class="calc-breakdown-item">
+            <span>Scale: ${escapeHTML(scaleName)}</span>
+            <strong>+₱${scalePrice.toLocaleString()}</strong>
+          </li>
+        `;
+      }
+
+      selectedFeatures.forEach(f => {
+        breakdownHtml += `
+          <li class="calc-breakdown-item">
+            <span>+ ${escapeHTML(f.name)}</span>
+            <strong>+₱${f.price.toLocaleString()}</strong>
+          </li>
+        `;
+      });
+
+      breakdownContainer.innerHTML = breakdownHtml;
+    }
+
+    // Save in quote state
+    calcContainer._currentQuote = {
+      typeName,
+      scaleName,
+      selectedFeatures: selectedFeatures.map(f => f.name),
+      priceRange: `₱${subtotal.toLocaleString()} – ₱${highRange.toLocaleString()}`,
+      timeline: `${totalWeeksMin} – ${totalWeeksMax} Weeks`,
+      estimatedBase: subtotal
+    };
+  }
+
+  // Bind change events
+  typeInputs.forEach(i => i.addEventListener("change", calculateQuote));
+  scaleInputs.forEach(i => i.addEventListener("change", calculateQuote));
+  featureInputs.forEach(i => i.addEventListener("change", calculateQuote));
+
+  // Initial calculation
+  calculateQuote();
+
+  // Apply to inquiry button handler
+  if (applyBtn) {
+    applyBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (calcContainer._currentQuote) {
+        sessionStorage.setItem("pending_quote", JSON.stringify(calcContainer._currentQuote));
+        window.location.href = "contact.html";
+      }
+    });
+  }
+}
+
+function loadPendingQuoteToForm() {
+  const pendingQuoteStr = sessionStorage.getItem("pending_quote");
+  if (!pendingQuoteStr) return;
+
+  const form = document.getElementById("collaboration-form");
+  if (!form) return;
+
+  try {
+    const quote = JSON.parse(pendingQuoteStr);
+    const clientTypeSelect = document.getElementById("contact-client-type");
+    const projectTypeSelect = document.getElementById("contact-project-type");
+    const budgetSelect = document.getElementById("contact-budget");
+    const timelineSelect = document.getElementById("contact-timeline");
+    const messageTextarea = document.getElementById("contact-message");
+
+    if (projectTypeSelect) {
+      // Find matching option or closest match
+      for (let opt of projectTypeSelect.options) {
+        if (opt.value.toLowerCase().includes(quote.typeName.toLowerCase()) ||
+          quote.typeName.toLowerCase().includes(opt.value.toLowerCase())) {
+          opt.selected = true;
+          break;
         }
-      });
-    }
-  }
-
-  window.addEventListener("scroll", onScroll, { passive: true });
-
-  if (backToTopBtn) {
-    backToTopBtn.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    });
-  }
-}
-
-/* --------------------------------------------------------------------------
-   4. PROJECTS RENDERING & FILTERING
-   -------------------------------------------------------------------------- */
-let activeFilter = "all";
-
-function initProjects() {
-  const container = document.getElementById("projects-container");
-  const filterBtns = document.querySelectorAll(".filter-btn");
-
-  if (!container || !window.PORTFOLIO_DATA || !window.PORTFOLIO_DATA.projects) return;
-
-  renderProjectsList(window.PORTFOLIO_DATA.projects, activeFilter);
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      filterBtns.forEach(b => b.classList.remove("active"));
-      btn.classList.add("active");
-      activeFilter = btn.getAttribute("data-filter");
-      renderProjectsList(window.PORTFOLIO_DATA.projects, activeFilter);
-    });
-  });
-
-  // Modal Close Listeners
-  const modalBackdrop = document.getElementById("project-modal-backdrop");
-  const modalCloseBtn = document.getElementById("modal-close-btn");
-
-  if (modalBackdrop) {
-    modalBackdrop.addEventListener("click", (e) => {
-      if (e.target === modalBackdrop) {
-        closeModal();
       }
-    });
-  }
-
-  if (modalCloseBtn) {
-    modalCloseBtn.addEventListener("click", closeModal);
-  }
-}
-
-function renderProjectsList(projects, filter) {
-  const container = document.getElementById("projects-container");
-  if (!container) return;
-
-  const filtered = filter === "all" 
-    ? projects 
-    : projects.filter(p => p.category === filter);
-
-  if (filtered.length === 0) {
-    container.innerHTML = `
-      <div style="grid-column: 1 / -1; text-align: center; padding: 3rem 1rem;">
-        <i class="fas fa-folder-open" style="font-size: 2.5rem; color: var(--color-emerald); margin-bottom: 1rem;"></i>
-        <p style="font-weight: 600; color: var(--text-main);">No projects found in this category.</p>
-      </div>
-    `;
-    return;
-  }
-
-  container.innerHTML = filtered.map(project => {
-    const techBadges = project.technologies
-      .slice(0, 4)
-      .map(t => `<span class="project-tech-pill">${escapeHTML(t)}</span>`)
-      .join("");
-
-    return `
-      <article class="project-card" data-id="${project.id}">
-        <div class="project-img-wrapper">
-          <img src="${escapeHTML(project.image)}" alt="${escapeHTML(project.title)} Illustration" loading="lazy" />
-          <span class="project-badge-overlay">${escapeHTML(project.badge)}</span>
-          <span class="project-status-overlay">${escapeHTML(project.status)}</span>
-        </div>
-        <div class="project-card-body">
-          <span class="project-category-label">${escapeHTML(project.categoryLabel)}</span>
-          <h3 class="project-title">${escapeHTML(project.title)}</h3>
-          <p class="project-subtitle">${escapeHTML(project.subtitle)}</p>
-          <p class="project-summary">${escapeHTML(project.summary)}</p>
-          <div class="project-tech-chips">
-            ${techBadges}
-          </div>
-          <div class="project-card-footer">
-            <button class="view-details-btn" onclick="openProjectModal('${project.id}')">
-              <span>View Architecture</span>
-              <i class="fas fa-arrow-right"></i>
-            </button>
-            ${project.githubUrl ? `
-              <a href="${escapeHTML(project.githubUrl)}" target="_blank" rel="noopener noreferrer" class="github-code-link" aria-label="View source code on GitHub">
-                <i class="fab fa-github"></i>
-                <span>Repository</span>
-              </a>
-            ` : ''}
-          </div>
-        </div>
-      </article>
-    `;
-  }).join("");
-}
-
-window.openProjectModal = function(projectId) {
-  if (!window.PORTFOLIO_DATA || !window.PORTFOLIO_DATA.projects) return;
-  const project = window.PORTFOLIO_DATA.projects.find(p => p.id === projectId);
-  if (!project) return;
-
-  const modalBackdrop = document.getElementById("project-modal-backdrop");
-  const modalTitle = document.getElementById("modal-project-title");
-  const modalSubtitle = document.getElementById("modal-project-subtitle");
-  const modalImage = document.getElementById("modal-project-img");
-  const modalProblem = document.getElementById("modal-project-problem");
-  const modalUsers = document.getElementById("modal-project-users");
-  const modalArchitecture = document.getElementById("modal-project-arch");
-  const modalFeatures = document.getElementById("modal-project-features");
-  const modalTechStack = document.getElementById("modal-project-tech");
-  const modalChallenges = document.getElementById("modal-project-challenges");
-  const modalGithubLink = document.getElementById("modal-github-link");
-  const modalBadge = document.getElementById("modal-status-badge");
-
-  if (modalTitle) modalTitle.textContent = project.title;
-  if (modalSubtitle) modalSubtitle.textContent = project.subtitle;
-  if (modalImage) {
-    modalImage.src = project.image;
-    modalImage.alt = project.title;
-  }
-  if (modalBadge) modalBadge.textContent = `${project.badge} • ${project.status}`;
-  if (modalProblem) modalProblem.textContent = project.problem;
-  if (modalUsers) modalUsers.textContent = project.intendedUsers;
-  if (modalArchitecture) modalArchitecture.textContent = project.architecture;
-
-  if (modalFeatures) {
-    modalFeatures.innerHTML = project.features.map(f => `
-      <li><i class="fas fa-check-circle"></i> <span>${escapeHTML(f)}</span></li>
-    `).join("");
-  }
-
-  if (modalTechStack) {
-    modalTechStack.innerHTML = project.technologies.map(t => `
-      <span class="project-tech-pill" style="font-size: 0.8rem; padding: 4px 10px;">${escapeHTML(t)}</span>
-    `).join("");
-  }
-
-  if (modalChallenges) {
-    modalChallenges.innerHTML = project.challenges.map(c => `
-      <li style="margin-bottom: 0.4rem;"><i class="fas fa-wrench" style="color: var(--color-gold-muted); margin-right: 6px;"></i> <span>${escapeHTML(c)}</span></li>
-    `).join("");
-  }
-
-  if (modalGithubLink) {
-    if (project.githubUrl) {
-      modalGithubLink.href = project.githubUrl;
-      modalGithubLink.style.display = "inline-flex";
-    } else {
-      modalGithubLink.style.display = "none";
     }
-  }
 
-  if (modalBackdrop) {
-    modalBackdrop.classList.add("open");
-    document.body.classList.add("no-scroll");
-  }
-};
+    if (messageTextarea) {
+      const featuresList = quote.selectedFeatures && quote.selectedFeatures.length > 0
+        ? quote.selectedFeatures.map(f => `  • ${f}`).join("\n")
+        : "  • Standard System Architecture";
 
-function closeModal() {
-  const modalBackdrop = document.getElementById("project-modal-backdrop");
-  if (modalBackdrop && modalBackdrop.classList.contains("open")) {
-    modalBackdrop.classList.remove("open");
-    document.body.classList.remove("no-scroll");
+      messageTextarea.value =
+        `[Calculated Quotation Estimate Basis]\n` +
+        `Selected System: ${quote.typeName}\n` +
+        `Operational Scale: ${quote.scaleName}\n` +
+        `Estimated Price Range: ${quote.priceRange}\n` +
+        `Estimated Timeline: ${quote.timeline}\n\n` +
+        `Included Specifications & Modules:\n${featuresList}\n\n` +
+        `Additional operational notes or business requirements:\n`;
+    }
+
+    sessionStorage.removeItem("pending_quote");
+    showToast("Loaded your estimated quotation into the inquiry form!");
+  } catch (err) {
+    console.error("Could not parse pending quote:", err);
   }
 }
 
 /* --------------------------------------------------------------------------
-   5. CONTACT FORM & EMAIL HELPERS
+   4. CONTACT FORM COMPOSER
    -------------------------------------------------------------------------- */
 function initContactForm() {
   const form = document.getElementById("collaboration-form");
   const copyEmailBtns = document.querySelectorAll(".copy-email-trigger");
 
   copyEmailBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const email = btn.getAttribute("data-email") || 
-        (window.PORTFOLIO_DATA && window.PORTFOLIO_DATA.profile.contact.email) || 
-        "apiloton@adssu.edu.ph";
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const email = btn.getAttribute("data-email") || "antoniojrpiloton@gmail.com";
       copyToClipboard(email, "Email address copied to clipboard!");
     });
   });
@@ -361,98 +326,43 @@ function initContactForm() {
       e.preventDefault();
       const name = document.getElementById("contact-name")?.value.trim() || "";
       const email = document.getElementById("contact-email")?.value.trim() || "";
-      const category = document.getElementById("contact-category")?.value || "General Inquiry";
-      const subjectInput = document.getElementById("contact-subject")?.value.trim() || "";
+      const clientType = document.getElementById("contact-client-type")?.value || "General Client";
+      const projectType = document.getElementById("contact-project-type")?.value || "Software Development";
+      const budget = document.getElementById("contact-budget")?.value || "To be scoped";
+      const timeline = document.getElementById("contact-timeline")?.value || "Standard";
       const message = document.getElementById("contact-message")?.value.trim() || "";
 
       if (!name || !email || !message) {
-        showToast("Please fill in your name, email, and message.");
+        showToast("Please provide your name, email, and project description.");
         return;
       }
 
-      const subject = encodeURIComponent(`[${category}] ${subjectInput ? subjectInput : 'Portfolio Collaboration Inquiry'}`);
+      const subject = encodeURIComponent(`[Project Inquiry: ${clientType}] ${projectType}`);
       const body = encodeURIComponent(
-        `Dear Asst. Prof. Antonio Jr. Piloton,\n\n` +
-        `${message}\n\n` +
-        `Best regards,\n` +
-        `${name}\n` +
+        `Dear Antonio Jr. L. Piloton, MIT,\n\n` +
+        `I would like to discuss a software project with the following details:\n\n` +
+        `Client Type: ${clientType}\n` +
+        `Project Focus: ${projectType}\n` +
+        `Target Timeline: ${timeline}\n` +
+        `Estimated Budget: ${budget}\n\n` +
+        `Project Requirements:\n${message}\n\n` +
+        `Sender Coordinates:\n` +
+        `Name: ${name}\n` +
         `Email: ${email}`
       );
 
-      const recipient = (window.PORTFOLIO_DATA && window.PORTFOLIO_DATA.profile.contact.email) || "apiloton@adssu.edu.ph";
+      const recipient = "antoniojrpiloton@gmail.com";
       const mailtoUrl = `mailto:${recipient}?subject=${subject}&body=${body}`;
 
-      // Open email client safely
       window.location.href = mailtoUrl;
-      showToast("Opening your default email client...");
+      showToast("Opening default email client...");
       form.reset();
     });
   }
 }
 
 /* --------------------------------------------------------------------------
-   6. CV DOWNLOAD HANDLER & FALLBACK MODAL
-   -------------------------------------------------------------------------- */
-function initCvDownload() {
-  const cvButtons = document.querySelectorAll(".download-cv-btn");
-  const cvModal = document.getElementById("cv-modal-backdrop");
-  const closeCvModalBtn = document.getElementById("cv-modal-close-btn");
-
-  cvButtons.forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      const cvPath = (window.PORTFOLIO_DATA && window.PORTFOLIO_DATA.profile.cvPath) || "assets/documents/Antonio-Jr-Piloton-CV.pdf";
-
-      // Test if file is accessible via HEAD request
-      fetch(cvPath, { method: "HEAD" })
-        .then(response => {
-          if (response.ok) {
-            // File exists, proceed with actual download
-            const link = document.createElement("a");
-            link.href = cvPath;
-            link.download = "Antonio-Jr-Piloton-CV.pdf";
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            showToast("Downloading verified Curriculum Vitae...");
-          } else {
-            openCvModal();
-          }
-        })
-        .catch(() => {
-          openCvModal();
-        });
-    });
-  });
-
-  if (closeCvModalBtn) {
-    closeCvModalBtn.addEventListener("click", closeCvModal);
-  }
-  if (cvModal) {
-    cvModal.addEventListener("click", (e) => {
-      if (e.target === cvModal) closeCvModal();
-    });
-  }
-}
-
-function openCvModal() {
-  const cvModal = document.getElementById("cv-modal-backdrop");
-  if (cvModal) {
-    cvModal.classList.add("open");
-    document.body.classList.add("no-scroll");
-  }
-}
-
-function closeCvModal() {
-  const cvModal = document.getElementById("cv-modal-backdrop");
-  if (cvModal && cvModal.classList.contains("open")) {
-    cvModal.classList.remove("open");
-    document.body.classList.remove("no-scroll");
-  }
-}
-
-/* --------------------------------------------------------------------------
-   7. TOAST NOTIFICATION SYSTEM
+   5. TOAST NOTIFICATIONS & CLIPBOARD HELPER
    -------------------------------------------------------------------------- */
 function showToast(message) {
   let toast = document.getElementById("global-toast");
@@ -463,13 +373,13 @@ function showToast(message) {
     document.body.appendChild(toast);
   }
 
-  toast.innerHTML = `<i class="fas fa-info-circle" style="color: var(--color-gold);"></i> <span>${escapeHTML(message)}</span>`;
+  toast.innerHTML = `<i class="fas fa-check-circle" style="color: #60A5FA;"></i> <span>${escapeHTML(message)}</span>`;
   toast.classList.add("show");
 
   clearTimeout(window._toastTimeout);
   window._toastTimeout = setTimeout(() => {
     toast.classList.remove("show");
-  }, 3200);
+  }, 3000);
 }
 
 function copyToClipboard(text, successMessage) {
@@ -496,28 +406,11 @@ function fallbackCopyText(text, successMessage) {
     document.execCommand("copy");
     showToast(successMessage);
   } catch (err) {
-    showToast(`Could not copy automatically. Contact: ${text}`);
+    showToast(`Email: ${text}`);
   }
   document.body.removeChild(textArea);
 }
 
-/* --------------------------------------------------------------------------
-   8. DYNAMIC DATA POPULATION HELPER
-   -------------------------------------------------------------------------- */
-function renderDynamicData() {
-  if (!window.PORTFOLIO_DATA) return;
-  const data = window.PORTFOLIO_DATA;
-
-  // Set last updated in footer
-  const lastUpdatedEl = document.getElementById("last-updated-date");
-  if (lastUpdatedEl && data.profile.lastUpdated) {
-    lastUpdatedEl.textContent = data.profile.lastUpdated;
-  }
-}
-
-/* --------------------------------------------------------------------------
-   UTILITY: HTML ESCAPE
-   -------------------------------------------------------------------------- */
 function escapeHTML(str) {
   if (!str) return "";
   return String(str)
@@ -526,4 +419,233 @@ function escapeHTML(str) {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&#039;");
+}
+
+/* --------------------------------------------------------------------------
+   DYNAMIC DATA HYDRATION (FROM PORTFOLIO_DATA)
+   Connects portfolio-data.js as the Single Source of Truth
+   -------------------------------------------------------------------------- */
+function hydrateFromPortfolioData() {
+  if (typeof PORTFOLIO_DATA === "undefined") {
+    console.warn("PORTFOLIO_DATA is not defined. Using static markup.");
+    return;
+  }
+
+  // 1. Hydrate Featured Projects on Homepage (index.html)
+  const featuredGrid = document.getElementById("featured-projects-grid");
+  if (featuredGrid && Array.isArray(PORTFOLIO_DATA.projects)) {
+    const featuredProjects = PORTFOLIO_DATA.projects.slice(0, 2);
+    featuredGrid.innerHTML = featuredProjects.map(proj => `
+      <article class="project-item">
+        <div class="project-item-preview">
+          <img src="${proj.image || 'assets/images/projects/pos-system.svg'}" alt="${proj.title}" />
+        </div>
+        <div class="project-item-body">
+          <span class="project-item-category">${proj.categoryLabel || 'Software System'}</span>
+          <h3 class="project-item-title">${proj.title}</h3>
+          <p class="project-item-summary">${proj.summary}</p>
+          <div class="project-tech-tags">
+            ${(proj.technologies || []).map(t => renderTechBadge(t)).join('')}
+          </div>
+          <div class="project-item-footer">
+            <a href="projects.html" class="link-arrow">View Case Study <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </article>
+    `).join('');
+  }
+
+  // 2. Hydrate All Projects Gallery (projects.html)
+  const allProjectsGrid = document.getElementById("all-projects-grid");
+  if (allProjectsGrid && Array.isArray(PORTFOLIO_DATA.projects)) {
+    allProjectsGrid.innerHTML = PORTFOLIO_DATA.projects.map(proj => `
+      <article class="project-item" data-category="${proj.category || 'all'}">
+        <div class="project-item-preview">
+          <img src="${proj.image || 'assets/images/projects/pos-system.svg'}" alt="${proj.title}" />
+        </div>
+        <div class="project-item-body">
+          <span class="project-item-category">${proj.categoryLabel || 'Software System'}</span>
+          <h2 class="project-item-title">${proj.title}</h2>
+          <p class="project-item-summary">${proj.summary}</p>
+          <div class="project-tech-tags">
+            ${(proj.technologies || []).map(t => renderTechBadge(t)).join('')}
+          </div>
+          <div class="project-item-footer" style="display: flex; gap: 1rem; align-items: center; margin-top: auto; padding-top: 1rem; border-top: 1px solid var(--border-light);">
+            ${proj.githubUrl ? `
+              <a href="${proj.githubUrl}" target="_blank" rel="noopener noreferrer" class="link-arrow">
+                <i class="fab fa-github"></i> Repository
+              </a>
+            ` : ''}
+            ${proj.demoUrl ? `
+              <a href="${proj.demoUrl}" target="_blank" rel="noopener noreferrer" class="link-arrow">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+            ` : ''}
+            <a href="contact.html" class="link-arrow" style="margin-left: auto;">
+              Inquire System <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+    `).join('');
+  }
+
+  // 3. Hydrate Services (services.html)
+  const servicesContainer = document.getElementById("services-container");
+  if (servicesContainer && Array.isArray(PORTFOLIO_DATA.services)) {
+    servicesContainer.innerHTML = PORTFOLIO_DATA.services.map(svc => `
+      <article class="service-item-card">
+        <div class="service-item-header">
+          <h2 class="service-item-title">${svc.title}</h2>
+          <span class="service-item-num">${svc.num || ''}</span>
+        </div>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+          ${svc.description}
+        </p>
+        <ul class="service-item-deliverables">
+          ${(svc.deliverables || []).map(d => `<li><i class="fas fa-check"></i> ${d}</li>`).join('')}
+        </ul>
+        <div class="project-tech-tags">
+          ${(svc.tags || []).map(t => renderTechBadge(t)).join('')}
+        </div>
+      </article>
+    `).join('');
+  }
+
+  // 4. Hydrate Publications (research.html)
+  const pubContainer = document.getElementById("publications-container");
+  if (pubContainer && PORTFOLIO_DATA.publications && Array.isArray(PORTFOLIO_DATA.publications.entries)) {
+    pubContainer.innerHTML = PORTFOLIO_DATA.publications.entries.map(pub => `
+      <article class="publication-card">
+        <div class="pub-indexing-pill">
+          <i class="fas fa-award"></i> ${pub.indexingBadge || pub.indexing || 'Peer-Reviewed'}
+        </div>
+        <h2 class="pub-title">${pub.title}</h2>
+        <div class="pub-venue">${pub.journal} • ${pub.volume || ''} (${pub.year})</div>
+        <p class="pub-meta">
+          <strong>Authors:</strong> ${pub.authors}<br />
+          <strong>Abstract Summary:</strong> ${pub.abstract}
+        </p>
+        <div class="pub-actions">
+          ${pub.link ? `
+            <a href="${pub.link}" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">
+              <i class="fas fa-file-pdf"></i> Direct PDF
+            </a>
+          ` : ''}
+          ${pub.researchGateUrl ? `
+            <a href="${pub.researchGateUrl}" target="_blank" rel="noopener noreferrer" class="btn btn--secondary btn--sm">
+              <i class="fab fa-researchgate"></i> ResearchGate
+            </a>
+          ` : ''}
+        </div>
+      </article>
+    `).join('');
+  }
+
+  // 5. Hydrate Academic Timeline (about.html)
+  const timelineContainer = document.getElementById("academic-timeline-container");
+  if (timelineContainer && PORTFOLIO_DATA.academicProfile && Array.isArray(PORTFOLIO_DATA.academicProfile.education)) {
+    timelineContainer.innerHTML = PORTFOLIO_DATA.academicProfile.education.map(edu => `
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3 class="timeline-title">${edu.degree}</h3>
+            <span class="timeline-period">${edu.period}</span>
+          </div>
+          <div class="timeline-institution">
+            <i class="fas fa-university" style="color: var(--color-champagne); margin-right: 0.35rem;"></i>
+            ${edu.institution} — ${edu.location}
+          </div>
+          <p class="timeline-desc">${edu.notes}</p>
+        </div>
+      </div>
+    `).join('');
+  }
+
+  
+  // 7. Hydrate & Filter 110 Systems Catalog (services.html)
+  const catalogContainer = document.getElementById("system-catalog-container");
+  if (catalogContainer && Array.isArray(PORTFOLIO_DATA.systemCatalog)) {
+    let currentCategory = "all";
+    let currentSearchTerm = "";
+
+    function renderCatalog() {
+      const filtered = PORTFOLIO_DATA.systemCatalog.filter(sys => {
+        const matchesCategory = currentCategory === "all" || sys.cat === currentCategory;
+        const matchesSearch = !currentSearchTerm || 
+          sys.title.toLowerCase().includes(currentSearchTerm) ||
+          sys.catLabel.toLowerCase().includes(currentSearchTerm);
+        return matchesCategory && matchesSearch;
+      });
+
+      const counter = document.getElementById("catalog-counter");
+      if (counter) {
+        counter.textContent = `Showing ${filtered.length} of ${PORTFOLIO_DATA.systemCatalog.length} systems`;
+      }
+
+      if (filtered.length === 0) {
+        catalogContainer.innerHTML = `
+          <div style="grid-column: 1 / -1; text-align: center; padding: 2.5rem 1rem; background-color: var(--bg-surface); border: 1px dashed var(--border-medium); border-radius: var(--radius-md);">
+            <i class="fas fa-search" style="font-size: 1.5rem; color: var(--text-muted); margin-bottom: 0.5rem;"></i>
+            <p style="color: var(--text-secondary); margin-bottom: 0.5rem;">No custom systems matched your search criteria.</p>
+            <p style="font-size: 0.8125rem; color: var(--text-muted);">Try a broader keyword or select "All Systems (110)".</p>
+          </div>
+        `;
+        return;
+      }
+
+      catalogContainer.innerHTML = filtered.map(sys => `
+        <div class="system-tile-card" data-cat="${sys.cat}">
+          <div class="system-tile-icon"><i class="fas ${sys.icon || 'fa-code'}"></i></div>
+          <div style="flex-grow: 1; min-width: 0;">
+            <div class="system-tile-num">#${sys.id < 10 ? '0' + sys.id : sys.id}</div>
+            <div class="system-tile-title">${sys.title}</div>
+            <div class="system-tile-cat">${sys.catLabel}</div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    renderCatalog();
+
+    // Attach Category Filter Buttons
+    const filterBtns = document.querySelectorAll(".catalog-filter-btn");
+    filterBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        currentCategory = btn.getAttribute("data-cat");
+        renderCatalog();
+      });
+    });
+
+    // Attach Search Input
+    const searchInput = document.getElementById("catalog-search");
+    if (searchInput) {
+      searchInput.addEventListener("input", (e) => {
+        currentSearchTerm = e.target.value.trim().toLowerCase();
+        renderCatalog();
+      });
+    }
+  }
+
+  // 6. Hydrate Certifications Grid (about.html)
+  const certContainer = document.getElementById("cert-grid-container");
+  if (certContainer && PORTFOLIO_DATA.academicProfile && Array.isArray(PORTFOLIO_DATA.academicProfile.certifications)) {
+    certContainer.innerHTML = PORTFOLIO_DATA.academicProfile.certifications.map(cert => `
+      <div class="cert-card">
+        <div class="cert-top">
+          <div>
+            <h3 class="cert-title">${cert.title}</h3>
+            <div class="cert-issuer">
+              <i class="fas fa-shield-alt" style="color: var(--color-champagne);"></i> ${cert.issuer}
+            </div>
+          </div>
+          <span class="cert-badge">${cert.year} ${cert.hours ? '• ' + cert.hours + ' hrs' : ''}</span>
+        </div>
+        <p style="font-size: 0.8125rem; color: var(--text-muted); margin: 0;">${cert.badge || 'Verified Credential'}</p>
+      </div>
+    `).join('');
+  }
 }
