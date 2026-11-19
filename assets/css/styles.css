@@ -3141,3 +3141,67 @@ textarea.form-input {
 [data-theme="dark"] .gallery-thumb-item.active {
   border-color: var(--color-champagne);
 }
+
+/* --------------------------------------------------------------------------
+   10. AMBIENT CURSOR SPOTLIGHT GLOW FOLLOWER (AWWWARDS / VERCEL STYLE)
+   -------------------------------------------------------------------------- */
+.cursor-glow-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0;
+  background: radial-gradient(
+    circle,
+    rgba(37, 99, 235, 0.08) 0%,
+    rgba(216, 182, 138, 0.05) 35%,
+    transparent 70%
+  );
+  transform: translate3d(-500px, -500px, 0);
+  transition: opacity 0.35s ease, width 0.3s cubic-bezier(0.16, 1, 0.3, 1), height 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+[data-theme="dark"] .cursor-glow-follower {
+  mix-blend-mode: screen;
+  background: radial-gradient(
+    circle,
+    rgba(96, 165, 250, 0.16) 0%,
+    rgba(216, 182, 138, 0.10) 35%,
+    transparent 75%
+  );
+}
+
+.cursor-glow-follower.is-active {
+  opacity: 1;
+}
+
+.cursor-glow-follower.is-hovering {
+  width: 580px;
+  height: 580px;
+}
+
+[data-theme="dark"] .cursor-glow-follower.is-hovering {
+  background: radial-gradient(
+    circle,
+    rgba(147, 197, 253, 0.22) 0%,
+    rgba(216, 182, 138, 0.14) 40%,
+    transparent 75%
+  );
+}
+
+@media (hover: none) or (pointer: coarse) {
+  .cursor-glow-follower {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor-glow-follower {
+    display: none !important;
+  }
+}

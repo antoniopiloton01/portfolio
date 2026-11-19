@@ -42,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initQuotationCalculator();
   loadPendingQuoteToForm();
   initProjectGalleryViewer();
+  initCursorGlowFollower();
 });
 
 /* --------------------------------------------------------------------------
@@ -944,4 +945,93 @@ function initProjectGalleryViewer() {
       });
     });
   });
+}
+
+/* --------------------------------------------------------------------------
+   10. AMBIENT CURSOR SPOTLIGHT GLOW FOLLOWER (AWWWARDS / VERCEL STYLE)
+   -------------------------------------------------------------------------- */
+function initCursorGlowFollower() {
+  // 1. Guard against touch devices and reduced motion preference
+  if (
+    !window.matchMedia ||
+    window.matchMedia("(hover: none), (pointer: coarse), (prefers-reduced-motion: reduce)").matches
+  ) {
+    return;
+  }
+
+  // 2. Create and inject follower element if not already in DOM
+  let glow = document.querySelector(".cursor-glow-follower");
+  if (!glow) {
+    glow = document.createElement("div");
+    glow.className = "cursor-glow-follower";
+    glow.setAttribute("aria-hidden", "true");
+    document.body.appendChild(glow);
+  }
+
+  let mouseX = -500;
+  let mouseY = -500;
+  let curX = -500;
+  let curY = -500;
+  let isMoving = false;
+  let animId = null;
+
+  // 3. Track pointer coordinates
+  window.addEventListener(
+    "pointermove",
+    (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      if (!glow.classList.contains("is-active")) {
+        glow.classList.add("is-active");
+      }
+      if (!isMoving) {
+        isMoving = true;
+        animId = requestAnimationFrame(updateGlowPosition);
+      }
+    },
+    { passive: true }
+  );
+
+  window.addEventListener("pointerleave", () => {
+    glow.classList.remove("is-active");
+  });
+
+  // 4. Smooth lerp animation loop (interpolated spring follower)
+  function updateGlowPosition() {
+    const dx = mouseX - curX;
+    const dy = mouseY - curY;
+    curX += dx * 0.15;
+    curY += dy * 0.15;
+
+    glow.style.transform = `translate3d(${curX}px, ${curY}px, 0) translate(-50%, -50%)`;
+
+    // Sleep RAF if cursor hasn't moved and is practically at target
+    if (Math.abs(dx) > 0.15 || Math.abs(dy) > 0.15) {
+      animId = requestAnimationFrame(updateGlowPosition);
+    } else {
+      isMoving = false;
+    }
+  }
+
+  // 5. Expand glow slightly on hover over interactive elements
+  const interactiveSelector = "a, button, .card, .btn, .pub-card, .project-item, .tech-marquee-item, .system-card-item";
+  document.addEventListener(
+    "pointerover",
+    (e) => {
+      if (e.target && e.target.closest && e.target.closest(interactiveSelector)) {
+        glow.classList.add("is-hovering");
+      }
+    },
+    { passive: true }
+  );
+
+  document.addEventListener(
+    "pointerout",
+    (e) => {
+      if (e.target && e.target.closest && e.target.closest(interactiveSelector)) {
+        glow.classList.remove("is-hovering");
+      }
+    },
+    { passive: true }
+  );
 }
