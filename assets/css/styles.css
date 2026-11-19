@@ -1342,6 +1342,28 @@ select:focus-visible {
   color: var(--text-muted);
 }
 
+.pub-badge--scopus {
+  background: linear-gradient(135deg, rgba(255, 108, 0, 0.12) 0%, rgba(255, 140, 0, 0.08) 100%);
+  color: #C04A00;
+  border: 1px solid rgba(255, 108, 0, 0.38);
+  font-weight: 800;
+}
+
+[data-theme="dark"] .pub-badge--scopus {
+  background: linear-gradient(135deg, rgba(255, 108, 0, 0.22) 0%, rgba(255, 140, 0, 0.15) 100%);
+  color: #FFA466;
+  border-color: rgba(255, 164, 102, 0.5);
+}
+
+.scopus-logo-mark {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  vertical-align: -1px;
+  flex-shrink: 0;
+  border-radius: 2px;
+}
+
 .pub-year {
   font-family: var(--font-mono);
   font-size: 0.78rem;
