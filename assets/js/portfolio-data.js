@@ -1110,6 +1110,13 @@ const PORTFOLIO_DATA = {
       badge: "Commercial Platform",
       status: "Production Ready / Operational",
       image: "assets/images/projects/pos-system.jpg",
+      screenshots: [
+        {
+          src: "assets/images/projects/pos-system.jpg",
+          title: "LikhaPOS Cashier Terminal & Thermal Receipt",
+          caption: "Live point-of-sale checkout view featuring F2 barcode product lookup, retail & wholesale tier pricing, order cart, and 80mm live thermal receipt preview."
+        }
+      ],
       summary: "An enterprise-grade point-of-sale and multi-branch inventory management platform developed for retail enterprises, cooperatives, and multi-branch merchants, featuring sub-second checkout, thermal receipt printing, and transactional inventory reconciliation.",
       problem: "Retailers and cooperatives regularly suffer stock leakage, inventory discrepancies across branches, slow checkout queues, and delayed end-of-day revenue reconciliation when relying on manual books or generic single-register applications.",
       intendedUsers: "Retail cashiers, branch inventory officers, accountants, and business owners.",
@@ -1139,6 +1146,18 @@ const PORTFOLIO_DATA = {
       badge: "Production Deployment",
       status: "Production Ready / Operational",
       image: "assets/images/projects/bantay-eskwela.jpg",
+      screenshots: [
+        {
+          src: "assets/images/projects/bantay-eskwela.jpg",
+          title: "BantayEskwela Sentinel Dashboard",
+          caption: "DepEd Real-Time Ready administrative attendance dashboard deployed at Tubajon National High School with real-time turnout analytics, student headcounts, and SMS broadcast status."
+        },
+        {
+          src: "assets/images/projects/bantay-eskwela-kiosk.jpg",
+          title: "Smart Auto Gate Turnstile Kiosk Terminal",
+          caption: "Hardware turnstile terminal running contactless RFID smart card tapping, QR scanning, audio guidance, and automatic guardian SMS trigger."
+        }
+      ],
       summary: "A DepEd real-time ready campus entry tracking and automated guardian notification platform deployed at Tubajon National High School. Features smart RFID turnstiles and QR gate scanners with live terminal attendance, automated SMS guardian alerts, and attendance analytics.",
       problem: "Traditional pen-and-paper campus gate logs create severe student bottleneck queues, provide zero real-time visibility for school administrators, and fail to immediately notify working parents of their children's campus arrival and departure.",
       intendedUsers: "School principals, campus security officers, gate monitors, classroom advisers, and student guardians.",
@@ -1168,6 +1187,13 @@ const PORTFOLIO_DATA = {
       badge: "EdTech Innovation",
       status: "Production Ready / Operational",
       image: "assets/images/projects/examora.jpg",
+      screenshots: [
+        {
+          src: "assets/images/projects/examora.jpg",
+          title: "Examora Assessment Cloud & OMR Detection",
+          caption: "0.28-second real-time camera-to-score bubble sheet grading engine with automated 4-point perspective warp, Google OAuth faculty workspace, and item analysis."
+        }
+      ],
       summary: "An optical mark recognition (OMR) assessment platform engineered for educational institutions and faculty. Scans student bubble sheets in real time via smartphone or webcam (0.28s live detection), generates instant item analysis and discrimination metrics, and exports grade rosters to Excel.",
       problem: "Manual grading of hundreds of examination answer sheets consumes dozens of faculty hours, delays academic interventions, and introduces human error. Dedicated legacy OMR machines require expensive proprietary scanner hardware and specialized heavy cardstock paper.",
       intendedUsers: "Faculty instructors, academic department chairs, institutional testing centers, and university registrars.",
@@ -1197,6 +1223,13 @@ const PORTFOLIO_DATA = {
       badge: "Peer-Reviewed & Published",
       status: "Published System (IJFMR)",
       image: "assets/images/projects/doctrack.svg",
+      screenshots: [
+        {
+          src: "assets/images/projects/doctrack.svg",
+          title: "Records Tracking Management System",
+          caption: "Verified QR code transmittal tracking architecture evaluated under ISO/IEC 25010 with an overall mean of 4.44 / 5.00."
+        }
+      ],
       summary: "A verified institutional document transmittal platform utilizing unique QR code identification to trace the lifecycle, physical custody, and approval milestones of official correspondence across administrative departments.",
       problem: "Inter-office memoranda, budget requests, and administrative vouchers frequently get misplaced or stalled in transition, making it arduous to determine the exact office holding a file and resulting in administrative bottlenecks.",
       intendedUsers: "Campus administrative units, college offices, records officers, and faculty members.",
@@ -1226,6 +1259,13 @@ const PORTFOLIO_DATA = {
       badge: "Scopus-Indexed Publication",
       status: "Published Research (JESTEC)",
       image: "assets/images/projects/institutional-sys.svg",
+      screenshots: [
+        {
+          src: "assets/images/projects/institutional-sys.svg",
+          title: "SCVAX Vaccination Management Information System",
+          caption: "Scopus-indexed nationwide vaccination information architecture and geospatial coverage analytics."
+        }
+      ],
       summary: "An enterprise application platform engineered to optimize and streamline nationwide vaccination programs, incorporating automated mapping, visual analytics, robust data handling, and QR code verification for citizen records.",
       problem: "Large-scale public health and immunization campaigns face immense logistical complexity, paper certificate forgery, disconnected regional health registries, and inadequate real-time visibility into vaccine stock distribution.",
       intendedUsers: "Municipal health officers, vaccination administrators, healthcare staff, and citizens.",
@@ -1255,6 +1295,13 @@ const PORTFOLIO_DATA = {
       badge: "Campus System",
       status: "Operational Prototype",
       image: "assets/images/projects/library-sis.svg",
+      screenshots: [
+        {
+          src: "assets/images/projects/library-sis.svg",
+          title: "UniLib & SIS Manager",
+          caption: "Unified library circulation cataloging and registrar clearance verification system."
+        }
+      ],
       summary: "A unified academic resource cataloging and circulation management system integrating Dewey Decimal / LOC classification with automated student borrowing clearances, overdue fine calculations, and institutional record validation.",
       problem: "Disjointed record-keeping between college libraries and registrar offices results in delayed graduation clearances, uncollected overdue penalties, and unreturned academic reference materials.",
       intendedUsers: "College librarians, student borrowers, faculty researchers, and campus clearance officers.",

@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initContactForm();
   initQuotationCalculator();
   loadPendingQuoteToForm();
+  initProjectGalleryViewer();
 });
 
 /* --------------------------------------------------------------------------
@@ -687,4 +688,212 @@ function hydrateFromPortfolioData() {
       </div>
     `).join('');
   }
+}
+
+/* --------------------------------------------------------------------------
+   8. PROJECT MULTI-SCREENSHOT SLIDESHOW & LIGHTBOX VIEWER
+   -------------------------------------------------------------------------- */
+function initProjectGalleryViewer() {
+  if (typeof PORTFOLIO_DATA === "undefined" || !PORTFOLIO_DATA.projects) return;
+
+  // 1. Ensure Lightbox Modal exists in the document
+  let modal = document.getElementById("project-gallery-modal");
+  if (!modal) {
+    modal = document.createElement("div");
+    modal.id = "project-gallery-modal";
+    modal.className = "gallery-modal";
+    modal.setAttribute("role", "dialog");
+    modal.setAttribute("aria-modal", "true");
+    modal.setAttribute("aria-hidden", "true");
+    modal.innerHTML = `
+      <div class="gallery-modal-dialog">
+        <div class="gallery-modal-header">
+          <div class="gallery-header-info">
+            <h3 class="gallery-modal-title" id="gallery-project-title">System Interface Showcase</h3>
+            <span class="gallery-slide-counter" id="gallery-counter">1 / 1</span>
+          </div>
+          <button type="button" class="gallery-close-btn" id="gallery-close" aria-label="Close Viewer">&times;</button>
+        </div>
+        <div class="gallery-stage">
+          <button type="button" class="gallery-nav-btn prev" id="gallery-prev" aria-label="Previous Screenshot">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <img id="gallery-main-image" src="" alt="Project Screenshot" />
+          <button type="button" class="gallery-nav-btn next" id="gallery-next" aria-label="Next Screenshot">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+        <div class="gallery-caption-bar">
+          <div class="gallery-caption-title" id="gallery-caption-title"></div>
+          <div class="gallery-caption-desc" id="gallery-caption-desc"></div>
+        </div>
+        <div class="gallery-thumbnails-strip" id="gallery-thumbnails"></div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+  }
+
+  const titleEl = document.getElementById("gallery-project-title");
+  const counterEl = document.getElementById("gallery-counter");
+  const mainImgEl = document.getElementById("gallery-main-image");
+  const captionTitleEl = document.getElementById("gallery-caption-title");
+  const captionDescEl = document.getElementById("gallery-caption-desc");
+  const thumbsContainer = document.getElementById("gallery-thumbnails");
+  const prevBtn = document.getElementById("gallery-prev");
+  const nextBtn = document.getElementById("gallery-next");
+  const closeBtn = document.getElementById("gallery-close");
+
+  let currentProject = null;
+  let currentIndex = 0;
+  let currentScreenshots = [];
+
+  function openGallery(projectId, startIndex = 0) {
+    const proj = (PORTFOLIO_DATA.projects || []).find(p => p.id === projectId);
+    if (!proj) return;
+
+    currentProject = proj;
+    currentScreenshots = (proj.screenshots && proj.screenshots.length > 0)
+      ? proj.screenshots
+      : [{ src: proj.image, title: proj.title, caption: proj.summary }];
+
+    currentIndex = Math.max(0, Math.min(startIndex, currentScreenshots.length - 1));
+    updateSlide();
+
+    modal.classList.add("active");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeGallery() {
+    modal.classList.remove("active");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  function updateSlide() {
+    if (!currentScreenshots.length) return;
+    const shot = currentScreenshots[currentIndex];
+
+    mainImgEl.style.opacity = "0.3";
+    mainImgEl.src = shot.src;
+    mainImgEl.alt = shot.title || currentProject.title;
+    mainImgEl.onload = () => { mainImgEl.style.opacity = "1"; };
+
+    titleEl.textContent = currentProject.title;
+    counterEl.textContent = `${currentIndex + 1} / ${currentScreenshots.length}`;
+    captionTitleEl.innerHTML = `<i class="fas fa-camera" style="color: var(--color-champagne);"></i> ${shot.title || 'Production Interface'}`;
+    captionDescEl.textContent = shot.caption || currentProject.summary;
+
+    if (currentScreenshots.length <= 1) {
+      prevBtn.style.display = "none";
+      nextBtn.style.display = "none";
+      thumbsContainer.style.display = "none";
+    } else {
+      prevBtn.style.display = "";
+      nextBtn.style.display = "";
+      thumbsContainer.style.display = "flex";
+      renderThumbnails();
+    }
+  }
+
+  function renderThumbnails() {
+    thumbsContainer.innerHTML = currentScreenshots.map((shot, idx) => `
+      <div class="gallery-thumb-item ${idx === currentIndex ? 'active' : ''}" data-index="${idx}" title="${shot.title || 'Slide ' + (idx + 1)}">
+        <img src="${shot.src}" alt="Thumbnail ${idx + 1}" />
+      </div>
+    `).join('');
+
+    thumbsContainer.querySelectorAll(".gallery-thumb-item").forEach(item => {
+      item.addEventListener("click", () => {
+        currentIndex = parseInt(item.getAttribute("data-index"), 10);
+        updateSlide();
+      });
+    });
+  }
+
+  function nextSlide() {
+    if (currentScreenshots.length <= 1) return;
+    currentIndex = (currentIndex + 1) % currentScreenshots.length;
+    updateSlide();
+  }
+
+  function prevSlide() {
+    if (currentScreenshots.length <= 1) return;
+    currentIndex = (currentIndex - 1 + currentScreenshots.length) % currentScreenshots.length;
+    updateSlide();
+  }
+
+  // Remove existing event listeners by replacing nodes if re-initialized
+  prevBtn.onclick = prevSlide;
+  nextBtn.onclick = nextSlide;
+  closeBtn.onclick = closeGallery;
+
+  modal.onclick = (e) => {
+    if (e.target === modal) closeGallery();
+  };
+
+  document.onkeydown = (e) => {
+    if (!modal.classList.contains("active")) return;
+    if (e.key === "Escape") closeGallery();
+    else if (e.key === "ArrowRight") nextSlide();
+    else if (e.key === "ArrowLeft") prevSlide();
+  };
+
+  // Touch Swipe Support on mobile devices
+  let touchStartX = 0;
+  modal.ontouchstart = (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  };
+  modal.ontouchend = (e) => {
+    const touchEndX = e.changedTouches[0].screenX;
+    if (touchEndX < touchStartX - 50) nextSlide();
+    if (touchEndX > touchStartX + 50) prevSlide();
+  };
+
+  // 2. Discover and bind all project previews and trigger buttons
+  document.querySelectorAll(".project-item, [data-project-id]").forEach(item => {
+    let pId = item.getAttribute("data-project-id");
+    const preview = item.querySelector(".project-item-preview");
+    const img = preview ? preview.querySelector("img") : null;
+    const src = img ? (img.getAttribute("src") || "") : "";
+
+    if (!pId) {
+      if (src.includes("pos-system")) pId = "retail-pos";
+      else if (src.includes("bantay-eskwela") || src.includes("scanalert")) pId = "bantay-eskwela";
+      else if (src.includes("examora")) pId = "examora";
+      else if (src.includes("doctrack")) pId = "doctrack";
+      else if (src.includes("institutional") || src.includes("scvax")) pId = "scvax";
+      else if (src.includes("library") || src.includes("unilib")) pId = "unilib-sis";
+      if (pId) item.setAttribute("data-project-id", pId);
+    }
+
+    if (!pId) return;
+
+    const proj = (PORTFOLIO_DATA.projects || []).find(p => p.id === pId);
+    const shotCount = proj && proj.screenshots ? proj.screenshots.length : 1;
+
+    // Attach badge & hint to preview if not present
+    if (preview && !preview.querySelector(".project-gallery-badge")) {
+      const badge = document.createElement("span");
+      badge.className = "project-gallery-badge";
+      badge.innerHTML = `<i class="fas fa-images"></i> ${shotCount > 1 ? shotCount + ' Slides' : 'Screenshot'}`;
+      preview.appendChild(badge);
+
+      const hint = document.createElement("span");
+      hint.className = "project-gallery-hint";
+      hint.innerHTML = `<i class="fas fa-expand"></i> Click for Slideshow`;
+      preview.appendChild(hint);
+
+      preview.style.cursor = "pointer";
+      preview.addEventListener("click", () => openGallery(pId));
+    }
+
+    // Attach click to any explicit gallery button inside the item
+    item.querySelectorAll(".btn-open-gallery").forEach(btn => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        openGallery(pId);
+      });
+    });
+  });
 }
