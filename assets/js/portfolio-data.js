@@ -47,7 +47,7 @@ const PORTFOLIO_DATA = {
     contact: {
       email: "antoniojrpiloton@gmail.com",
       businessEmail: "antoniojrpiloton@gmail.com",
-      officeLocation: "College of Computing and Information Sciences, ADSSU Main Campus, Bunawan, Agusan del Sur, Philippines",
+      serviceArea: "Caraga Region & Nationwide (Remote Development & Consultation)",
       consultationHours: "Monday – Friday: Technical Inquiries & Consulting Appointments",
       responseCommitment: "Guaranteed initial response within 24–48 business hours",
       facebookPage: "https://www.facebook.com/JdigitalSolutions26",
