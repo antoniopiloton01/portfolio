@@ -1,0 +1,25 @@
+# Antonio Jr. L. Piloton, MIT
+
+> Full-Stack Software Developer, IT Consultant, Systems Architect, and Assistant Professor at Agusan del Sur State University (ADSSU), Caraga Region, Philippines.
+
+- Website: https://antoniopiloton01.github.io/portfolio/
+- GitHub: https://github.com/antoniopiloton01
+- Location: Agusan del Sur / Surigao, Caraga Region, Philippines
+- Email: antoniojrpiloton@gmail.com
+- Contact: +63 948 245 2893
+
+## Professional Profile
+Antonio Jr. L. Piloton is a Software Developer, IT Consultant, and Academician with extensive production experience building enterprise-grade applications for local government units (LGUs), state colleges and universities (SUCs), retail businesses, and healthcare clinics. He holds a Master in Information Technology (MIT, Best Capstone Project Awardee 2023) and is a candidate for Doctor in Information Technology (CAR DIT).
+
+## Core Capabilities & Engineering Stack
+- **Backend & APIs**: PHP 8.x, Laravel MVC, RESTful APIs, Session & JWT Security, Python
+- **Database & Architecture**: MySQL, Relational Database Modeling, Transactions, Query Optimization
+- **Frontend & Mobile**: JavaScript (ES6+), React Native, Tailwind CSS, Responsive Web Design
+- **Enterprise Solutions**: Barangay Information Management Systems (BIMS), POS & Inventory Systems, Payroll & HRIS, Student Information & Enrollment Systems, Multi-Tenant SaaS architectures
+
+## Verified Credentials
+- DICT (Department of Information and Communications Technology): Executive Data Driven Governance, Ethical AI & ChatGPT Workflows, UI/UX Design, Startup App Development
+- NVIDIA AI Academy Philippines: Accelerated Computing & Machine Learning (A.Ignite)
+- Cisco Networking Academy: Python Essentials 1, JavaScript Essentials 1, Computer Hardware Basics
+- DOST - Caraga: Python Programming
+- Surigao del Norte State University (SNSU): Basic Records & Archives Management (BRAM), Futures Thinking Digitalization CapDev
