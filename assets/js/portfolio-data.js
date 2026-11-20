@@ -161,7 +161,7 @@ const PORTFOLIO_DATA = {
       "num": "01",
       "title": "Business & Enterprise Solutions",
       "subtitle": "Commercial Point-of-Sale, Multi-Branch Inventory & Financial Control",
-      "description": "POS, inventory, sales, CRM, ERP, accounting workflows, and multi-branch operations. Replace disconnected spreadsheets with real-time cashier registers, stock transfers, and automated reconciliation.",
+      "description": "Point-of-sale, stock tracking, and sales reporting. Replace spreadsheets with fast cashier registers, barcode scanning, and clear daily sales reports.",
       "deliverables": [
         "Sub-second checkout with barcode scanning & split tenders",
         "Multi-branch inventory ledger with minimum reorder thresholds",
@@ -181,7 +181,7 @@ const PORTFOLIO_DATA = {
       "num": "02",
       "title": "Educational & Academic Systems",
       "subtitle": "Student Information, Attendance, Online Exams & Grading Engines",
-      "description": "School management, attendance, examinations, grading, and research-oriented software. Built with academic institutional integrity, ISO 25010 validation standards, and student privacy compliance.",
+      "description": "Student information portals, RFID turnstile attendance, and exam grading systems built to keep student records private and organized.",
       "deliverables": [
         "Comprehensive Student Information Systems (SIS) & portals",
         "Biometric, RFID gate & QR-code student attendance monitoring",
@@ -201,7 +201,7 @@ const PORTFOLIO_DATA = {
       "num": "03",
       "title": "Web & Mobile Applications",
       "subtitle": "Full-Stack Web Platforms & Offline-First Mobile Architectures",
-      "description": "Custom web platforms, Android/iOS apps, offline-first applications, and API integration. Engineered with SQLite local persistence and idempotent synchronization for unreliable internet environments.",
+      "description": "Custom web platforms and React Native mobile apps. Built with offline SQLite storage so your team can keep working even when provincial internet drops.",
       "deliverables": [
         "Cross-platform mobile apps developed in React Native & TypeScript",
         "Offline-first local caching with encrypted SQLite data storage",
@@ -221,7 +221,7 @@ const PORTFOLIO_DATA = {
       "num": "04",
       "title": "Government & Institutional Systems",
       "subtitle": "Barangay Information, Cryptographic Document Tracking & Resident Services",
-      "description": "Barangay information systems, document tracking, resident profiling, and public service automation. Features tamper-evident QR verification, role-based workflows, and audit-compliant log trails.",
+      "description": "Barangay portals, resident records, document tracking, and clearance printing with tamper-proof QR verification.",
       "deliverables": [
         "Barangay Information Management Systems (BIMS) & profiling",
         "Barangay clearance, certificate & permit issuance engine",
@@ -241,7 +241,7 @@ const PORTFOLIO_DATA = {
       "num": "05",
       "title": "SaaS & Cloud-Based Platforms",
       "subtitle": "Multi-Tenant Platforms, Subscription Engines & Centralized Portals",
-      "description": "Multi-tenant systems, subscription platforms, centralized dashboards, and scalable applications. Strict tenant data segregation, recurring billing lifecycles, and high-volume performance.",
+      "description": "Cloud systems with multi-branch or multi-user accounts, automated backups, and clean manager dashboards.",
       "deliverables": [
         "Multi-tenant schema & database isolation architectures",
         "Role-based privilege separation (Owner, Manager, Cashier, Auditor)",
@@ -261,7 +261,7 @@ const PORTFOLIO_DATA = {
       "num": "06",
       "title": "System Integration & Automation",
       "subtitle": "Hardware Interfacing, SMS Gateways, Background Queues & Workflows",
-      "description": "SMS, QR/NFC, workflow automation, APIs, notifications, and reporting. Bridge legacy infrastructure with automated background queues, GSM modems, and hardware peripherals.",
+      "description": "Hardware and messaging setups: automated SMS alerts, receipt printers, barcode readers, and automated PDF reports.",
       "deliverables": [
         "Automated GSM modem / SIM800L / Web SMS gateway alerts",
         "Hardware ESC/POS thermal printer direct network socket integration",
