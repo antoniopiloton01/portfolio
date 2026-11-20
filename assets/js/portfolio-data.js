@@ -1636,58 +1636,148 @@ const PORTFOLIO_DATA = {
     ],
     certifications: [
       {
-        title: "Best Capstone Project Awardee (MIT)",
-        issuer: "Surigao del Norte State University",
-        year: "2023",
-        badge: "Academic Honor 🏆"
-      },
-      {
-        title: "Data Driven Governance for Executive Leadership",
-        issuer: "Department of Information and Communications Technology (DICT)",
-        year: "2025",
-        badge: "Technical L&D (8 hrs)"
-      },
-      {
         title: "Learn ChatGPT for Government Workforce (Ethically)",
         issuer: "Department of Information and Communications Technology (DICT)",
         year: "2025",
-        badge: "Technical L&D (4 hrs)"
+        hours: "4",
+        type: "Technical",
+        icon: "fas fa-robot",
+        desc: "Ethical AI implementation, workflow automation, prompt engineering, and privacy compliance for the public sector."
+      },
+      {
+        title: "Data Driven Governance for Executive Leadership Training",
+        issuer: "Department of Information and Communications Technology (DICT)",
+        year: "2025",
+        hours: "8",
+        type: "Technical",
+        icon: "fas fa-chart-line",
+        desc: "Institutional data governance frameworks, policy development, and digital transformation strategy."
+      },
+      {
+        title: "Introduction to User Interface (UI) and User Experience (UX) Design",
+        issuer: "Department of Information and Communications Technology (DICT)",
+        year: "2025",
+        hours: "4",
+        type: "Technical",
+        icon: "fas fa-pen-nib",
+        desc: "User-centered interface design, wireframing, usability heuristics, and UX workflow patterns for digital platforms."
+      },
+      {
+        title: "Introduction to Application Development for Startups",
+        issuer: "Department of Information and Communications Technology (DICT)",
+        year: "2025",
+        hours: "4",
+        type: "Technical",
+        icon: "fas fa-rocket",
+        desc: "Rapid software prototyping, startup MVP engineering, agile architecture, and scalable product deployment."
       },
       {
         title: "A.Ignite: Fueling Filipino Minds with Future of Global Tech",
         issuer: "NVIDIA AI Academy Philippines",
         year: "2025",
-        badge: "Technical L&D (8 hrs)"
-      },
-      {
-        title: "JavaScript Essentials 1 & Python Essentials 1",
-        issuer: "Cisco Networking Academy",
-        year: "2025",
-        badge: "Technical Certification"
+        hours: "8",
+        type: "Technical",
+        icon: "fas fa-microchip",
+        desc: "Applied machine learning architectures, accelerated GPU computing, and modern deep learning pipelines."
       },
       {
         title: "Computer Hardware Basics",
         issuer: "Cisco Networking Academy",
         year: "2025",
-        badge: "Technical Certification"
+        hours: "6",
+        type: "Technical",
+        icon: "fas fa-server",
+        desc: "Computer architectures, internal hardware subsystems, diagnostic protocols, and preventive maintenance."
       },
       {
-        title: "UI/UX Design & Startup App Development",
-        issuer: "Department of Information and Communications Technology (DICT)",
+        title: "JavaScript Essentials 1",
+        issuer: "Cisco Networking Academy",
         year: "2025",
-        badge: "Technical L&D (8 hrs)"
+        hours: "6",
+        type: "Technical",
+        icon: "fab fa-js",
+        desc: "Core ECMAScript syntax, event-driven programming, DOM manipulation, and dynamic client-side logic."
       },
       {
-        title: "Futures Thinking: Digitalization of SNSU through Research",
-        issuer: "Surigao del Norte State University",
-        year: "2024",
-        badge: "Institutional L&D (24 hrs)"
+        title: "Python Essentials 1",
+        issuer: "Cisco Networking Academy",
+        year: "2025",
+        hours: "6",
+        type: "Technical",
+        icon: "fab fa-python",
+        desc: "Core Python programming syntax, data structures, procedural logic, and algorithmic scripting."
       },
       {
-        title: "Basic Records and Archives Management (BRAM)",
-        issuer: "Surigao del Norte State University",
+        title: "Digital Careers Expo (DCE) - Butuan",
+        issuer: "Department of Information and Communications Technology (DICT)",
         year: "2024",
-        badge: "Institutional L&D (16 hrs)"
+        hours: "8",
+        type: "Technical",
+        icon: "fas fa-network-wired",
+        desc: "Regional digital talent enablement, ICT industry trends, startup ecosystem growth, and tech competencies."
+      },
+      {
+        title: "In-House Seminar-Workshop on Basic Records and Archives Management (BRAM)",
+        issuer: "Surigao del Norte State University (SNSU)",
+        year: "2024",
+        hours: "16",
+        type: "Technical",
+        icon: "fas fa-archive",
+        desc: "National Archives standards, statutory document retention schedules, and secure digital records lifecycles."
+      },
+      {
+        title: "Programming for Beginners Using Python",
+        issuer: "Department of Science and Technology - Caraga (DOST - Caraga)",
+        year: "2024",
+        hours: "4",
+        type: "Technical",
+        icon: "fas fa-code",
+        desc: "Applied Python fundamentals, logic sequencing, computational thinking, and data processing automation."
+      },
+      {
+        title: "Embracing Futures Thinking: Charting the Digitalization of SNSU through Research CapDev Initiatives",
+        issuer: "Surigao del Norte State University (SNSU)",
+        year: "2024",
+        hours: "24",
+        type: "Technical",
+        icon: "fas fa-lightbulb",
+        desc: "Strategic institutional foresight, digital capability research frameworks, and transformative university tech roadmaps."
+      },
+      {
+        title: "Filipino Brand of Excellence",
+        issuer: "Surigao del Norte State University (SNSU)",
+        year: "2023",
+        hours: "8",
+        type: "Professional Excellence",
+        icon: "fas fa-medal",
+        desc: "Public service delivery standards, professional integrity, citizen-centric institutional culture, and workplace excellence."
+      },
+      {
+        title: "Best Capstone Project Awardee (MIT)",
+        issuer: "Surigao del Norte State University (SNSU)",
+        year: "2023",
+        hours: "",
+        type: "Academic Honor",
+        icon: "fas fa-trophy",
+        desc: "Recognized for exceptional systems architecture, implementation rigor, and outstanding graduate research capstone."
+      },
+      {
+        title: "UI - Technology Entrepreneurship Boot-Camp",
+        issuer: "Surigao State College of Technology (SSCT)",
+        year: "2019",
+        hours: "24",
+        type: "Technical",
+        icon: "fas fa-laptop-code",
+        desc: "Intensive technology incubation, product ideation, user interface validation, and venture pitching."
+      },
+      {
+        title: "Code It Like A Pro Contest",
+        issuer: "Philippine Society of Information Technology Educators (PSITE)",
+        year: "2019",
+        hours: "8",
+        type: "Technical",
+        icon: "fas fa-terminal",
+        desc: "Competitive algorithmic programming, rapid data structure implementation, and high-pressure logic optimization."
       }
     ]
   },

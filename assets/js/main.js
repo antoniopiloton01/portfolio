@@ -728,12 +728,12 @@ function hydrateFromPortfolioData() {
           <div>
             <h3 class="cert-title">${cert.title}</h3>
             <div class="cert-issuer">
-              <i class="fas fa-shield-alt" style="color: var(--color-champagne);"></i> ${cert.issuer}
+              <i class="${cert.icon || 'fas fa-certificate'}" style="color: var(--color-champagne); margin-right: 0.35rem;"></i> ${cert.issuer}
             </div>
           </div>
-          <span class="cert-badge">${cert.year} ${cert.hours ? '• ' + cert.hours + ' hrs' : ''}</span>
+          <span class="cert-badge">${cert.year}${cert.hours ? ' • ' + cert.hours + ' hrs' : ''}</span>
         </div>
-        <p style="font-size: 0.8125rem; color: var(--text-muted); margin: 0;">${cert.badge || 'Verified Credential'}</p>
+        <p style="font-size: 0.8125rem; color: var(--text-muted); margin: 0;">${cert.desc || cert.badge || 'Verified Credential'}</p>
       </div>
     `).join('');
   }
